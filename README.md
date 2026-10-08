@@ -8,13 +8,14 @@ The second is the **ILCA 6 Explorer** (`/classes/laser/`): the single-handed Oly
 
 The third is the **Race Flags** library (`/wiki/flags/`): every race signal of the Racing Rules of Sailing 2025–2028, drawn as SVG, with what it means, what to do, the sound and the rule. It has a start-sequence trainer (flags, sounds and clock for P, I, Z, U and black flag starts, recalls and postponement) and a quiz. Class notes for Optimist and ILCA events come from data overlays (`?class=optimist` or `?class=ilca`).
 
-The site opens on the Optimist. Tabs at the top switch between **Optimist**, **ILCA 6** and **Flags**. Next to the tabs is a language menu: English, Bulgarian (part and flag names so far), and German, French and Russian marked "soon". The chosen language carries across all pages. The Flags tab opens the class notes of the boat you came from.
+The fourth is **Race Courses** (`/wiki/courses/`): windward–leeward, trapezoid, triangle and the Optimist course, drawn from data (RRS Appendix S, the World Sailing Race Management Manual, IODA and ILCA championship sailing instructions). A course player sails a boat round each course (tacking on the beats, rounding each mark on the right side, with an optional 20° wind shift), a course-board decoder explains codes such as "L3", "O2" or "IOD", and a quiz tests mark order, sides, legs and finishes.
+
+The site opens on the Optimist. Tabs at the top switch between **Optimist**, **ILCA 6**, **Flags** and **Courses**. Next to the tabs is a language menu: English, Bulgarian (part and flag names so far), and German, French and Russian marked "soon". The chosen language carries across all pages. The Flags and Courses tabs open the class notes of the boat you came from.
 
 ## Planned
 
 - **ILCA 7 and ILCA 4 rigs** for the ILCA explorer
 - **Racing rules wiki**
-- **Race courses wiki**
 - **Federations and class associations**
 - **A racing game** (far future)
 
@@ -30,13 +31,15 @@ index.html            lander (always opens the Optimist explorer)
 assets/css/           tokens.css (colours, type), base.css (shared components + site nav), explorer.css, wiki.css
 assets/js/core/       site config, translations, site navigation (tabs + language), sailing helpers
 assets/js/explorer/   reusable 3D explorer: stage, part registry, UI
-assets/js/wiki/       flags library page and SVG flag drawing
+assets/js/wiki/       flags and courses pages, SVG flag and course drawing
 models/optimist/      Optimist geometry (optimist.js) and part list (parts.js)
 classes/optimist/     the Optimist explorer page
 i18n/<lang>/          strings per language (en, bg, de, fr, ru)
 wiki/flags/           the race flags library page
+wiki/courses/         the race courses page
 wiki/, game/          other planned sections (placeholders)
 data/flags/           race signal data and class overlays
+data/courses/         course definitions (wind-relative) and class overlays
 tools/                helper scripts (placeholder)
 documentation/        project documentation (placeholder)
 ```

@@ -26,9 +26,9 @@
     { "id": "N-H", "stack": ["ics-N", "ics-H"], "groups": ["abandon", "ashore"], "rule": "RRS Race Signals, 27.3, 32.3", "sound": { "up": "3" } },
     { "id": "N-A", "stack": ["ics-N", "ics-A"], "groups": ["abandon"], "rule": "RRS Race Signals, 27.3, 32.3", "sound": { "up": "3" } },
 
-    { "id": "C", "stack": ["ics-C"], "extras": ["shape-starboard", "shape-port", "board-minus", "board-plus"], "groups": ["course"], "rule": "RRS 33", "sound": { "up": "rep" } },
-    { "id": "M", "stack": ["ics-M"], "groups": ["course"], "rule": "RRS 34", "sound": { "up": "rep" } },
-    { "id": "S", "stack": ["ics-S"], "groups": ["course", "finish"], "rule": "RRS 32.2", "sound": { "up": "2" } },
+    { "id": "C", "stack": ["ics-C"], "extras": ["shape-starboard", "shape-port", "board-minus", "board-plus"], "groups": ["course"], "rule": "RRS 33", "sound": { "up": "rep" }, "link": "courses" },
+    { "id": "M", "stack": ["ics-M"], "groups": ["course"], "rule": "RRS 34", "sound": { "up": "rep" }, "link": "courses" },
+    { "id": "S", "stack": ["ics-S"], "groups": ["course", "finish"], "rule": "RRS 32.2", "sound": { "up": "2" }, "link": "courses" },
     { "id": "blue", "stack": ["plain-blue"], "groups": ["finish"], "rule": "RRS Race Signals", "sound": { "up": "none" } },
 
     { "id": "yellow", "stack": ["plain-yellow"], "groups": ["penalty"], "rule": "RRS 42, Appendix P (P1.2, P2)", "sound": { "up": "whistle" } },

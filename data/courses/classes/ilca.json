@@ -1,0 +1,38 @@
+{
+  "_about": "ILCA class layer for the courses page (same format as optimist.json). Sources: ILCA Event Manual 2025 §7.1 (trapezoid with inner and outer loops, downwind gates, separate start and finish lines); 2025 ILCA 6 & 7 Masters Worlds SIs, Addendum C (I2 Start-1-1a-4s/4p-1-2-3s/3p-Finish, O2 Start-1-2-3s/3p-2-3s/3p-Finish, separate reaching finish); 2025 ILCA Australian Nationals SIs (O2 / I2 on a board). The handout's 'O-ILCA' / 'I-ILCA' codes were not found in any ILCA document; boards show I2 / O2. See .claude/memory/courses-sources.md.",
+  "id": "ilca",
+  "typical": ["ilca-I", "ilca-O", "L", "W"],
+  "notes": [
+    { "for": "ilca-I", "si": true },
+    { "for": "ilca-O", "si": true },
+    { "for": "I" },
+    { "for": "O" }
+  ],
+  "add": [
+    {
+      "id": "ilca-I", "code": "I", "family": "trapezoid", "source": "ILCA SIs 2025", "classes": ["ilca"],
+      "marks": {
+        "1": { "at": [0, 1] }, "1a": { "at": [-0.1, 0.99], "offset": true }, "2": { "at": [-0.626, 0.772] },
+        "3s": { "at": [-0.686, -0.228], "gate": "3" }, "3p": { "at": [-0.566, -0.228], "gate": "3" },
+        "4s": { "at": [-0.06, 0], "gate": "4" }, "4p": { "at": [0.06, 0], "gate": "4" }
+      },
+      "start": { "pin": [-0.18, -0.1], "committee": [0.18, -0.1] },
+      "finish": { "committee": [-0.164, -0.338], "pin": [-0.236, -0.502] },
+      "route": { "head": ["start", "1", "1a", "gate4", "1", "2", "gate3", "finish"] },
+      "beats": { "fixed": 2 }
+    },
+    {
+      "id": "ilca-O", "code": "O", "family": "trapezoid", "source": "ILCA SIs 2025", "classes": ["ilca"],
+      "marks": {
+        "1": { "at": [0, 1] }, "2": { "at": [-0.626, 0.772] },
+        "3s": { "at": [-0.686, -0.228], "gate": "3" }, "3p": { "at": [-0.566, -0.228], "gate": "3" },
+        "4s": { "at": [-0.06, 0], "gate": "4", "unused": true }, "4p": { "at": [0.06, 0], "gate": "4", "unused": true }
+      },
+      "start": { "pin": [-0.18, -0.1], "committee": [0.18, -0.1] },
+      "finish": { "committee": [-0.164, -0.338], "pin": [-0.236, -0.502] },
+      "route": { "head": ["start", "1", "2", "gate3", "2", "gate3", "finish"] },
+      "beats": { "fixed": 2 }
+    }
+  ],
+  "hide": ["IOD"]
+}

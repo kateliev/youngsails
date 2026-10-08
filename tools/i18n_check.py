@@ -7,8 +7,9 @@ Compares every i18n/<lang>/<namespace>.json with the English source:
   * arrays (spec rows, legend) of another length  -> error,
   * strings identical to English                  -> reported only (some, like "ILCA 6", are meant to be equal).
 
-A plural object ({"one": ..., "other": ...}) may replace a plain string; each
-form must keep the English placeholders.
+A plural object ({"one": ..., "other": ...}) may replace a plain string, in English
+or in a translation; each form must keep the placeholders of the English string
+(or of its 'other' form).
 
 Usage:  python tools/i18n_check.py [lang ...] [-v]
         -v also lists missing keys and strings identical to English.
@@ -29,8 +30,10 @@ def is_plural(v):
 
 
 def leaves(node, path=''):
-    """Yield (path, value) for every string, skipping `_` note keys."""
-    if isinstance(node, dict):
+    """Yield (path, value) for every string, skipping `_` note keys. A plural object is one string."""
+    if is_plural(node):
+        yield path, node['other']
+    elif isinstance(node, dict):
         for k, v in node.items():
             if not k.startswith('_'):
                 yield from leaves(v, f'{path}.{k}' if path else k)
@@ -69,6 +72,8 @@ def compare(en, tr, path, report):
                 compare(a, b, f'{path}[{i}]', report)
     else:
         forms = tr.values() if is_plural(tr) else [tr]
+        if is_plural(en):   # English plural: every form of the translation keeps the placeholders of English 'other'
+            en = en['other']
         if not isinstance(en, (str, int)):
             report['errors'].append(f'{path}: value where English has {type(en).__name__}')
             return

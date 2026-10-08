@@ -17,15 +17,18 @@ export async function mountSiteNav({ current }) {
   const S = await loadStrings('common', lang);
   const here = SECTIONS.find(s => s.id === current);
 
+  // Wiki pages with a class toggle open with the boat you came from: an explorer's
+  // `wikiClass`, or the ?class= of the wiki page you are on.
+  const cls = here?.wikiClass || (here?.classParam ? new URLSearchParams(location.search).get('class') : null);
   const href = s => {
     const u = new URL(s.path, ROOT);
     if (lang !== DEFAULT_LANG) u.searchParams.set('lang', lang);
-    if (s.id === 'flags' && here?.flagsClass) u.searchParams.set('class', here.flagsClass);   // open the flags of the boat you came from
+    if (s.classParam && cls) u.searchParams.set('class', cls);
     return u.pathname + u.search;
   };
   const tabs = SECTIONS.filter(s => s.ready && s.tab).map(s => s.id === current
-    ? `<a class="site-tab" aria-current="page" href="${href(s)}">${esc(t(S, `nav.${s.id}`))}</a>`
-    : `<a class="site-tab" href="${href(s)}">${esc(t(S, `nav.${s.id}`))}</a>`).join('');
+    ? `<a class="site-tab" aria-current="page" data-section="${s.id}" href="${href(s)}">${esc(t(S, `nav.${s.id}`))}</a>`
+    : `<a class="site-tab" data-section="${s.id}" href="${href(s)}">${esc(t(S, `nav.${s.id}`))}</a>`).join('');
 
   const options = LANGS.map(l => {
     const usable = l.ready || l.partial || l.code === lang;
@@ -42,6 +45,15 @@ export async function mountSiteNav({ current }) {
       <span class="site-lang-code" aria-hidden="true">${lang.toUpperCase()}</span>
     </label>`;
   el.querySelector('select').addEventListener('change', e => setLang(e.target.value));
+}
+
+// A wiki page whose class toggle changed calls this, so the other wiki tabs carry the new class.
+export function syncNavClass(cls) {
+  for (const s of SECTIONS.filter(x => x.classParam)) {
+    const a = document.querySelector(`#siteNav .site-tab[data-section="${s.id}"]`);
+    if (!a) continue;
+    const u = new URL(a.href); u.searchParams.set('class', cls); a.href = u.pathname + u.search;
+  }
 }
 
 // Site footer: owner (GitHub profile), copyright years, source repository, e-mail.

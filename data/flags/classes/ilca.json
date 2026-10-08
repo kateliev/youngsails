@@ -13,7 +13,7 @@
   "add": [
     { "id": "ilca-rigs", "stack": ["set-ilca"], "layout": "side", "groups": ["start"], "rule": "SI", "si": true, "sound": { "up": "1", "down": "1" } },
     { "id": "ilca-fleets", "stack": ["set-fleets3"], "layout": "side", "groups": ["start"], "rule": "SI", "si": true, "sound": { "up": "1", "down": "1" } },
-    { "id": "ilca-course", "stack": ["text-O2"], "groups": ["course"], "rule": "SI", "si": true, "link": "courses" },
+    { "id": "ilca-course", "stack": ["text-O2"], "groups": ["course"], "rule": "SI", "si": true, "link": "courses", "board": true },
     { "id": "ilca-support", "stack": ["text-BUL"], "groups": ["safety"], "rule": "SI", "si": true }
   ],
   "hide": []

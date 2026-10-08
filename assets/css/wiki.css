@@ -186,3 +186,120 @@ body.wiki { min-height: 100%; }
   .answers { grid-template-columns: minmax(0, 1fr); }
   .answers.flags-only { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* ---------------- courses page (assets/js/wiki/courses.js, course-art.js) ---------------- */
+/* course diagrams: water = --chip (the SVG's .tr-sea rect), marks neutral, accent = current leg and the boat */
+.course-art { display: block; border-radius: 10px; overflow: hidden; }
+.course-art svg { display: block; width: 100%; height: auto; }
+.course-tile .course-art { height: 132px; display: grid; place-items: center; background: var(--chip); }
+.course-tile .course-art svg { width: auto; height: 100%; max-width: 100%; }
+.tile-codes { display: flex; gap: 4px; flex-wrap: wrap; }
+.code { font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: .06em; background: var(--ink); color: var(--panel-solid); border-radius: 5px; padding: 0 6px; }
+.card-course { margin: 4px 0 12px; }
+.card-course svg { max-height: 360px; width: auto; max-width: 100%; margin: 0 auto; }
+.wiki-card .beats-opt { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; }
+.route-head { margin: 4px 0 4px; }
+
+.cs-leg { stroke: var(--ink-2); stroke-width: 1.6; stroke-dasharray: 5 5; opacity: .7; }
+.cs-leg.on { stroke: var(--accent); stroke-width: 10; stroke-dasharray: none; stroke-linecap: round; opacity: .22; }
+.course-svg:not(:has(#csTrail)) .cs-leg.on { stroke-width: 4; opacity: 1; }
+.course-svg.thumb .cs-leg { stroke-width: 2.4; stroke-dasharray: none; opacity: .55; }
+.cs-round path { fill: none; stroke: var(--ink); stroke-width: 1.8; }
+.cs-round .cs-head { fill: var(--ink); stroke: none; }
+.cs-round.on path { stroke: var(--accent); stroke-width: 3; }
+.cs-round.on .cs-head { fill: var(--accent); }
+.cs-mark circle { fill: var(--panel-solid); stroke: var(--ink); stroke-width: 2; }
+.cs-mark text { fill: var(--ink); font-family: var(--font-display); font-weight: 700; font-size: 13px; }
+.cs-mark.offset circle { stroke-dasharray: 3 2; }
+.cs-mark.unused { opacity: .35; }
+.cs-mark.next circle { stroke: var(--accent); stroke-width: 3; }
+.cs-mark.on circle { stroke: var(--accent); stroke-width: 4; fill: var(--panel-solid); }
+.course-svg.thumb .cs-mark circle { fill: var(--ink); stroke: none; }
+.cs-line { stroke: var(--ink); stroke-width: 2.5; }
+.cs-pin { fill: var(--ink-2); }
+.cs-rc-hull { fill: var(--ink); }
+.cs-staff { stroke: var(--ink); stroke-width: 1.4; }
+.cs-line-label { font-size: 12px; }
+.cs-wind path { fill: var(--panel-solid); stroke: var(--sea); stroke-width: 2; stroke-linejoin: round; }
+.cs-wind { transition: transform .6s ease; }
+.cs-wind-label { fill: var(--sea); }
+.cs-cand circle { fill: var(--accent); }
+.cs-cand text { fill: var(--accent-ink); font-family: var(--font-display); font-weight: 700; font-size: 15px; }
+.cs-trail { fill: none; stroke: var(--accent); stroke-width: 2.6; stroke-linejoin: round; stroke-linecap: round; }
+.cs-ghost { fill: none; stroke: var(--accent); stroke-width: 1.6; stroke-dasharray: 3 5; opacity: .55; }
+.cs-hull { fill: var(--accent); stroke: var(--ink); stroke-width: .9; }
+.cs-boom { stroke: var(--ink); stroke-width: 2.2; stroke-linecap: round; }
+
+/* order of marks */
+.route { list-style: none; counter-reset: stop; margin: 0 0 12px; padding: 0; font-size: 13px; }
+.route li { counter-increment: stop; display: grid; grid-template-columns: 26px 1fr; column-gap: 8px; padding: 5px 0; border-bottom: 1px solid var(--line); }
+.route li::before { content: counter(stop); grid-row: span 2; align-self: start; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; background: var(--chip); color: var(--chip-ink); font-weight: 700; font-size: 12px; }
+.route li b { font-family: var(--font-display); font-size: 15px; letter-spacing: .02em; }
+.route li span { color: var(--ink-2); }
+.route.live li.done { opacity: .55; }
+.route.live li.on::before { background: var(--accent); color: var(--accent-ink); }
+.route.live li.on b { color: var(--accent); }
+.route-line { font-family: var(--font-display); font-size: 17px; letter-spacing: .02em; }
+
+/* teaching topics in the intro card */
+.teach { border-top: 1px solid var(--line); padding: 2px 0; }
+.teach summary { cursor: pointer; font-family: var(--font-display); font-weight: 700; font-size: 16px; letter-spacing: .02em; padding: 7px 0; }
+.teach p { margin: 0 0 8px; }
+.teach .links { display: flex; gap: 12px; flex-wrap: wrap; }
+.si-callout .badge-si { font-size: 12px; }
+
+/* course player */
+.pl-intro { margin-bottom: 12px; }
+.player { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 16px; align-items: start; }
+.pl-col { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.pl-scene { position: sticky; top: 12px; }
+.pl-art svg { display: block; width: 100%; height: auto; max-height: calc(100vh - 90px); }
+.pl-status .phase { font-size: 16px; }
+.pl-status .pl-leg { font-size: 46px; line-height: 1; margin: 2px 0 4px; }
+.pl-point { font-weight: 700; font-size: 13.5px; color: var(--ink); min-height: 1.4em; }
+.pl-select { display: flex; flex-direction: column; gap: 4px; }
+.pl-select select { font: inherit; font-weight: 700; font-size: 14px; color: var(--ink); background: var(--panel-solid); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 7px 8px; max-width: 100%; }
+.pl-buttons .btn { padding: 9px 12px; font-size: 14px; }
+.pl-route .route { margin: 0; max-height: 300px; overflow: auto; }
+.pl-note a { white-space: nowrap; }
+
+/* course-board decoder */
+.board-wrap { display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 16px; align-items: start; margin-top: 12px; }
+.board-panel { padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+.board-face { display: flex; flex-direction: column; gap: 6px; }
+.board-face input { width: 100%; font-family: var(--font-display); font-weight: 700; font-size: 64px; line-height: 1; letter-spacing: .08em; text-align: center; text-transform: uppercase;
+  color: #fff; background: #0c2235; border: 6px solid var(--panel-solid); outline: 1px solid var(--line); border-radius: 10px; padding: 12px 8px; }
+.board-face input::placeholder { color: rgba(255, 255, 255, .25); }
+.board-face input:focus-visible { outline: 3px solid var(--accent); }
+.bd-picks { flex-wrap: wrap; }
+.bd-code { font-size: 44px; letter-spacing: .06em; }
+.bd-art { max-width: 520px; margin: 4px 0 10px; }
+.bd-art svg { max-height: 420px; width: auto; max-width: 100%; }
+
+/* quiz on a diagram: diagram left, answers right (stacked on phones) */
+#view-quiz .quiz { max-width: 980px; }
+.q-prompt { font-size: 24px; }
+.q-body { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 16px; align-items: start; margin-top: 6px; }
+.q-course svg { max-height: min(460px, 62vh); width: auto; max-width: 100%; margin: 0 auto; }
+.q-side .answers { grid-template-columns: minmax(0, 1fr); margin-top: 0; }
+.q-side .answer { font-size: 15px; padding: 12px 14px; }
+.q-side .answers.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.answers.three .answer { text-align: center; font-family: var(--font-display); font-weight: 700; font-size: 22px; }
+
+@media (max-width: 980px) {
+  .player { display: flex; flex-direction: column; align-items: stretch; gap: 12px; }
+  .pl-col { display: contents; }
+  .pl-status { order: 1; position: sticky; top: 4px; z-index: 5; padding: 8px 12px; }
+  .pl-scene { order: 2; position: static; } .pl-controls { order: 3; } .pl-route { order: 4; } .pl-note { order: 5; }
+  .pl-art svg { max-height: 62vh; }
+  .board-wrap { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 620px) {
+  .pl-status .pl-leg { font-size: 34px; }
+  .pl-buttons { display: grid; grid-template-columns: 1fr 1fr; }
+  .pl-buttons .btn { padding: 12px 10px; font-size: 15px; }
+  .course-tile .course-art { height: 104px; }
+  .board-face input { font-size: 52px; }
+  .q-prompt { font-size: 20px; }
+  .q-body { grid-template-columns: minmax(0, 1fr); }
+}

@@ -31,13 +31,14 @@ export const glossFor = lang => (lang === 'en' ? 'bg' : 'en');
 
 // Sections of the site. `ready: false` sections are planned, not built.
 // `tab: true` puts a ready section in the site navigation (order = tab order);
-// `flagsClass` is the class the flags page opens with when you come from that section.
+// `wikiClass` is the boat class a wiki page (flags, courses) opens with when you come from that section;
+// `classParam: true` marks a wiki page with a class toggle (?class=…), so its tab carries the class.
 export const SECTIONS = [
-  { id: 'optimist', path: 'classes/optimist/', ready: true, tab: true, flagsClass: 'optimist' },
-  { id: 'laser', path: 'classes/laser/', ready: true, tab: true, flagsClass: 'ilca' },
-  { id: 'flags', path: 'wiki/flags/', ready: true, tab: true },
+  { id: 'optimist', path: 'classes/optimist/', ready: true, tab: true, wikiClass: 'optimist' },
+  { id: 'laser', path: 'classes/laser/', ready: true, tab: true, wikiClass: 'ilca' },
+  { id: 'flags', path: 'wiki/flags/', ready: true, tab: true, classParam: true },
+  { id: 'courses', path: 'wiki/courses/', ready: true, tab: true, classParam: true },
   { id: 'rules', path: 'wiki/rules/', ready: false },
-  { id: 'courses', path: 'wiki/courses/', ready: false },
   { id: 'federations', path: 'wiki/federations/', ready: false },
   { id: 'game', path: 'game/', ready: false },
 ];

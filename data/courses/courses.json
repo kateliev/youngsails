@@ -1,0 +1,95 @@
+{
+  "_about": "Race courses, language-neutral. Texts: /i18n/<lang>/courses.json -> courses.<id>. Coordinates are wind-relative: y points upwind (towards the wind), x across the wind (to starboard when facing upwind); 1 unit = one beat. Route tokens: 'start', 'finish', a mark id (left to port unless the mark says 'leave'; gate marks ending in 's' are left to starboard, 'p' to port) and 'gate<N>' (pass between the marks of gate N, then round either one). A course with 'beats.extra' repeats route.loop (beats - extra) times between route.head and route.tail; a course with 'beats.fixed' sails route.head only. Sources per course in 'source'; details in .claude/memory/courses-sources.md.",
+  "edition": "RRS 2025-2028 Appendix S · World Sailing Race Management Manual (2024)",
+  "classes": ["optimist", "ilca"],
+  "families": ["wl", "trapezoid", "triangle"],
+  "courses": [
+    {
+      "id": "L", "code": "L", "family": "wl", "source": "RRS App. S",
+      "marks": { "1": { "at": [0, 1] }, "2s": { "at": [-0.06, 0.1], "gate": "2" }, "2p": { "at": [0.06, 0.1], "gate": "2" } },
+      "start": { "pin": [-0.18, 0], "committee": [0.18, 0] },
+      "finish": { "pin": [-0.18, 0], "committee": [0.18, 0] },
+      "route": { "head": ["start", "1"], "loop": ["gate2", "1"], "tail": ["finish"] },
+      "beats": { "min": 2, "max": 4, "default": 2, "extra": 1 }
+    },
+    {
+      "id": "LA", "code": "LA", "family": "wl", "source": "RRS App. S",
+      "marks": { "1": { "at": [0, 1] }, "1a": { "at": [-0.1, 0.99], "offset": true }, "2s": { "at": [-0.06, 0.1], "gate": "2" }, "2p": { "at": [0.06, 0.1], "gate": "2" } },
+      "start": { "pin": [-0.18, 0], "committee": [0.18, 0] },
+      "finish": { "pin": [-0.18, 0], "committee": [0.18, 0] },
+      "route": { "head": ["start", "1", "1a"], "loop": ["gate2", "1", "1a"], "tail": ["finish"] },
+      "beats": { "min": 2, "max": 4, "default": 2, "extra": 1 }
+    },
+    {
+      "id": "W", "code": "W", "family": "wl", "source": "RRS App. S",
+      "marks": { "1": { "at": [0, 1] }, "2s": { "at": [-0.06, 0.1], "gate": "2" }, "2p": { "at": [0.06, 0.1], "gate": "2" } },
+      "start": { "pin": [-0.18, 0], "committee": [0.18, 0] },
+      "finish": { "pin": [-0.12, 1.14], "committee": [0.12, 1.14] },
+      "route": { "head": ["start"], "loop": ["1", "gate2"], "tail": ["finish"] },
+      "beats": { "min": 2, "max": 4, "default": 2, "extra": 1 }
+    },
+    {
+      "id": "WA", "code": "WA", "family": "wl", "source": "RRS App. S",
+      "marks": { "1": { "at": [0, 1] }, "1a": { "at": [-0.1, 0.99], "offset": true }, "2s": { "at": [-0.06, 0.1], "gate": "2" }, "2p": { "at": [0.06, 0.1], "gate": "2" } },
+      "start": { "pin": [-0.18, 0], "committee": [0.18, 0] },
+      "finish": { "pin": [-0.12, 1.14], "committee": [0.12, 1.14] },
+      "route": { "head": ["start"], "loop": ["1", "1a", "gate2"], "tail": ["finish"] },
+      "beats": { "min": 2, "max": 4, "default": 2, "extra": 1 }
+    },
+    {
+      "id": "TL", "code": "TL", "family": "triangle", "source": "RRS App. S",
+      "marks": { "1": { "at": [0, 1] }, "2": { "at": [-0.5, 0.5] }, "3": { "at": [0.05, 0] } },
+      "start": { "pin": [-0.2, -0.12], "committee": [0.16, -0.12] },
+      "finish": { "pin": [-0.2, -0.12], "committee": [0.16, -0.12] },
+      "route": { "head": ["start", "1", "2", "3", "1"], "loop": ["3", "1"], "tail": ["finish"] },
+      "beats": { "min": 2, "max": 4, "default": 2, "extra": 2 }
+    },
+    {
+      "id": "TW", "code": "TW", "family": "triangle", "source": "RRS App. S",
+      "marks": { "1": { "at": [0, 1] }, "2": { "at": [-0.5, 0.5] }, "3": { "at": [0.05, 0] } },
+      "start": { "pin": [-0.2, -0.12], "committee": [0.16, -0.12] },
+      "finish": { "pin": [-0.12, 1.14], "committee": [0.12, 1.14] },
+      "route": { "head": ["start", "1", "2", "3"], "loop": ["1", "3"], "tail": ["finish"] },
+      "beats": { "min": 2, "max": 4, "default": 2, "extra": 2 }
+    },
+    {
+      "id": "I", "code": "I", "family": "trapezoid", "source": "WS RMM J.4",
+      "_geometry": "Non-spinnaker trapezoid, 70° at mark 1 (RMM §6); reach 1-2 = 2/3 beat (RMM J.3.3); gate 3 one beat below mark 2; start just below gate 4; finish on a reach from 3p, line from the start RC vessel to FS (RMM p. 11).",
+      "marks": {
+        "1": { "at": [0, 1] }, "2": { "at": [-0.626, 0.772] },
+        "3s": { "at": [-0.686, -0.228], "gate": "3" }, "3p": { "at": [-0.566, -0.228], "gate": "3" },
+        "4s": { "at": [-0.06, 0], "gate": "4" }, "4p": { "at": [0.06, 0], "gate": "4" }
+      },
+      "start": { "pin": [-0.18, -0.1], "committee": [0.18, -0.1] },
+      "finish": { "committee": [0.18, -0.1], "pin": [0.18, -0.4] },
+      "route": { "head": ["start", "1"], "loop": ["gate4", "1"], "tail": ["2", "3p", "finish"] },
+      "beats": { "min": 2, "max": 4, "default": 2, "extra": 1 }
+    },
+    {
+      "id": "O", "code": "O", "family": "trapezoid", "source": "WS RMM J.4",
+      "marks": {
+        "1": { "at": [0, 1] }, "2": { "at": [-0.626, 0.772] },
+        "3s": { "at": [-0.686, -0.228], "gate": "3" }, "3p": { "at": [-0.566, -0.228], "gate": "3" },
+        "4s": { "at": [-0.06, 0], "gate": "4", "unused": true }, "4p": { "at": [0.06, 0], "gate": "4", "unused": true }
+      },
+      "start": { "pin": [-0.18, -0.1], "committee": [0.18, -0.1] },
+      "finish": { "committee": [0.18, -0.1], "pin": [0.18, -0.4] },
+      "route": { "head": ["start", "1", "2"], "loop": ["gate3", "2"], "tail": ["3p", "finish"] },
+      "beats": { "min": 2, "max": 4, "default": 2, "extra": 1 }
+    },
+    {
+      "id": "IOD", "code": "IOD", "family": "trapezoid", "source": "WS RMM p. 26", "classes": ["optimist"],
+      "_geometry": "RMM Optimist course: 60° at mark 1, 120° at mark 2, equal legs start-1, 1-2, 2-3; finish 50 m from mark 2 on the inside of the course, reached by a beat from gate 3.",
+      "marks": {
+        "1": { "at": [0, 1] }, "2": { "at": [-0.866, 0.5] },
+        "3s": { "at": [-0.926, -0.5], "gate": "3" }, "3p": { "at": [-0.806, -0.5], "gate": "3" }
+      },
+      "start": { "pin": [-0.18, 0], "committee": [0.18, 0] },
+      "finish": { "pin": [-0.82, 0.36], "committee": [-0.66, 0.36] },
+      "route": { "head": ["start", "1", "2", "gate3", "finish"] },
+      "beats": { "fixed": 2 }
+    }
+  ],
+  "_designations": "Course letters from the World Sailing Race Management Manual (2024), 'Illustrating the course'. Used by the course-board decoder for codes the page has no diagram for. Texts: i18n courses.json -> designations.<code>.",
+  "designations": ["I", "O", "IW", "OW", "IA", "OA", "L", "W", "LA", "WA", "LG", "LR", "WG", "WR", "T", "TL", "TW", "TR", "TLA", "TWA", "IS", "OS", "LS", "M", "IOD"]
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Race Courses · Young Sails</title>
+<meta name="description" content="Race courses explained for young sailors: windward–leeward, trapezoid, triangle and the Optimist course. Watch a boat sail each course, decode the course board and test yourself with a quiz.">
+<link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="../../assets/css/tokens.css">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/wiki.css">
+</head>
+<body class="wiki">
+<div class="wiki-wrap">
+  <nav id="siteNav" class="site-nav panel"></nav>
+
+  <header class="wiki-head panel">
+    <div class="wiki-title">
+      <h1 id="pageTitle">Race courses</h1>
+      <p id="tagline"></p>
+    </div>
+    <div class="wiki-tools">
+      <span class="badge-si" id="edition"></span>
+    </div>
+  </header>
+
+  <nav class="wiki-nav">
+    <div class="seg" role="group" id="viewSeg" data-i18n-attr="aria-label:ui.views">
+      <button data-view="library" aria-pressed="true" data-i18n="ui.library">Courses</button>
+      <button data-view="player" aria-pressed="false" data-i18n="ui.player">Sail a course</button>
+      <button data-view="board" aria-pressed="false" data-i18n="ui.boardView">Course board</button>
+      <button data-view="quiz" aria-pressed="false" data-i18n="ui.quiz">Quiz</button>
+    </div>
+    <div class="opt">
+      <span class="eyebrow-label" id="classLabel" data-i18n="ui.classLabel">Boat class</span>
+      <div class="seg" role="group" id="classSeg" aria-labelledby="classLabel"></div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section id="view-library" class="wiki-cols">
+      <div>
+        <details class="intro-inline panel" id="introInline"><summary></summary><div></div></details>
+        <div class="filters panel">
+          <div class="filter-row" role="group" id="filterRow" data-i18n-attr="aria-label:ui.filters"></div>
+        </div>
+        <p class="result-count" id="resultCount" aria-live="polite"></p>
+        <div class="tile-grid course-grid" id="grid"></div>
+      </div>
+      <aside class="wiki-aside">
+        <section class="wiki-card panel sheet" id="card" aria-live="polite"></section>
+      </aside>
+    </section>
+
+    <section id="view-player" hidden></section>
+    <section id="view-board" hidden></section>
+    <section id="view-quiz" hidden></section>
+  </main>
+
+  <footer class="wiki-foot">
+    <p id="footEdition"></p>
+  </footer>
+  <footer id="siteFoot" class="site-foot"></footer>
+</div>
+
+<script type="module">
+  import { startCourses } from '../../assets/js/wiki/courses.js';
+  import { mountSiteNav } from '../../assets/js/core/sitenav.js';
+  mountSiteNav({ current: 'courses' });
+  startCourses().catch(err => {
+    console.error(err);
+    document.getElementById('main').innerHTML = '<div id="err" class="panel">The course library could not load. Check your connection and reload the page.</div>';
+  });
+</script>
+</body>
+</html>

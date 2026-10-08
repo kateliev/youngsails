@@ -21,4 +21,4 @@ Keep the memory current: when you finish meaningful work, update `history.md` an
 2. `models/<class>/<class>.js`: `create<Class>({ registry })` that returns the model API described at the top of `assets/js/explorer/explorer.js`.
 3. `i18n/en/<class>.json`: names and texts (copy the structure of `optimist.json`).
 4. `classes/<class>/index.html`: copy the Optimist page; change the three imports and the `current` id passed to `mountSiteNav`.
-5. Add a tab: set `tab: true` on the section in `SECTIONS` (`assets/js/core/config.js`), plus `flagsClass` if the flags page has an overlay for it. Then add `nav.<id>` to `i18n/en/common.json`.
+5. Add a tab: set `tab: true` on the section in `SECTIONS` (`assets/js/core/config.js`), plus `wikiClass` if the wiki pages (flags, courses) have an overlay for it. Then add `nav.<id>` to `i18n/en/common.json`.

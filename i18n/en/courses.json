@@ -1,0 +1,328 @@
+{
+  "_status": "complete",
+  "_note": "Race courses page. Course facts: RRS 2025-2028 Appendix S, World Sailing Race Management Manual (2024), IODA and ILCA championship documents (see .claude/memory/courses-sources.md). Leg words reuse common.json pointsOfSail / trim.",
+  "pageTitle": "Race Courses",
+  "title": "Race courses",
+  "titleAccent": 5,
+  "tagline": "Which marks, in which order, on which side",
+  "ui": {
+    "views": "Sections",
+    "library": "Courses",
+    "player": "Sail a course",
+    "boardView": "Course board",
+    "quiz": "Quiz",
+    "classLabel": "Boat class",
+    "filters": "Show courses",
+    "all": "All",
+    "typicalFilter": "Typical for {c}",
+    "count": { "one": "{n} course", "other": "{n} courses" },
+    "typical": "Typical for {c}",
+    "siBadge": "Your sailing instructions win",
+    "footer": "Diagrams follow {e}. Every event can change them: always read your sailing instructions.",
+    "soon": "{name}: coming soon on Young Sails.",
+    "links": { "rules": "Racing rules at marks" },
+    "board": "On the board",
+    "beatsAria": "Number of beats",
+    "sailIt": "Sail this course ▶",
+    "route": "Order of marks",
+    "code": "Code",
+    "beats": "Beats",
+    "beatsN": { "one": "{n} beat", "other": "{n} beats" },
+    "legs": "Legs",
+    "legsN": { "one": "{n} leg", "other": "{n} legs" },
+    "finish": "Finish",
+    "source": "Source",
+    "why": "Why",
+    "classNote": "{c} note",
+    "si": "Usually set by the sailing instructions",
+    "checkSi": "This is a typical example. Your event's sailing instructions show the real course, and they always win.",
+    "prev": "← Prev",
+    "next": "Next →",
+    "prevAria": "Previous course",
+    "nextAria": "Next course",
+    "close": "Close",
+    "closeAria": "Close the course card",
+    "loadError": "The course library could not load. Check your connection and reload the page."
+  },
+  "families": {
+    "wl": "Windward–leeward",
+    "trapezoid": "Trapezoid",
+    "triangle": "Triangle"
+  },
+  "art": {
+    "wind": "Wind",
+    "startFinish": "Start and finish",
+    "rc": "Race committee boat",
+    "aria": "Diagram of the course: {name}. The wind comes from the top."
+  },
+  "route": {
+    "start": "Start",
+    "finish": "Finish",
+    "mark": "Mark {m}",
+    "gate": "Gate {g}",
+    "port": "port (on your left)",
+    "starboard": "starboard (on your right)",
+    "startHow": "Cross the line between the committee boat (orange flag) and the pin end.",
+    "finishHow": "Cross the finishing line from the course side.",
+    "gateHow": "Sail between the two marks, then round either one.",
+    "leave": "Leave it to {side}.",
+    "gateOne": "Only this mark of the gate, not {other}.",
+    "offsetHow": "The offset mark: a short leg just after mark 1."
+  },
+  "legs": {
+    "beat": "Beat",
+    "reach": "Reach",
+    "run": "Run"
+  },
+  "intro": {
+    "chip": "How courses work",
+    "heading": "Marks, order, side",
+    "text": "A race course is a set of marks. The course tells you three things: which marks you go round, in which order, and on which side you leave each one. The diagrams always have the wind coming from the top.",
+    "si": "Every diagram here is a typical example. On race day, the sailing instructions of your event show the real course. They always win.",
+    "hint": "Pick a course to see its marks, or press “Sail this course” to watch a boat sail it."
+  },
+  "teach": {
+    "si": {
+      "title": "The sailing instructions win",
+      "text": "Each regatta can number its marks, draw its courses and choose its codes in its own way. Before you go afloat, find the course diagram in your sailing instructions and learn it. If you are not sure, ask your coach.",
+      "rule": "RRS 28 and the Sail the Course definition: you sail the course described in the sailing instructions."
+    },
+    "lines": {
+      "title": "Starting and finishing lines",
+      "text": "The starting line is between a staff with an orange flag on the committee boat and the pin end. The finishing line is between a staff with a blue flag and the mark at the other end. Some courses use the same line for both. Cross the finishing line from the course side.",
+      "rule": "RRS Race Signals; RRS Appendix S, SI 9.2 and 11.1."
+    },
+    "sides": {
+      "title": "Leaving a mark to port or starboard",
+      "text": "“Leave a mark to port” means the mark stays on your left side, so you turn left round it. “To starboard” means on your right. On the diagrams the arrow round each mark shows the way to go. Most courses leave every mark to port.",
+      "rule": "Sail the Course: a string along your track must pass each mark on the required side, in the correct order."
+    },
+    "gates": {
+      "title": "Gates",
+      "text": "A gate is two marks side by side, for example 2s and 2p. Sail between them, then round either one: 2s to starboard or 2p to port. Pick the side of the course you like for the next beat. A gate also stops a big fleet from crowding round one mark.",
+      "rule": "Sail the Course (b)(3): pass between the marks of a gate from the direction of the previous mark."
+    },
+    "legs": {
+      "title": "Beat, reach and run",
+      "text": "A beat goes upwind: you cannot sail straight to the mark, so you sail close-hauled and tack. A reach goes across the wind. A run goes downwind with the wind behind you. The number in a course code (L2, O3) tells you how many beats you sail.",
+      "rule": "World Sailing Race Management Manual: the number after the letters is the number of beats."
+    },
+    "signals": {
+      "title": "How the course is signalled",
+      "text": "No later than your warning signal, the committee boat shows the course, often on a board: “L3”, “O2”, “IOD”. It may also show the compass bearing to mark 1. Some events use numeral pennants or course numbers instead. The sailing instructions say how.",
+      "rule": "RRS Appendix S, SI 7.1."
+    },
+    "changes": {
+      "title": "When the course changes",
+      "text": "Flag C with repeated sounds at a mark: the next mark has moved, so sail to its new position. Flag M on a boat: it replaces a missing mark, so round it like the mark. Flag S: the course is shortened, so finish at that mark.",
+      "rule": "RRS 32, 33 and 34."
+    },
+    "rules": {
+      "title": "Rules at the marks",
+      "text": "When boats arrive at a mark together, the rules decide who gets room to round it (mark-room, RRS 18). Ask your coach to explain it on the water."
+    },
+    "flagNames": {
+      "orange": "Orange flag",
+      "blue": "Blue flag",
+      "C": "Flag C",
+      "M": "Flag M",
+      "S": "Flag S"
+    }
+  },
+  "courses": {
+    "L": {
+      "name": "Windward–leeward, leeward finish",
+      "summary": "Up to mark 1 and down to the gate, again and again. You finish downwind, on the same line where you started.",
+      "finish": "Downwind, on the starting line (the same line).",
+      "why": "The simplest course to set. It is easy to move when the wind changes, so every beat stays a true beat."
+    },
+    "LA": {
+      "name": "Windward–leeward with offset mark",
+      "summary": "Like course L, but with a short leg from mark 1 to the offset mark 1a before you run down to the gate.",
+      "finish": "Downwind, on the starting line (the same line).",
+      "why": "Mark 1a sends boats that have rounded mark 1 away from the boats still beating up to it."
+    },
+    "W": {
+      "name": "Windward–leeward, windward finish",
+      "summary": "Up and down like course L, but the last leg is a beat. The finishing line is upwind of mark 1.",
+      "finish": "Upwind, on a line beyond mark 1.",
+      "why": "Boats finish on a beat, so they are spread out and easy to record. Mark 1 does not count on the last beat: pass it on either side."
+    },
+    "WA": {
+      "name": "Windward–leeward with offset mark, windward finish",
+      "summary": "Course W with the offset mark 1a after each rounding of mark 1. The last leg is a beat to a finish beyond mark 1.",
+      "finish": "Upwind, on a line beyond mark 1."
+    },
+    "TL": {
+      "name": "Triangle, leeward finish",
+      "summary": "The classic club course: a beat to mark 1, a reach to mark 2, a reach to mark 3, then a beat back to mark 1. With more beats (TL3) you add a run and a beat between marks 3 and 1: the “triangle–sausage”.",
+      "finish": "Downwind, on the starting line (the same line).",
+      "why": "Two reaching legs give variety. Still common at club races."
+    },
+    "TW": {
+      "name": "Triangle, windward finish",
+      "summary": "Beat, reach, reach, then up again. The last leg is a beat to a finishing line beyond mark 1.",
+      "finish": "Upwind, on a line beyond mark 1."
+    },
+    "I": {
+      "name": "Trapezoid, inner loop",
+      "summary": "First a windward–leeward on the inner side: mark 1, gate 4s/4p, mark 1 again. Then a reach to mark 2, a run to mark 3p and a reach to the finish.",
+      "finish": "On a reach from mark 3p, to a line near the committee boat.",
+      "why": "A trapezoid is two windward–leeward courses side by side. Two fleets can race at once: one on the inner loop, one on the outer loop."
+    },
+    "O": {
+      "name": "Trapezoid, outer loop",
+      "summary": "A beat to mark 1, a reach to mark 2, then windward–leeward on the outer side between gate 3s/3p and mark 2. Last, a reach from mark 3p to the finish.",
+      "finish": "On a reach from mark 3p, to a line near the committee boat.",
+      "why": "The reach from mark 1 to mark 2 spreads the fleet out before the run."
+    },
+    "IOD": {
+      "name": "Optimist course",
+      "summary": "The Optimist championship course: a beat to mark 1, a reach to mark 2, a run to the gate 3s/3p, and a beat to the finish just inside mark 2. Four legs, the first three of the same length.",
+      "finish": "Upwind, at the end of the second beat, on a line just inside mark 2.",
+      "why": "One course with every point of sail, and a finish on a beat where the fleet is spread out."
+    }
+  },
+  "classes": {
+    "optimist": {
+      "name": "Optimist",
+      "intro": "Optimist championships sail the Optimist course (“IOD”): an outer-loop trapezoid with the finish at the end of the second beat. Club and national events also use windward–leeward, trapezoid and triangle courses.",
+      "notes": {
+        "IOD": "IODA World Championships use this shape: “an outer loop trapezoid with the finish line at the end of the second windward leg”. The finishing leg can be shorter or longer than the other legs.",
+        "O": "Many Optimist regattas show “O2” or “I2” on the board. Mark numbers can differ from this diagram: check the course diagram in your sailing instructions.",
+        "I": "With several fleets, one often sails the outer loop and the next one the inner loop. Watch which board is shown before your warning signal.",
+        "L": "Common for younger fleets and short races: easy to set and easy to follow."
+      },
+      "courses": {}
+    },
+    "ilca": {
+      "name": "ILCA",
+      "intro": "ILCA championships use trapezoid courses with inner and outer loops, downwind gates and separate start and finish lines. The board shows “I2” or “O2”. The ILCA versions differ a little from the World Sailing table: see the ILCA cards.",
+      "notes": {
+        "ilca-I": "From the ILCA World Championship sailing instructions: the inner loop has the offset mark 1a after the first rounding of mark 1, and you finish through gate 3s/3p.",
+        "ilca-O": "From the ILCA World Championship sailing instructions: after the second run, round either mark of gate 3, then reach to the finish.",
+        "I": "This is the World Sailing version. At ILCA championships the inner loop adds mark 1a and ends through gate 3: see “ILCA inner loop”.",
+        "O": "This is the World Sailing version. At ILCA championships you can round either mark of gate 3 before the finish: see “ILCA outer loop”."
+      },
+      "courses": {
+        "ilca-I": {
+          "name": "ILCA trapezoid, inner loop",
+          "summary": "Beat to mark 1, short leg to the offset mark 1a, run to gate 4s/4p, beat to mark 1, reach to mark 2, run to gate 3s/3p, reach to the finish.",
+          "finish": "On a reach from gate 3, on a separate finishing line between the loops.",
+          "why": "The separate finishing line keeps finishing boats away from the starting line, so the next fleet can start."
+        },
+        "ilca-O": {
+          "name": "ILCA trapezoid, outer loop",
+          "summary": "Beat to mark 1, reach to mark 2, run to gate 3s/3p, beat to mark 2, run to gate 3s/3p again, reach to the finish.",
+          "finish": "On a reach from gate 3, on a separate finishing line between the loops."
+        }
+      }
+    }
+  },
+  "player": {
+    "heading": "Sail a course",
+    "intro": "Watch a boat sail the course leg by leg. On a beat it tacks; on reaches and runs it sails straight. The arrow round each mark lights up when the boat rounds it.",
+    "course": "Course",
+    "play": "▶ Play",
+    "pause": "❚❚ Pause",
+    "resume": "▶ Resume",
+    "again": "▶ Sail again",
+    "back": "◀ Leg",
+    "backAria": "Back one leg",
+    "step": "Leg ▶",
+    "stepAria": "Forward one leg",
+    "reset": "Back to the start",
+    "reduced": "Motion is reduced on this device: use the leg buttons to step through the course.",
+    "speed": "Speed",
+    "wind": "Wind",
+    "steady": "Steady",
+    "shiftRight": "Shift 20° right",
+    "shiftLeft": "Shift 20° left",
+    "right": "right",
+    "left": "left",
+    "legOf": "Leg {i} of {n}: {from} → {to}",
+    "rounding": "Rounding {m}: leave it to {side}",
+    "tacking": "tacking",
+    "finished": "Finished!",
+    "finishedSub": "You crossed the finishing line.",
+    "siNote": "This is a typical example. Your sailing instructions show the real course.",
+    "shiftNote": "The wind has turned {d}° to the {dir}. The beats are now lopsided: one tack is long and the other short, and the run is no longer straight downwind. The race committee can move the next mark so the next leg fits the new wind. It tells you with flag C at the mark you are rounding."
+  },
+  "board": {
+    "heading": "Course board",
+    "intro": "Type what you see on the committee boat, or pick a code. We show you that course and explain the code.",
+    "label": "The board shows",
+    "hint": "Letters = the type of course. The number = how many beats.",
+    "empty": "Type a course code, for example L2 or IOD.",
+    "lookSi": "Look in your sailing instructions: they explain every code the committee will show.",
+    "beatsLine": { "one": "{n} = you sail {n} beat (upwind leg).", "other": "{n} = you sail {n} beats (upwind legs)." },
+    "unknown": "We don't know “{code}”. Many events use their own codes or course numbers.",
+    "noDiagram": "We don't have a diagram for this course yet. It is not common at Optimist and ILCA regattas.",
+    "noNumber": "The number of beats is missing. It usually follows the letters, for example {code}.",
+    "odd": "This number of beats is unusual. Check it in your sailing instructions.",
+    "many": "A long race! The same marks, with more laps.",
+    "openCard": "Open the course card",
+    "otherClass": "This course belongs to the {c} class. Pick that boat class above to sail it."
+  },
+  "designations": {
+    "I": "trapezoid, inner loop, reaching finish",
+    "O": "trapezoid, outer loop, reaching finish",
+    "IW": "trapezoid, inner loop, finish on a beat",
+    "OW": "trapezoid, outer loop, finish on a beat",
+    "IA": "trapezoid, inner loop, with an offset mark 1a",
+    "OA": "trapezoid, outer loop, with an offset mark 1a",
+    "L": "windward–leeward, finish downwind",
+    "W": "windward–leeward, finish upwind",
+    "LA": "windward–leeward with an offset mark 1a, finish downwind",
+    "WA": "windward–leeward with an offset mark 1a, finish upwind",
+    "LG": "windward–leeward, finish on a reach to starboard after a run",
+    "LR": "windward–leeward, finish on a reach to port after a run",
+    "WG": "windward–leeward, finish on a reach to starboard after a beat",
+    "WR": "windward–leeward, finish on a reach to port after a beat",
+    "T": "triangle, start and finish in the middle of the beat",
+    "TL": "triangle, finish downwind",
+    "TW": "triangle, finish upwind",
+    "TR": "triangle, finish on a reach",
+    "TLA": "triangle with an offset mark 1a, finish downwind",
+    "TWA": "triangle with an offset mark 1a, finish upwind",
+    "IS": "trapezoid, inner loop, with a slalom before the finish (windsurfing)",
+    "OS": "trapezoid, outer loop, with a slalom before the finish (windsurfing)",
+    "LS": "windward–leeward with a slalom before the finish (windsurfing)",
+    "M": "match racing: windward–leeward, marks left to starboard",
+    "IOD": "the Optimist course"
+  },
+  "quiz": {
+    "heading": "Course quiz",
+    "intro": "Ten questions about marks, sides, legs and finishes. Read the diagram: the wind comes from the top.",
+    "start": "Start the quiz",
+    "mode": {
+      "next": "Which mark next?",
+      "side": "Port or starboard?",
+      "leg": "Beat, reach or run?",
+      "finish": "Where is the finish?"
+    },
+    "times": { "1": "the first time", "2": "the second time", "3": "the third time", "4": "again" },
+    "qNext": "Course {code}: you have just rounded {m} ({times}). Where do you go next?",
+    "qSide": "Course {code}: on which side do you leave mark {m}?",
+    "side": { "port": "To port (on my left)", "starboard": "To starboard (on my right)" },
+    "explainSide": "Mark {m}: leave it to {side}. Look at the arrow round the mark.",
+    "explainGate": "Mark {m} is a gate mark: the letter tells you. “s” = leave to starboard, “p” = leave to port. So {m}: {side}.",
+    "qLeg": "The orange leg, from {from} to {to}: is it a beat, a reach or a run?",
+    "explainLeg": {
+      "beat": "It goes upwind, so it is a beat: you have to tack.",
+      "reach": "It goes across the wind, so it is a reach.",
+      "run": "It goes downwind, so it is a run."
+    },
+    "qFinish": "The board shows {code}. Where is the finish?",
+    "progress": "Question {i} of {n}",
+    "score": "Score: {s}",
+    "next": "Next question",
+    "again": "Play again",
+    "right": "Right!",
+    "wrong": "Not quite. The answer is: {a}.",
+    "result": "You got {s} out of {n}.",
+    "great": "Great! You are ready to read any course board.",
+    "good": "Good. Sail the courses you missed in the player.",
+    "keepGoing": "Keep practising. Open the courses, sail them, then play again."
+  }
+}

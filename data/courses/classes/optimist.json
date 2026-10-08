@@ -1,0 +1,13 @@
+{
+  "_about": "Optimist class layer for the courses page. 'typical' = courses often sailed at Optimist events (shown first, with a badge). 'notes' adds a class note to a course (text in i18n courses.json -> classes.optimist.notes.<id>; 'si': true = usually set by the sailing instructions). 'add' adds class-only courses, 'hide' hides course ids. Sources: 2025 Optimist Worlds NoR 12.1 (outer loop trapezoid, finish at the end of the second windward leg = IOD shape); WS Race Management Manual p. 26 (IOD); Antigua Optimist Open 2024 SIs (O2 / I2 trapezoids at a regional event). See .claude/memory/courses-sources.md.",
+  "id": "optimist",
+  "typical": ["IOD", "O", "I", "L", "TL"],
+  "notes": [
+    { "for": "IOD" },
+    { "for": "O", "si": true },
+    { "for": "I", "si": true },
+    { "for": "L", "si": true }
+  ],
+  "add": [],
+  "hide": []
+}

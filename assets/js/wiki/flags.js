@@ -6,6 +6,7 @@
 // A class overlay never changes an RRS meaning; it only adds notes and entries.
 import { pickLang, pickGloss, loadStrings, loadRaw, t, applyDom } from '../core/i18n.js';
 import { SECTIONS } from '../core/config.js';
+import { syncNavClass } from '../core/sitenav.js';
 import { signalSVG, flagGroup } from './flag-art.js';
 
 const DATA = new URL('../../../data/flags/', import.meta.url);
@@ -85,6 +86,7 @@ export async function startFlags() {
     const b = e.target.closest('button[data-class]'); if (!b || b.dataset.class === state.cls) return;
     state.cls = b.dataset.class;
     const u = new URL(location.href); u.searchParams.set('class', state.cls); history.replaceState(null, '', u);
+    syncNavClass(state.cls);
     applyClass(); renderClassSeg();
     if (state.selected && !byId[state.selected]) state.selected = null;
     renderFilters(); renderGrid(); renderCard(); renderIntroInline(); quiz?.reset();
@@ -179,7 +181,7 @@ export async function startFlags() {
       ])}
       ${extras}
       ${x.tip ? `<p class="note"><b>${esc(t(S, 'ui.tip'))}:</b> ${esc(x.tip)}</p>` : ''}
-      ${linkHtml(e.link)}
+      ${linkHtml(e.link, e)}
       ${n && ct.notes?.[id] ? `<div class="callout"><div class="eyebrow-label">${esc(t(S, 'ui.classNote', { c: ct.name }))}${n.si ? `<span class="badge-si">${esc(t(S, 'ui.si'))}</span>` : ''}</div><p>${esc(ct.notes[id])}</p></div>` : ''}
       <div class="row">
         <button class="btn" id="prev" aria-label="${esc(t(S, 'ui.prevAria'))}">${esc(t(S, 'ui.prev'))}</button>
@@ -190,11 +192,14 @@ export async function startFlags() {
     $('closeCard').onclick = () => select(null);
   }
   // An entry may point to another section of the site; it becomes a link once that section is ready.
-  function linkHtml(id) {
+  function linkHtml(id, e = {}) {
     const sec = id && SECTIONS.find(s => s.id === id);
     if (!sec) return '';
     const label = t(S, `ui.links.${id}`);
-    return sec.ready ? `<p><a href="../../${sec.path}">${esc(label)} →</a></p>` : `<p class="note">${esc(t(S, 'ui.soon', { name: label }))}</p>`;
+    const q = new URLSearchParams(sec.classParam ? { class: state.cls } : {});
+    if (new URLSearchParams(location.search).get('lang')) q.set('lang', new URLSearchParams(location.search).get('lang'));
+    const href = `../../${sec.path}${q.toString() ? `?${q}` : ''}${e.board ? '#board' : ''}`;
+    return sec.ready ? `<p><a href="${esc(href)}">${esc(label)} →</a></p>` : `<p class="note">${esc(t(S, 'ui.soon', { name: label }))}</p>`;
   }
   let lastTile = null;
   function setSheet(open) {
@@ -228,6 +233,8 @@ export async function startFlags() {
   PHONE.addEventListener?.('change', () => setSheet(!!state.selected));
 
   renderFilters(); renderGrid(); renderCard(); renderIntroInline();
+  // ?flag=<id> opens that card (used by links from the courses page)
+  if (byId[params.get('flag')]) select(params.get('flag'), false);
 
   /* ---------------- views ---------------- */
   let trainer = null, quiz = null;
