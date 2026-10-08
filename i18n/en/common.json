@@ -4,6 +4,14 @@
     "name": "Young Sails",
     "tagline": "Learn sailing, part by part"
   },
+  "nav": {
+    "aria": "Site sections",
+    "optimist": "Optimist",
+    "laser": "ILCA 6",
+    "flags": "Flags",
+    "partial": "partial",
+    "soon": "soon"
+  },
   "ui": {
     "parts": "Parts",
     "partsCount": "{n} parts",

@@ -6,6 +6,9 @@
 body.wiki { min-height: 100%; }
 .wiki-wrap { max-width: 1240px; margin: 0 auto; padding: 12px var(--gutter) 40px; }
 
+/* site navigation bar above the header (styles in base.css) */
+.wiki-wrap > .site-nav { margin: 0 0 10px; }
+
 /* header */
 .wiki-head { display: flex; align-items: flex-end; gap: 10px 18px; flex-wrap: wrap; padding: 10px 16px 12px; }
 .wiki-title { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1 1 auto; }

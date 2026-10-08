@@ -12,7 +12,7 @@ export function pickLang() {
   const q = new URLSearchParams(location.search).get('lang');
   if (q && codes.includes(q)) { save(q); return q; }
   const saved = load();
-  if (saved && LANGS.find(l => l.code === saved && l.ready)) return saved;
+  if (saved && LANGS.find(l => l.code === saved && (l.ready || l.partial))) return saved;
   for (const n of navigator.languages || [navigator.language]) {
     const c = (n || '').slice(0, 2).toLowerCase();
     if (LANGS.find(l => l.code === c && l.ready)) return c;

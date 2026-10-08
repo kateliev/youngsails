@@ -8,6 +8,8 @@ The second is the **ILCA 6 Explorer** (`/classes/laser/`): the single-handed Oly
 
 The third is the **Race Flags** library (`/wiki/flags/`): every race signal of the Racing Rules of Sailing 2025–2028, drawn as SVG, with what it means, what to do, the sound and the rule. It has a start-sequence trainer (flags, sounds and clock for P, I, Z, U and black flag starts, recalls and postponement) and a quiz. Class notes for Optimist and ILCA events come from data overlays (`?class=optimist` or `?class=ilca`).
 
+The site opens on the Optimist. Tabs at the top switch between **Optimist**, **ILCA 6** and **Flags**. Next to the tabs is a language menu: English, Bulgarian (part and flag names so far), and German, French and Russian marked "soon". The chosen language carries across all pages. The Flags tab opens the class notes of the boat you came from.
+
 ## Planned
 
 - **ILCA 7 and ILCA 4 rigs** for the ILCA explorer
@@ -23,10 +25,10 @@ Languages: English, Bulgarian, German, French and Russian. English is complete. 
 A static site with no build step, served by GitHub Pages from the `main` branch. 3D runs on [three.js](https://threejs.org), loaded from a CDN.
 
 ```
-index.html            lander (for now it forwards to the Optimist explorer)
+index.html            lander (always opens the Optimist explorer)
 404.html              "off course" page
-assets/css/           tokens.css (colours, type), base.css (shared components), explorer.css, wiki.css
-assets/js/core/       site config, translations, sailing helpers
+assets/css/           tokens.css (colours, type), base.css (shared components + site nav), explorer.css, wiki.css
+assets/js/core/       site config, translations, site navigation (tabs + language), sailing helpers
 assets/js/explorer/   reusable 3D explorer: stage, part registry, UI
 assets/js/wiki/       flags library page and SVG flag drawing
 models/optimist/      Optimist geometry (optimist.js) and part list (parts.js)

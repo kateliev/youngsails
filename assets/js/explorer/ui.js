@@ -2,8 +2,7 @@
 // All visible text comes from the i18n dictionaries passed in:
 //   S = common.json (UI words), M = <model>.json (part names and texts), G = glossary language names.
 import * as THREE from 'three';
-import { t, applyDom, setLang } from '../core/i18n.js';
-import { LANGS } from '../core/config.js';
+import { t, applyDom } from '../core/i18n.js';
 import { pointOfSail, windAngleFromBoom, tackFromBoom } from '../core/sailing.js';
 import { clamp, deg } from './geometry.js';
 
@@ -27,13 +26,7 @@ export function createUI({ stage, registry, model, state, S, M, G, parts, groups
   document.title = `${M.pageTitle || title} · ${t(S, 'site.name')}`;
   $('partCount').textContent = t(S, 'ui.partsCount', { n: parts.length });
 
-  // language menu (only languages marked ready, plus the current one)
-  const langs = LANGS.filter(l => l.ready || l.code === lang);
-  const sel = $('langSelect');
-  if (langs.length > 1) {
-    sel.innerHTML = langs.map(l => `<option value="${l.code}" ${l.code === lang ? 'selected' : ''}>${l.code.toUpperCase()}</option>`).join('');
-    sel.onchange = () => setLang(sel.value);
-  } else sel.hidden = true;
+  // (the language menu lives in the site navigation: assets/js/core/sitenav.js)
 
   /* ---------------- parts list ---------------- */
   for (const g of groups) {

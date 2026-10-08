@@ -13,10 +13,12 @@ Keep the memory current: when you finish meaningful work, update `history.md` an
 - Boat facts must come from the class rules (IODA for the Optimist, ILCA for the Laser). Cite the rule in a code comment when a number comes from it.
 - Audience: children and teenagers. Write short, plain sentences.
 - Commit or push only when the owner asks.
+- **Site navigation** is one shared module, `assets/js/core/sitenav.js`. It renders the section tabs and the language menu. Every page has `<nav id="siteNav" class="site-nav panel"></nav>` and calls `mountSiteNav({ current: '<section id>' })`. Pages must not build their own language menu. The root `/` always lands on the Optimist explorer.
 
 ## Adding a boat class
 
 1. `models/<class>/parts.js`: part list (id, group, exploded-view offset, flags).
 2. `models/<class>/<class>.js`: `create<Class>({ registry })` that returns the model API described at the top of `assets/js/explorer/explorer.js`.
 3. `i18n/en/<class>.json`: names and texts (copy the structure of `optimist.json`).
-4. `classes/<class>/index.html`: copy the Optimist page and change the three imports.
+4. `classes/<class>/index.html`: copy the Optimist page; change the three imports and the `current` id passed to `mountSiteNav`.
+5. Add a tab: set `tab: true` on the section in `SECTIONS` (`assets/js/core/config.js`), plus `flagsClass` if the flags page has an overlay for it. Then add `nav.<id>` to `i18n/en/common.json`.

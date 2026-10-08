@@ -15,15 +15,15 @@
 </head>
 <body class="wiki">
 <div class="wiki-wrap">
+  <nav id="siteNav" class="site-nav panel"></nav>
+
   <header class="wiki-head panel">
     <div class="wiki-title">
-      <a class="site-mark" href="../../">Young <b>Sails</b></a>
       <h1 id="pageTitle">Race flags</h1>
       <p id="tagline"></p>
     </div>
     <div class="wiki-tools">
       <span class="chip" id="edition"></span>
-      <select id="langSelect" data-i18n-attr="aria-label:ui.language"></select>
     </div>
   </header>
 
@@ -68,6 +68,8 @@
 
 <script type="module">
   import { startFlags } from '../../assets/js/wiki/flags.js';
+  import { mountSiteNav } from '../../assets/js/core/sitenav.js';
+  mountSiteNav({ current: 'flags' });
   startFlags().catch(err => {
     console.error(err);
     document.getElementById('main').innerHTML = '<div id="err" class="panel">The flag library could not load. Check your connection and reload the page.</div>';

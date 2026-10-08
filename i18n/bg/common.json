@@ -1,3 +1,14 @@
 {
-  "_status": "not started — copy keys from ../en/common.json and translate"
+  "_status": "partial — only the site navigation is translated; copy the other keys from ../en/common.json and translate",
+  "nav": {
+    "aria": "Раздели на сайта",
+    "optimist": "Оптимист",
+    "laser": "ILCA 6",
+    "flags": "Флагове",
+    "partial": "частично",
+    "soon": "скоро"
+  },
+  "ui": {
+    "language": "Език"
+  }
 }

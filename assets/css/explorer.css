@@ -7,19 +7,19 @@ body.explorer { overflow: hidden; }
 #scene { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; outline: none; }
 
 /* brand */
+/* site navigation bar top-left, the boat's brand panel under it */
+#siteNav { position: absolute; left: 16px; top: 12px; z-index: 4; }
 /* the brand sits on its own panel so it reads over the bright sky in both themes */
-.brand { position: absolute; left: 16px; top: 12px; pointer-events: none; display: flex; flex-direction: column; gap: 2px; padding: 8px 14px 9px; }
-.brand .site-mark { pointer-events: auto; }
+.brand { position: absolute; left: 16px; top: 72px; pointer-events: none; display: flex; flex-direction: column; gap: 2px; padding: 9px 14px 10px; }
 .brand-row { display: flex; align-items: flex-end; gap: 14px; }
 .brand h1 { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-h1); line-height: .86; letter-spacing: .02em; text-transform: uppercase; margin: 0; color: var(--ink); }
 .brand h1 span { color: var(--accent); }
 .brand p { margin: 0 0 2px; font-family: var(--font-display); font-weight: 500; font-size: 15px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); }
-.brand .tg, .brand select { pointer-events: auto; }
+.brand .tg { pointer-events: auto; }
 #partsToggle { display: none; }
-#langSelect { font: inherit; font-weight: 700; font-size: 13px; border: 1px solid var(--line); background: var(--panel-solid); color: var(--ink); border-radius: var(--radius-sm); padding: 5px 6px; }
 
 /* parts list */
-.parts { position: absolute; left: 16px; top: 100px; bottom: 84px; width: 248px; display: flex; flex-direction: column; overflow: hidden; }
+.parts { position: absolute; left: 16px; top: 140px; bottom: 84px; width: 248px; display: flex; flex-direction: column; overflow: hidden; }
 .parts header { padding: 12px 14px 8px; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); }
 .parts header h2 { font-family: var(--font-display); font-size: 18px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; margin: 0; }
 .parts header small { color: var(--ink-2); font-variant-numeric: tabular-nums; }
@@ -64,10 +64,12 @@ body.explorer { overflow: hidden; }
 #err { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); max-width: 420px; padding: 18px; }
 
 @media (max-width: 820px) {
+  #siteNav { left: 12px; right: 12px; top: 10px; }
+  .brand { left: 12px; top: 66px; padding: 7px 10px 8px; }
   .brand h1 { font-size: 30px; }
   .brand p { display: none; }
   #partsToggle { display: inline-block; }
-  .parts { display: none; top: 88px; bottom: auto; max-height: calc(100% - 200px); width: min(300px, calc(100% - 32px)); z-index: 3; }
+  .parts { display: none; top: 124px; bottom: auto; max-height: calc(100% - 200px); width: min(300px, calc(100% - 32px)); z-index: 3; }
   .parts.open { display: flex; }
   .card { left: 16px; right: 16px; top: auto; bottom: 86px; width: auto; max-height: 38%; padding: 12px 14px; }
   .card h2 { font-size: 28px; }

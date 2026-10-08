@@ -26,13 +26,13 @@
   <div id="tip"></div>
   <div id="loading" data-i18n="ui.loading">Rigging the boat…</div>
 
+  <nav id="siteNav" class="site-nav panel"></nav>
+
   <div class="brand panel">
-    <span class="site-mark">Young <b>Sails</b></span>
     <div class="brand-row">
       <h1 id="modelTitle">ILCA 6</h1>
       <p id="modelTagline"></p>
       <button id="partsToggle" class="tg" aria-expanded="false" aria-controls="parts" data-i18n="ui.parts">Parts</button>
-      <select id="langSelect" data-i18n-attr="aria-label:ui.language"></select>
     </div>
   </div>
 
@@ -63,9 +63,11 @@
 
 <script type="module">
   import { startExplorer } from '../../assets/js/explorer/explorer.js';
+  import { mountSiteNav } from '../../assets/js/core/sitenav.js';
   import { createLaser } from '../../models/laser/laser.js';
   import { PARTS, GROUPS, PAINTS } from '../../models/laser/parts.js';
 
+  mountSiteNav({ current: 'laser' });
   startExplorer({ createModel: createLaser, parts: PARTS, groups: GROUPS, paints: PAINTS, ns: 'laser' })
     .catch(err => {
       console.error(err);

@@ -4,8 +4,8 @@
 //        /data/flags/classes/<class>.json   class layer: notes, extra entries, hidden ids
 // Text:  /i18n/<lang>/flags.json            flags.<id>, classes.<class>.{notes,flags}, ui, trainer, quiz
 // A class overlay never changes an RRS meaning; it only adds notes and entries.
-import { pickLang, pickGloss, loadStrings, loadRaw, t, applyDom, setLang } from '../core/i18n.js';
-import { LANGS, SECTIONS } from '../core/config.js';
+import { pickLang, pickGloss, loadStrings, loadRaw, t, applyDom } from '../core/i18n.js';
+import { SECTIONS } from '../core/config.js';
 import { signalSVG, flagGroup } from './flag-art.js';
 
 const DATA = new URL('../../../data/flags/', import.meta.url);
@@ -73,11 +73,7 @@ export async function startFlags() {
   $('edition').textContent = edition;
   $('footEdition').textContent = `${edition} · ${t(S, 'intro.rule')}`;
 
-  const langs = LANGS.filter(l => l.ready || l.code === lang), sel = $('langSelect');
-  if (langs.length > 1) {
-    sel.innerHTML = langs.map(l => `<option value="${l.code}" ${l.code === lang ? 'selected' : ''}>${l.code.toUpperCase()}</option>`).join('');
-    sel.onchange = () => setLang(sel.value);
-  } else sel.hidden = true;
+  // (the language menu lives in the site navigation: assets/js/core/sitenav.js)
 
   // class toggle (kept in the URL as ?class=…)
   const classSeg = $('classSeg');

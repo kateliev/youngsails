@@ -6,12 +6,13 @@ export const SITE = {
   repo: 'https://github.com/kateliev/youngsails',
 };
 
-// Languages the site is planned in. Set `ready: true` when a language has
-// complete strings; only ready languages appear in the language menu.
-// A language that is not ready can still be forced with ?lang=xx for testing.
+// Languages the site is planned in.
+//   ready:   complete strings; picked automatically from the browser language.
+//   partial: some strings (missing ones fall back to English); selectable in the menu.
+//   neither: listed in the menu as "soon" and disabled. ?lang=xx still forces it for testing.
 export const LANGS = [
   { code: 'en', label: 'English', ready: true },
-  { code: 'bg', label: 'Български', ready: false },
+  { code: 'bg', label: 'Български', ready: false, partial: true },
   { code: 'de', label: 'Deutsch', ready: false },
   { code: 'fr', label: 'Français', ready: false },
   { code: 'ru', label: 'Русский', ready: false },
@@ -23,10 +24,12 @@ export const DEFAULT_LANG = 'en';
 export const glossFor = lang => (lang === 'en' ? 'bg' : 'en');
 
 // Sections of the site. `ready: false` sections are planned, not built.
+// `tab: true` puts a ready section in the site navigation (order = tab order);
+// `flagsClass` is the class the flags page opens with when you come from that section.
 export const SECTIONS = [
-  { id: 'optimist', path: 'classes/optimist/', ready: true },
-  { id: 'laser', path: 'classes/laser/', ready: true },
-  { id: 'flags', path: 'wiki/flags/', ready: true },
+  { id: 'optimist', path: 'classes/optimist/', ready: true, tab: true, flagsClass: 'optimist' },
+  { id: 'laser', path: 'classes/laser/', ready: true, tab: true, flagsClass: 'ilca' },
+  { id: 'flags', path: 'wiki/flags/', ready: true, tab: true },
   { id: 'rules', path: 'wiki/rules/', ready: false },
   { id: 'courses', path: 'wiki/courses/', ready: false },
   { id: 'federations', path: 'wiki/federations/', ready: false },
