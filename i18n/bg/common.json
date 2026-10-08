@@ -1,5 +1,5 @@
 {
-  "_status": "complete — interface words; sailing terms to be checked by a Bulgarian coach",
+  "_status": "complete — interface words; sailing terms to be checked by a Bulgarian coach (see .claude/memory/terms-bg.md)",
   "site": {
     "name": "Young Sails",
     "tagline": "Учим ветроходство, част по част"
@@ -14,7 +14,7 @@
   },
   "ui": {
     "parts": "Части",
-    "partsCount": "{n} части",
+    "partsCount": { "one": "{n} част", "other": "{n} части" },
     "partsAria": "Части на лодката",
     "info": "Инфо",
     "infoAria": "Описание на избраната част",

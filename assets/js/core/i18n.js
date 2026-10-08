@@ -7,8 +7,15 @@ import { LANGS, DEFAULT_LANG, glossFor } from './config.js';
 const ROOT = new URL('../../../i18n/', import.meta.url);
 const STORE_KEY = 'ys.lang';
 const codes = LANGS.map(l => l.code);
+// Plural rules of the page language; set by pickLang(), used by t().
+let plural = new Intl.PluralRules(DEFAULT_LANG);
 
 export function pickLang() {
+  const lang = choose();
+  plural = new Intl.PluralRules(lang);
+  return lang;
+}
+function choose() {
   const q = new URLSearchParams(location.search).get('lang');
   if (q && codes.includes(q)) { save(q); return q; }
   const saved = load();
@@ -52,8 +59,11 @@ export async function loadStrings(ns, lang) {
 export async function loadRaw(ns, lang) { return lang ? fetchJSON(lang, ns) : {}; }
 
 // t(dict, 'ui.parts', {n: 4}) → string with {n} filled in; returns the key if missing.
+// A value may be a plural object {one, few, many, other}: the form is picked
+// from vars.n with Intl.PluralRules of the page language ('other' as fallback).
 export function t(dict, path, vars) {
   let v = path.split('.').reduce((o, k) => (o == null ? o : o[k]), dict);
+  if (v && typeof v === 'object' && typeof v.other === 'string') v = v[plural.select(Number(vars?.n))] ?? v.other;
   if (typeof v !== 'string') return v ?? path;
   if (vars) v = v.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? '');
   return v;
