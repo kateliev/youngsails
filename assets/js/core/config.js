@@ -26,7 +26,7 @@ export const glossFor = lang => (lang === 'en' ? 'bg' : 'en');
 export const SECTIONS = [
   { id: 'optimist', path: 'classes/optimist/', ready: true },
   { id: 'laser', path: 'classes/laser/', ready: true },
-  { id: 'flags', path: 'wiki/flags/', ready: false },
+  { id: 'flags', path: 'wiki/flags/', ready: true },
   { id: 'rules', path: 'wiki/rules/', ready: false },
   { id: 'courses', path: 'wiki/courses/', ready: false },
   { id: 'federations', path: 'wiki/federations/', ready: false },

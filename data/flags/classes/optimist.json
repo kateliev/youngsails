@@ -1,0 +1,20 @@
+{
+  "_about": "Optimist class layer for the flags library. It never changes an RRS meaning. 'notes' adds a class note to a signal (texts in i18n flags.json -> classes.optimist.notes.<id>); 'si': true labels a note or an entry 'usually set by the sailing instructions'. 'add' adds entries (texts in classes.optimist.flags.<id>). 'hide' lists signal ids not shown for this class. Sources: IODA class rules (2020 edition + changes effective 2026-01-01, rule 4.2(a)); 2025 Optimist Asian & Oceanian Championship NoR; 2026 Australian Optimist Championship SIs; LRYC IODAI Connaughts 2023 regatta-fleet SIs. See .claude/memory/flags-sources.md.",
+  "id": "optimist",
+  "notes": [
+    { "for": "class", "si": true },
+    { "for": "Y" },
+    { "for": "yellow", "si": true },
+    { "for": "O" },
+    { "for": "R" },
+    { "for": "orange", "si": true },
+    { "for": "AP", "si": true },
+    { "for": "FS", "si": true }
+  ],
+  "add": [
+    { "id": "opt-groups", "stack": ["set-groups"], "groups": ["start"], "rule": "SI", "si": true, "sound": { "up": "1", "down": "1" } },
+    { "id": "opt-D", "stack": ["ics-D"], "groups": ["ashore"], "rule": "SI", "si": true, "sound": { "up": "1" } },
+    { "id": "opt-support", "stack": ["text-BUL"], "groups": ["safety"], "rule": "SI", "si": true }
+  ],
+  "hide": []
+}

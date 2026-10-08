@@ -1,0 +1,42 @@
+{
+  "_about": "Race signals from the Racing Rules of Sailing (RRS). Language-neutral: texts are in /i18n/<lang>/flags.json under the same ids. Every meaning and sound was checked against the RRS 2025-2028 text (with World Sailing changes and corrections to 2026-04-20): Race Signals pages, Part 3 rules 25-37, rule 40 and Appendix P. Sound codes: '1' '2' '3' = that many sounds, 'long' = one long sound, 'rep' = repetitive sounds, 'none' = no sound, 'whistle' = a sound signal from a judge. 'up' is when the signal is displayed, 'down' when it is removed; a missing key means the rules give no sound for that moment.",
+  "edition": "RRS 2025-2028",
+  "editionYears": "2025-2028",
+  "classes": ["optimist"],
+  "groups": ["start", "recall", "postpone", "abandon", "course", "finish", "penalty", "safety", "ashore"],
+  "signals": [
+    { "id": "class", "stack": ["class"], "groups": ["start"], "rule": "RRS 26", "sound": { "up": "1", "down": "1" } },
+    { "id": "P", "stack": ["ics-P"], "groups": ["start"], "rule": "RRS 26", "sound": { "up": "1", "down": "long" } },
+    { "id": "I", "stack": ["ics-I"], "groups": ["start", "penalty"], "rule": "RRS 30.1", "sound": { "up": "1", "down": "long" } },
+    { "id": "Z", "stack": ["ics-Z"], "groups": ["start", "penalty"], "rule": "RRS 30.2", "sound": { "up": "1", "down": "long" } },
+    { "id": "ZI", "stack": ["ics-Z", "ics-I"], "side": true, "groups": ["start", "penalty"], "rule": "RRS 26, 30.1, 30.2", "sound": { "up": "1", "down": "long" } },
+    { "id": "U", "stack": ["ics-U"], "groups": ["start", "penalty"], "rule": "RRS 30.3", "sound": { "up": "1", "down": "long" } },
+    { "id": "black", "stack": ["plain-black"], "groups": ["start", "penalty"], "rule": "RRS 30.4", "sound": { "up": "1", "down": "long" } },
+    { "id": "orange", "stack": ["plain-orange"], "groups": ["start"], "rule": "RRS Race Signals", "sound": { "up": "none" } },
+
+    { "id": "X", "stack": ["ics-X"], "groups": ["recall"], "rule": "RRS 29.1", "sound": { "up": "1" } },
+    { "id": "FS", "stack": ["sub-1"], "groups": ["recall"], "rule": "RRS 29.2", "sound": { "up": "2", "down": "1" } },
+
+    { "id": "AP", "stack": ["ics-AP"], "groups": ["postpone"], "rule": "RRS Race Signals, 27.3", "sound": { "up": "2", "down": "1" } },
+    { "id": "AP-H", "stack": ["ics-AP", "ics-H"], "groups": ["postpone", "ashore"], "rule": "RRS Race Signals, 27.3", "sound": { "up": "2" } },
+    { "id": "AP-A", "stack": ["ics-AP", "ics-A"], "groups": ["postpone"], "rule": "RRS Race Signals, 27.3", "sound": { "up": "2" } },
+    { "id": "AP-num", "stack": ["ics-AP", "num-1"], "variants": ["num-1", "num-2", "num-3", "num-4", "num-5", "num-6", "num-7", "num-8", "num-9"], "groups": ["postpone"], "rule": "RRS Race Signals", "sound": { "up": "2", "down": "1" } },
+
+    { "id": "N", "stack": ["ics-N"], "groups": ["abandon"], "rule": "RRS Race Signals, 27.3, 32.3", "sound": { "up": "3", "down": "1" } },
+    { "id": "N-H", "stack": ["ics-N", "ics-H"], "groups": ["abandon", "ashore"], "rule": "RRS Race Signals, 27.3, 32.3", "sound": { "up": "3" } },
+    { "id": "N-A", "stack": ["ics-N", "ics-A"], "groups": ["abandon"], "rule": "RRS Race Signals, 27.3, 32.3", "sound": { "up": "3" } },
+
+    { "id": "C", "stack": ["ics-C"], "extras": ["shape-starboard", "shape-port", "board-minus", "board-plus"], "groups": ["course"], "rule": "RRS 33", "sound": { "up": "rep" } },
+    { "id": "M", "stack": ["ics-M"], "groups": ["course"], "rule": "RRS 34", "sound": { "up": "rep" } },
+    { "id": "S", "stack": ["ics-S"], "groups": ["course", "finish"], "rule": "RRS 32.2", "sound": { "up": "2" } },
+    { "id": "blue", "stack": ["plain-blue"], "groups": ["finish"], "rule": "RRS Race Signals", "sound": { "up": "none" } },
+
+    { "id": "yellow", "stack": ["plain-yellow"], "groups": ["penalty"], "rule": "RRS 42, Appendix P (P1.2, P2)", "sound": { "up": "whistle" } },
+    { "id": "O", "stack": ["ics-O"], "groups": ["penalty"], "rule": "RRS Appendix P5", "sound": { "up": "rep" } },
+    { "id": "R", "stack": ["ics-R"], "groups": ["penalty"], "rule": "RRS Appendix P5", "sound": { "up": "rep" } },
+
+    { "id": "V", "stack": ["ics-V"], "groups": ["safety"], "rule": "RRS 37", "sound": { "up": "1" } },
+    { "id": "Y", "stack": ["ics-Y"], "groups": ["safety"], "rule": "RRS 27.1, 40", "sound": { "up": "1" } },
+    { "id": "L", "stack": ["ics-L"], "groups": ["ashore"], "rule": "RRS Race Signals", "sound": { "up": "1" } }
+  ]
+}

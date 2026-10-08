@@ -6,10 +6,12 @@ The first module is the **Optimist Explorer**: a 3D model of the International O
 
 The second is the **ILCA 6 Explorer** (`/classes/laser/`): the single-handed Olympic dinghy with the ILCA 6 rig, built to the ILCA class rules, with 50 parts. Its mast bends as you trim the boom.
 
+The third is the **Race Flags** library (`/wiki/flags/`): every race signal of the Racing Rules of Sailing 2025–2028, drawn as SVG, with what it means, what to do, the sound and the rule. It has a start-sequence trainer (flags, sounds and clock for P, I, Z, U and black flag starts, recalls and postponement) and a quiz. Class notes for Optimist events come from a data overlay.
+
 ## Planned
 
 - **ILCA 7 and ILCA 4 rigs** for the ILCA explorer
-- **Racing flags library**
+- **ILCA notes for the flags library**
 - **Racing rules wiki**
 - **Race courses wiki**
 - **Federations and class associations**
@@ -24,14 +26,17 @@ A static site with no build step, served by GitHub Pages from the `main` branch.
 ```
 index.html            lander (for now it forwards to the Optimist explorer)
 404.html              "off course" page
-assets/css/           tokens.css (colours, type), base.css (shared components), explorer.css
+assets/css/           tokens.css (colours, type), base.css (shared components), explorer.css, wiki.css
 assets/js/core/       site config, translations, sailing helpers
 assets/js/explorer/   reusable 3D explorer: stage, part registry, UI
+assets/js/wiki/       flags library page and SVG flag drawing
 models/optimist/      Optimist geometry (optimist.js) and part list (parts.js)
 classes/optimist/     the Optimist explorer page
 i18n/<lang>/          strings per language (en, bg, de, fr, ru)
-wiki/, game/          planned sections (placeholders)
-data/, tools/         structured data and helper scripts (placeholders)
+wiki/flags/           the race flags library page
+wiki/, game/          other planned sections (placeholders)
+data/flags/           race signal data and class overlays
+tools/                helper scripts (placeholder)
 documentation/        project documentation (placeholder)
 ```
 

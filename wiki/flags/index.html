@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Race Flags · Young Sails</title>
+<meta name="description" content="The race signals of the Racing Rules of Sailing explained for young sailors: what each flag means, what to do and the sounds that go with it, with a start-sequence trainer and a quiz.">
+<link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/css/tokens.css">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/wiki.css">
+</head>
+<body class="wiki">
+<div class="wiki-wrap">
+  <header class="wiki-head panel">
+    <div class="wiki-title">
+      <a class="site-mark" href="../../">Young <b>Sails</b></a>
+      <h1 id="pageTitle">Race flags</h1>
+      <p id="tagline"></p>
+    </div>
+    <div class="wiki-tools">
+      <span class="chip" id="edition"></span>
+      <select id="langSelect" data-i18n-attr="aria-label:ui.language"></select>
+    </div>
+  </header>
+
+  <nav class="wiki-nav">
+    <div class="seg" role="group" id="viewSeg" data-i18n-attr="aria-label:ui.views">
+      <button data-view="library" aria-pressed="true" data-i18n="ui.library">Flag library</button>
+      <button data-view="trainer" aria-pressed="false" data-i18n="ui.trainer">Start trainer</button>
+      <button data-view="quiz" aria-pressed="false" data-i18n="ui.quiz">Quiz</button>
+    </div>
+    <div class="opt">
+      <span class="eyebrow-label" id="classLabel" data-i18n="ui.classLabel">Boat class</span>
+      <div class="seg" role="group" id="classSeg" aria-labelledby="classLabel"></div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section id="view-library" class="wiki-cols">
+      <div>
+        <details class="intro-inline panel" id="introInline"><summary></summary><div></div></details>
+        <div class="filters panel">
+          <label class="search"><span class="eyebrow-label" data-i18n="ui.search">Search</span>
+            <input id="search" type="search" autocomplete="off" data-i18n-attr="placeholder:ui.searchPlaceholder">
+          </label>
+          <div class="filter-row" role="group" id="filterRow" data-i18n-attr="aria-label:ui.filters"></div>
+        </div>
+        <p class="result-count" id="resultCount" aria-live="polite"></p>
+        <div class="tile-grid" id="grid"></div>
+      </div>
+      <aside class="wiki-aside">
+        <section class="wiki-card panel sheet" id="card" aria-live="polite"></section>
+      </aside>
+    </section>
+
+    <section id="view-trainer" hidden></section>
+    <section id="view-quiz" hidden></section>
+  </main>
+
+  <footer class="wiki-foot">
+    <p id="footEdition"></p>
+  </footer>
+</div>
+
+<script type="module">
+  import { startFlags } from '../../assets/js/wiki/flags.js';
+  startFlags().catch(err => {
+    console.error(err);
+    document.getElementById('main').innerHTML = '<div id="err" class="panel">The flag library could not load. Check your connection and reload the page.</div>';
+  });
+</script>
+</body>
+</html>

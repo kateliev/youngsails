@@ -1,0 +1,380 @@
+{
+  "_status": "complete",
+  "_note": "Meanings follow the Racing Rules of Sailing 2025-2028 (Race Signals, Part 3, rule 40, Appendix P). Keys under flags.* match the ids in /data/flags/flags.json. Class texts live under classes.<class>.",
+  "pageTitle": "Race Flags",
+  "title": "Race flags",
+  "titleAccent": 5,
+  "tagline": "What the committee boat is telling you",
+  "edition": "Racing Rules of Sailing {e}",
+
+  "ui": {
+    "views": "Sections",
+    "library": "Flag library",
+    "trainer": "Start trainer",
+    "quiz": "Quiz",
+    "classLabel": "Boat class",
+    "search": "Search",
+    "searchPlaceholder": "Search flags: “AP”, “recall”…",
+    "filters": "Show flags for",
+    "all": "All",
+    "count": "{n} signals",
+    "noResults": "No flag matches. Try another word or pick “All”.",
+    "means": "Means",
+    "youDo": "You do",
+    "sound": "Sound",
+    "rule": "Rule",
+    "tip": "Tip",
+    "classNote": "{c} note",
+    "si": "Usually set by the sailing instructions",
+    "siShort": "Event rule",
+    "variants": "Pennant 1 to 9 = hours",
+    "extras": "Shown with flag C",
+    "prev": "← Prev",
+    "next": "Next →",
+    "prevAria": "Previous flag",
+    "nextAria": "Next flag",
+    "close": "Close",
+    "closeAria": "Close the flag card",
+    "language": "Language",
+    "over": "over",
+    "with": "with",
+    "openCard": "Show details for {name}",
+    "loadError": "The flag library could not load. Check your connection and reload the page."
+  },
+
+  "groups": {
+    "start": "Start",
+    "recall": "Recalls",
+    "postpone": "Postpone",
+    "abandon": "Abandon",
+    "course": "Course changes",
+    "finish": "Finish",
+    "penalty": "Penalties",
+    "safety": "Safety",
+    "ashore": "Ashore"
+  },
+
+  "sounds": {
+    "1": "one sound",
+    "2": "two sounds",
+    "3": "three sounds",
+    "long": "one long sound",
+    "rep": "repeated sounds",
+    "none": "no sound",
+    "whistle": "a whistle or other sound",
+    "up": "Up: {s}",
+    "down": "Down: {s}"
+  },
+
+  "intro": {
+    "chip": "How signals work",
+    "heading": "Flags talk, horns help",
+    "text": "The race committee talks to you with flags. A horn or a whistle makes you look up. The rulebook says that times are taken from the flags, and a missing sound is ignored.",
+    "rule": "RRS 26 and Race Signals",
+    "legend": [
+      ["↑", "the flag goes up"],
+      ["↓", "the flag comes down"],
+      ["●", "one sound"],
+      ["● ●", "two sounds"],
+      ["● ● ●", "three sounds"],
+      ["▬▬", "one long sound"],
+      ["- - - - -", "repeated sounds"]
+    ],
+    "over": "A flag shown over your class flag (or your group or fleet flag) is only for that class or group.",
+    "tip": "Watch the flag, not the horn. The horn can be late, quiet or carried away by the wind.",
+    "hint": "Pick a flag to learn what it means and what to do."
+  },
+
+  "flags": {
+    "class": {
+      "name": "Class flag",
+      "means": "Warning signal: your start is in 5 minutes.",
+      "youDo": "Start your watch. Sail near the start line, check the wind and the course. When your class flag comes down, you start.",
+      "sound": "Up: one sound (warning, 5 minutes). Down: one sound (start, 0).",
+      "tip": "The notice of race or the sailing instructions can set a different time than 5 minutes. They also tell you which flag is your class flag."
+    },
+    "P": {
+      "name": "Flag P",
+      "means": "Preparatory signal: 4 minutes to your start. No special start rule.",
+      "youDo": "Check your watch. When P comes down with one long sound, there is 1 minute to go. If you are over the line at the start, go back and start again.",
+      "tip": "P is called the “Blue Peter”."
+    },
+    "I": {
+      "name": "Flag I",
+      "means": "Preparatory signal with rule 30.1: if you are over the line in the last minute, you must go back round one end of the line.",
+      "youDo": "Stay behind the line in the last minute. If you are over, sail back across one of the extensions of the line, outside the ends, then start.",
+      "tip": "You cannot just dip back through the line. Go round an end."
+    },
+    "Z": {
+      "name": "Flag Z",
+      "means": "Preparatory signal with rule 30.2: if you are in the triangle in the last minute, you get a 20% scoring penalty.",
+      "youDo": "In the last minute, stay out of the triangle made by the two ends of the line and the first mark. If you are caught, the penalty stays even if the start is done again.",
+      "tip": "There is no penalty if the race is postponed or abandoned before the start. Each time you are caught at a new attempt to start, you get another 20%."
+    },
+    "ZI": {
+      "name": "Z with I",
+      "means": "Flags Z and I together as the preparatory signal: rules 30.1 and 30.2 both apply.",
+      "youDo": "Stay out of the triangle in the last minute. If you are over the line, go back round an end of the line."
+    },
+    "U": {
+      "name": "Flag U",
+      "means": "Preparatory signal with rule 30.3: if you are in the triangle in the last minute, you are disqualified.",
+      "youDo": "Stay out of the triangle in the last minute. If the start is done again (a general recall), you may sail the new start.",
+      "tip": "With U or the black flag there is no individual recall. Being in the triangle in the last minute is enough to be disqualified."
+    },
+    "black": {
+      "name": "Black flag",
+      "means": "Preparatory signal with rule 30.4: if you are in the triangle in the last minute, you are disqualified, even if there is a general recall.",
+      "youDo": "Stay well behind the line in the last minute. If you are caught, your sail number is shown before the next warning signal and you may not sail the new start.",
+      "tip": "Not if the race is postponed or abandoned before the start. If you sail the new start anyway, that score cannot be your discard."
+    },
+    "orange": {
+      "name": "Orange flag",
+      "means": "The staff with this flag is one end of the starting line.",
+      "youDo": "Find both ends of the line: the orange flag on the committee boat and the mark (or other boat) at the other end. Line them up to know where the line is.",
+      "tip": "Practise “transits”: look past one end to something on the shore, so you can find the line from far away."
+    },
+    "X": {
+      "name": "Flag X",
+      "means": "Individual recall: at the start, one or more boats were over the line (or did not keep rule 30.1).",
+      "youDo": "If you were over, go back so that your whole hull is behind the line, then start. With flag I, go round an end. Nobody has to call your number.",
+      "tip": "X stays up until all those boats have come back, but at most 4 minutes after the start (or until 1 minute before the next start)."
+    },
+    "FS": {
+      "name": "First Substitute",
+      "means": "General recall: the start is cancelled and will be done again.",
+      "youDo": "Go back to the pre-start side of the line and wait. When the flag comes down, the new warning signal comes 1 minute later.",
+      "tip": "The committee often uses a stricter preparatory flag (U or black) for the new start. Look again."
+    },
+    "AP": {
+      "name": "Flag AP",
+      "means": "Postponed: races that have not started will start later.",
+      "youDo": "Stay near the start area and keep watching. When AP comes down, the warning signal comes 1 minute later.",
+      "tip": "Use the wait: drink, eat a snack, keep warm, check the wind."
+    },
+    "AP-H": {
+      "name": "AP over H",
+      "means": "Races not started are postponed. Further signals ashore.",
+      "youDo": "Sail back to the harbour. Watch the official flagpole ashore for the next signal."
+    },
+    "AP-A": {
+      "name": "AP over A",
+      "means": "Races not started are postponed. No more racing today.",
+      "youDo": "Sail back to the harbour. Racing is over for today."
+    },
+    "AP-num": {
+      "name": "AP over a numeral pennant",
+      "means": "Races not started are postponed by 1 to 9 hours from the scheduled starting time.",
+      "youDo": "The number on the pennant is the number of hours. AP over pennant 2 means: two hours later than planned."
+    },
+    "N": {
+      "name": "Flag N",
+      "means": "All races in progress are abandoned. Return to the starting area.",
+      "youDo": "Stop racing and sail back to the start area. When N comes down, the warning signal comes 1 minute later.",
+      "tip": "Abandoned means the race does not count. It will usually be sailed again."
+    },
+    "N-H": {
+      "name": "N over H",
+      "means": "All races in progress are abandoned. Further signals ashore.",
+      "youDo": "Stop racing and sail back to the harbour. Watch the flagpole ashore."
+    },
+    "N-A": {
+      "name": "N over A",
+      "means": "All races in progress are abandoned. No more racing today.",
+      "youDo": "Stop racing and sail home."
+    },
+    "C": {
+      "name": "Flag C",
+      "means": "The position of the next mark has changed.",
+      "youDo": "Look for the signal with it: a green triangle means the mark moved to starboard (right), a red rectangle to port (left), “−” means a shorter leg, “+” a longer one. There may also be a compass bearing.",
+      "sound": "Repeated sounds, at a rounding mark, before you start the new leg.",
+      "tip": "The new mark may not be in place yet. Sail towards where it should be."
+    },
+    "M": {
+      "name": "Flag M",
+      "means": "The object with this flag (often a boat) replaces a missing mark.",
+      "youDo": "Round or pass it as if it were the mark."
+    },
+    "S": {
+      "name": "Flag S",
+      "means": "The course has been shortened.",
+      "youDo": "Finish now: at a rounding mark, the finishing line is between the mark and the staff with flag S.",
+      "tip": "S must be shown before the first boat finishes. Two sounds tell you to look."
+    },
+    "blue": {
+      "name": "Blue flag",
+      "means": "The staff with this flag is one end of the finishing line.",
+      "youDo": "Finish by crossing the line between the blue flag and the mark at the other end, from the course side.",
+      "tip": "After you finish, keep clear of boats still racing."
+    },
+    "yellow": {
+      "name": "Yellow flag (judge)",
+      "means": "Appendix P: a judge saw you break rule 42 (pumping, rocking, ooching, sculling…). The judge makes a sound, points a yellow flag at you and calls your number.",
+      "youDo": "First time: get clear of other boats and do a Two-Turns Penalty at once (two turns, each with one tack and one gybe). Second time: retire from the race. Third time: retire; that score cannot be your discard.",
+      "tip": "Appendix P applies only when the notice of race or sailing instructions say so. Rule 42: use only the wind and water to make the boat go."
+    },
+    "O": {
+      "name": "Flag O",
+      "means": "Pumping, rocking and ooching are allowed, as the class rules say, because the wind is above their limit.",
+      "youDo": "Only for classes whose class rules allow it. If your class has no such rule, nothing changes for you.",
+      "sound": "Before the start: shown before or with the warning signal. After the start: repeated sounds, at a mark."
+    },
+    "R": {
+      "name": "Flag R",
+      "means": "The wind has dropped: rule 42 (as the class rules change it) applies again.",
+      "youDo": "Stop pumping, rocking and ooching after you pass the mark.",
+      "sound": "Before the start: shown before or with a new warning signal. After the start: repeated sounds, at a mark."
+    },
+    "V": {
+      "name": "Flag V",
+      "means": "Safety: listen to the race committee radio channel for search and rescue instructions.",
+      "youDo": "If you have a radio, listen. If not, look out for safety boats, do what they tell you and help if you can."
+    },
+    "Y": {
+      "name": "Flag Y",
+      "means": "Wear a personal flotation device (life jacket).",
+      "youDo": "Put on your life jacket and do up every strap. Shown afloat: for the race. Shown ashore: all the time you are on the water that day.",
+      "tip": "A wetsuit or a drysuit is not a life jacket."
+    },
+    "L": {
+      "name": "Flag L",
+      "means": "Ashore: a new notice to competitors is posted. Afloat: come within hail, or follow this boat.",
+      "youDo": "Ashore: go and read the official notice board. Afloat: sail close enough to hear the message, or follow the boat with L."
+    }
+  },
+
+  "extras": {
+    "shape-starboard": "to starboard",
+    "shape-port": "to port",
+    "board-minus": "shorter leg",
+    "board-plus": "longer leg"
+  },
+
+  "classes": {
+    "optimist": {
+      "name": "Optimist",
+      "intro": "Optimist races use the same race signals as every other class. Each event also has a notice of race and sailing instructions. Notes marked “Event rule” change from event to event: always read your sailing instructions.",
+      "notes": {
+        "class": "At big Optimist events the fleet is split into groups (also called fleets or divisions), each with its own coloured flag. Then your group's flag is your class flag. Check your group every morning.",
+        "Y": "Optimist class rule 4.2(a) already says you must wear a life jacket, with a whistle tied to it. So flag Y changes nothing for you: your life jacket is on. Many events go further: “at all times while afloat”.",
+        "yellow": "Optimist championships usually use Appendix P, with judges in boats on the course. The sailing instructions may change the penalties, for example what happens if you are penalised after you finish. Read them.",
+        "O": "Not used in Optimist racing: the Optimist class rules do not allow pumping, rocking or ooching in any wind. You may see this flag in other classes.",
+        "R": "Not used in Optimist racing (no flag O, so no flag R). You may see it in other classes.",
+        "orange": "At many events the orange flag goes up with one sound at least 5 minutes before the first warning signal. It means: racing will start soon.",
+        "AP": "Ashore, many events change “1 minute” to a longer time, for example “not less than 45 minutes”, so you have time to launch and sail out.",
+        "FS": "With many groups, the other groups wait in a waiting area until your start is done. A general recall makes everyone wait longer, so start carefully."
+      },
+      "flags": {
+        "opt-groups": {
+          "name": "Group flags",
+          "means": "At a big event each group starts with its own flag (for example yellow, blue, red, green). In a final series the flags are often for gold, silver and bronze fleets.",
+          "youDo": "Learn your group's flag and colour. Some events give you a ribbon in that colour to tie to the top of your sprit.",
+          "sound": "Like a class flag. Up: one sound (warning). Down: one sound (start).",
+          "tip": "The flags drawn here are examples. The real ones often carry the Optimist logo."
+        },
+        "opt-D": {
+          "name": "Flag D (ashore)",
+          "means": "Ashore: you may launch now. The warning signal will come not less than a set time later (for example 45 minutes).",
+          "youDo": "Do not launch before D goes up. When it does, rig, launch and sail to the start area.",
+          "sound": "Up: one sound."
+        },
+        "opt-support": {
+          "name": "Coach and support boats",
+          "means": "Coach and support boats may fly their own flags, for example a white flag with a country code. They have no meaning for your race.",
+          "youDo": "Only follow race committee signals. Coach boats must keep out of the racing area while you race."
+        }
+      }
+    }
+  },
+
+  "trainer": {
+    "heading": "Start sequence trainer",
+    "intro": "Watch the flags go up and down on the committee boat, hear the sounds and follow the clock. Pick a preparatory flag to see how the rules for the last minute change.",
+    "prep": "Preparatory flag",
+    "scenario": "Situation",
+    "scenarios": {
+      "clean": "Clean start",
+      "x": "Individual recall",
+      "gr": "General recall",
+      "ap": "Postponement"
+    },
+    "start": "Start",
+    "pause": "Pause",
+    "resume": "Resume",
+    "restart": "Start again",
+    "reset": "Reset",
+    "speed": "Speed",
+    "soundOn": "Sounds",
+    "soundHint": "Sounds play only after you press Start.",
+    "toStart": "to start",
+    "afterStart": "after start",
+    "next": "Next: {what} in {s} s",
+    "nothingNext": "Sequence over.",
+    "ready": "Press Start. The warning signal comes in 10 seconds.",
+    "lastMinute": "Last minute",
+    "timeline": "Timeline",
+    "log": "What happened",
+    "courseAria": "Top view of the start: the starting line between the committee boat and the pin end mark, and the first mark upwind.",
+    "boatAria": "Side view of the race committee boat with its flags.",
+    "wind": "Wind",
+    "mark1": "Mark 1",
+    "pin": "Pin end",
+    "committee": "Committee boat",
+    "course": "The start from above",
+    "triangle": "Keep out in the last minute",
+    "extensions": "Over? Go round an end",
+    "phases": {
+      "waiting": "Waiting",
+      "warning": "Warning",
+      "prep": "Preparatory",
+      "last": "Last minute",
+      "started": "Started",
+      "postponed": "Postponed",
+      "recall": "General recall",
+      "done": "Race on!"
+    },
+    "events": {
+      "classUp": "Class flag up: warning signal",
+      "prepUp": "{flag} up: preparatory signal",
+      "prepDown": "{flag} down: one minute to go",
+      "classDown": "Class flag down: start!",
+      "xUp": "X up: individual recall",
+      "xDown": "X down: all boats that were over have come back",
+      "noX": "No X: with {flag}, boats in the triangle in the last minute are disqualified (no individual recall)",
+      "fsUp": "First Substitute up: general recall",
+      "fsDown": "First Substitute down: new warning in 1 minute",
+      "blackNumbers": "Sail numbers of black-flag boats are shown: they may not sail the new start",
+      "apUp": "AP up: postponed",
+      "apDown": "AP down: warning signal in 1 minute",
+      "end": "Race on!"
+    },
+    "rules": {
+      "heading": "Over the line in the last minute?",
+      "P": "Flag P: no special rule. If you are over the line at the start, flag X goes up. Go back and start properly.",
+      "I": "Flag I (rule 30.1): if you are over the line in the last minute, sail round an end of the line to come back, then start.",
+      "Z": "Flag Z (rule 30.2): in the triangle in the last minute = 20% scoring penalty, even if the start is done again.",
+      "U": "Flag U (rule 30.3): in the triangle in the last minute = disqualified. After a general recall you may sail the new start.",
+      "black": "Black flag (rule 30.4): in the triangle in the last minute = disqualified, even after a general recall. You may not sail the new start."
+    }
+  },
+
+  "quiz": {
+    "heading": "Flag quiz",
+    "intro": "Ten questions. Can you read the committee boat?",
+    "modeMeaning": "Which flag means…?",
+    "modeFlag": "What does this flag mean?",
+    "qMeaning": "Which flag means: “{means}”",
+    "qFlag": "What does this flag mean?",
+    "start": "Start the quiz",
+    "next": "Next question",
+    "again": "Play again",
+    "right": "Right!",
+    "wrong": "Not quite. It is {name}.",
+    "progress": "Question {i} of {n}",
+    "score": "Score: {s}",
+    "result": "You got {s} out of {n}.",
+    "great": "Great! You are ready for the start line.",
+    "good": "Good. Look again at the flags you missed.",
+    "keepGoing": "Keep practising. Try the library, then play again."
+  }
+}

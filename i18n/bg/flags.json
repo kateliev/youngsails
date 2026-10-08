@@ -1,0 +1,102 @@
+{
+  "_status": "names only — machine-checked, NOT reviewed. A Bulgarian coach or race officer should check these terms before bg is marked ready.",
+  "_lang": "bg",
+  "flags": {
+    "class": {
+      "name": "Флаг на класа"
+    },
+    "P": {
+      "name": "Флаг P"
+    },
+    "I": {
+      "name": "Флаг I"
+    },
+    "Z": {
+      "name": "Флаг Z"
+    },
+    "ZI": {
+      "name": "Z заедно с I"
+    },
+    "U": {
+      "name": "Флаг U"
+    },
+    "black": {
+      "name": "Черен флаг"
+    },
+    "orange": {
+      "name": "Оранжев флаг"
+    },
+    "X": {
+      "name": "Флаг X"
+    },
+    "FS": {
+      "name": "Първи заместител"
+    },
+    "AP": {
+      "name": "Флаг AP"
+    },
+    "AP-H": {
+      "name": "AP над H"
+    },
+    "AP-A": {
+      "name": "AP над A"
+    },
+    "AP-num": {
+      "name": "AP над цифров вимпел"
+    },
+    "N": {
+      "name": "Флаг N"
+    },
+    "N-H": {
+      "name": "N над H"
+    },
+    "N-A": {
+      "name": "N над A"
+    },
+    "C": {
+      "name": "Флаг C"
+    },
+    "M": {
+      "name": "Флаг M"
+    },
+    "S": {
+      "name": "Флаг S"
+    },
+    "blue": {
+      "name": "Син флаг"
+    },
+    "yellow": {
+      "name": "Жълт флаг (съдия)"
+    },
+    "O": {
+      "name": "Флаг O"
+    },
+    "R": {
+      "name": "Флаг R"
+    },
+    "V": {
+      "name": "Флаг V"
+    },
+    "Y": {
+      "name": "Флаг Y"
+    },
+    "L": {
+      "name": "Флаг L"
+    }
+  },
+  "classes": {
+    "optimist": {
+      "flags": {
+        "opt-groups": {
+          "name": "Флагове на групите"
+        },
+        "opt-D": {
+          "name": "Флаг D (на брега)"
+        },
+        "opt-support": {
+          "name": "Флагове на треньорските лодки"
+        }
+      }
+    }
+  }
+}

@@ -24,6 +24,11 @@
   --warn: #c98a00;
   --danger: #c62f2f;
 
+  /* neutral light card behind signal flags: the same in both themes, so white
+     and yellow flags stay visible in dark mode (flag colours never change) */
+  --flag-backing: #edf1f5;
+  --flag-backing-line: #cfd8e0;
+
   /* type */
   --font-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
   --font-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
