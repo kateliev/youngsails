@@ -10,7 +10,7 @@
 
 body.explorer { overflow: hidden; }
 #app { position: fixed; left: 0; right: 0; top: env(safe-area-inset-top, 0px); bottom: env(safe-area-inset-bottom, 0px); overflow: hidden;
-  --panel-w: 300px; --head-h: 54px; --rail-top: 12px; --rail-bottom: 84px; }   /* --head-h: one height for every header panel */
+  --panel-w: 300px; --head-h: 54px; --rail-top: 12px; --rail-bottom: 92px; }   /* --head-h: one height for every header panel */
 #scene { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; outline: none; }
 
 /* columns: transparent to the pointer, so the boat can be dragged between the panels */
@@ -60,7 +60,7 @@ body.explorer { overflow: hidden; }
 .card .check { margin-top: 12px; }
 
 /* toolbar */
-.toolbar { position: absolute; left: 50%; transform: translateX(-50%); bottom: 14px; z-index: 4; display: flex; align-items: center; gap: 14px; padding: 8px 12px; max-width: calc(100% - 32px); overflow-x: auto; }
+.toolbar { position: absolute; left: 50%; transform: translateX(-50%); bottom: 22px; z-index: 4; display: flex; align-items: center; gap: 14px; padding: 8px 12px; max-width: calc(100% - 32px); overflow-x: auto; }
 /* the boom block has a fixed width: its readout changes while you drag, the toolbar must not */
 .trim { display: flex; flex-direction: column; gap: 2px; width: 340px; flex: none; }
 .trim label { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; min-width: 0; }
@@ -72,6 +72,10 @@ body.explorer { overflow: hidden; }
 .sw button { width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--panel-solid); box-shadow: 0 0 0 1px var(--line); cursor: pointer; padding: 0; }
 .sw button[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--accent); }
 .sep { width: 1px; align-self: stretch; background: var(--line); }
+
+/* footer: one quiet line under the toolbar, on a faint backing so it reads over the water */
+#siteFoot { position: absolute; left: 50%; bottom: 3px; transform: translateX(-50%); z-index: 4; white-space: nowrap; flex-wrap: nowrap; width: max-content; max-width: calc(100% - 16px);
+  padding: 0 8px; border-radius: 6px; background: color-mix(in srgb, var(--panel) 55%, transparent); }
 
 /* hover tooltip and 3D labels */
 #tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--panel-solid); padding: 4px 9px; border-radius: 7px; font-size: 13px; font-weight: 700; white-space: nowrap; transform: translate(14px, -130%); opacity: 0; transition: opacity .12s; z-index: 5; }
@@ -103,7 +107,7 @@ body.explorer { overflow: hidden; }
   .sheet-toggles { display: flex; }
 
   .sheet { display: none; position: absolute; left: 12px; right: 12px; top: var(--sheet-top); z-index: 5;
-    max-height: calc(100% - var(--sheet-top) - 92px); flex-direction: column; }
+    max-height: calc(100% - var(--sheet-top) - 100px); flex-direction: column; }
   .sheet.open { display: flex; }
   #card { padding: 14px 16px; }
   .parts, .card { width: auto; }

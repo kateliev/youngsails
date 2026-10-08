@@ -4,6 +4,12 @@ export const SITE = {
   name: 'Young Sails',
   domain: 'youngsails.org',
   repo: 'https://github.com/kateliev/youngsails',
+  owner: 'Vassil Kateliev',
+  ownerUrl: 'https://github.com/kateliev',
+  since: 2026,   // first year of the copyright line; later years show as 2026–YYYY
+  // E-mail kept in two pieces so the address never appears whole in the HTML or the
+  // repository; sitenav.js joins it in the browser and builds the mailto link only on use.
+  contact: ['vassil', 'kateliev.com'],
 };
 
 // Languages the site is planned in.

@@ -89,6 +89,7 @@ body.wiki { min-height: 100%; }
 
 .wiki-foot { margin-top: 26px; color: var(--ink-2); font-size: var(--fs-small); }
 .wiki-foot p { margin: 0 0 4px; }
+.wiki-wrap > .site-foot { margin-top: 18px; }
 #err { max-width: 460px; margin: 40px auto; padding: 18px; }
 
 /* phones: two-column grid, card becomes a bottom sheet */
