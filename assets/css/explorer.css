@@ -1,0 +1,77 @@
+/* Young Sails — 3D boat explorer layout (Optimist now, Laser later).
+   Full-bleed canvas with floating panels: brand top-left, parts list left,
+   info card right, view toolbar bottom centre. */
+
+body.explorer { overflow: hidden; }
+#app { position: fixed; left: 0; right: 0; top: env(safe-area-inset-top, 0px); bottom: env(safe-area-inset-bottom, 0px); overflow: hidden; }
+#scene { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; outline: none; }
+
+/* brand */
+/* the brand sits on its own panel so it reads over the bright sky in both themes */
+.brand { position: absolute; left: 16px; top: 12px; pointer-events: none; display: flex; flex-direction: column; gap: 2px; padding: 8px 14px 9px; }
+.brand .site-mark { pointer-events: auto; }
+.brand-row { display: flex; align-items: flex-end; gap: 14px; }
+.brand h1 { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-h1); line-height: .86; letter-spacing: .02em; text-transform: uppercase; margin: 0; color: var(--ink); }
+.brand h1 span { color: var(--accent); }
+.brand p { margin: 0 0 2px; font-family: var(--font-display); font-weight: 500; font-size: 15px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); }
+.brand .tg, .brand select { pointer-events: auto; }
+#partsToggle { display: none; }
+#langSelect { font: inherit; font-weight: 700; font-size: 13px; border: 1px solid var(--line); background: var(--panel-solid); color: var(--ink); border-radius: var(--radius-sm); padding: 5px 6px; }
+
+/* parts list */
+.parts { position: absolute; left: 16px; top: 100px; bottom: 84px; width: 248px; display: flex; flex-direction: column; overflow: hidden; }
+.parts header { padding: 12px 14px 8px; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); }
+.parts header h2 { font-family: var(--font-display); font-size: 18px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; margin: 0; }
+.parts header small { color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.parts .list { overflow: auto; padding: 4px 6px 12px; min-height: 0; }
+.grp { padding: 12px 8px 4px; }
+.pbtn { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; width: 100%; text-align: left; background: none; border: 0; border-radius: 8px; padding: 5px 8px; cursor: pointer; font-size: 14px; }
+.pbtn:hover { background: var(--chip); }
+.pbtn .gloss { color: var(--ink-2); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.pbtn .name { white-space: nowrap; }
+.pbtn[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+.pbtn[aria-pressed="true"] .gloss { color: inherit; opacity: .8; }
+.pbtn.sub { padding-left: 20px; }
+
+/* info card */
+.card { position: absolute; right: 16px; top: 16px; width: 340px; max-height: calc(100% - 116px); overflow: auto; padding: 16px 18px; }
+.card .eyebrow { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; }
+.card .count { color: var(--ink-2); font-variant-numeric: tabular-nums; font-size: 12px; }
+.card h2 { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-h2); line-height: 1; margin: 2px 0; letter-spacing: .01em; }
+.card .gloss { color: var(--ink-2); font-style: italic; margin-bottom: 10px; }
+.card p { margin: 0 0 12px; max-width: 62ch; }
+.card .check { margin-top: 12px; }
+
+/* toolbar */
+.toolbar { position: absolute; left: 50%; transform: translateX(-50%); bottom: 14px; display: flex; align-items: center; gap: 14px; padding: 8px 12px; max-width: calc(100% - 32px); overflow-x: auto; }
+.trim { display: flex; flex-direction: column; gap: 2px; min-width: 230px; }
+.trim label { display: flex; justify-content: space-between; gap: 10px; }
+.trim output { color: var(--ink); font-variant-numeric: tabular-nums; letter-spacing: .03em; text-transform: none; font-family: var(--font-body); font-size: 12px; font-weight: 700; white-space: nowrap; }
+.trim input { width: 100%; accent-color: var(--accent); }
+.sw { display: flex; gap: 5px; }
+.sw button { width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--panel-solid); box-shadow: 0 0 0 1px var(--line); cursor: pointer; padding: 0; }
+.sw button[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--accent); }
+.sep { width: 1px; align-self: stretch; background: var(--line); }
+
+/* hover tooltip and 3D labels */
+#tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--panel-solid); padding: 4px 9px; border-radius: 7px; font-size: 13px; font-weight: 700; white-space: nowrap; transform: translate(14px, -130%); opacity: 0; transition: opacity .12s; }
+#tip small { font-weight: 400; opacity: .75; margin-left: 6px; }
+#labels { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.lbl { position: absolute; left: 0; top: 0; pointer-events: auto; cursor: pointer; display: flex; align-items: center; gap: 6px; white-space: nowrap; font-family: var(--font-display); font-weight: 600; font-size: 14px; letter-spacing: .04em; text-transform: uppercase; color: var(--ink); background: none; border: 0; padding: 0; }
+.lbl i { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 2px var(--panel-solid); flex: none; }
+.lbl span { background: var(--panel); padding: 1px 7px; border-radius: 6px; border: 1px solid var(--line); }
+#loading { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--font-display); font-size: 20px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
+#err { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); max-width: 420px; padding: 18px; }
+
+@media (max-width: 820px) {
+  .brand h1 { font-size: 30px; }
+  .brand p { display: none; }
+  #partsToggle { display: inline-block; }
+  .parts { display: none; top: 88px; bottom: auto; max-height: calc(100% - 200px); width: min(300px, calc(100% - 32px)); z-index: 3; }
+  .parts.open { display: flex; }
+  .card { left: 16px; right: 16px; top: auto; bottom: 86px; width: auto; max-height: 38%; padding: 12px 14px; }
+  .card h2 { font-size: 28px; }
+  .card .ov-more { display: none; }
+  .toolbar { left: 16px; right: 16px; transform: none; max-width: none; gap: 10px; }
+  .trim { min-width: 180px; }
+}

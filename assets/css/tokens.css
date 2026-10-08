@@ -1,0 +1,56 @@
+/* Young Sails — design tokens.
+   One palette and type system for every section of the site (class explorers,
+   wiki pages, game). Pages only use these variables, never raw colours.
+   Look: a regatta race display — bright water and sky, white HUD panels,
+   race-mark orange as the single accent. */
+
+:root {
+  /* colour */
+  --stage: #d3e8f5;               /* page ground behind 3D scenes and content */
+  --panel: rgba(255, 255, 255, .9);
+  --panel-solid: #ffffff;
+  --line: rgba(14, 44, 70, .13);
+  --ink: #0c2235;                 /* main text */
+  --ink-2: #4a6277;               /* secondary text */
+  --accent: #e2560f;              /* race-mark orange */
+  --accent-ink: #ffffff;          /* text on accent */
+  --chip: #e5eff6;
+  --chip-ink: #1d4766;
+  --sea: #0f5f86;
+  --shadow: 0 10px 30px rgba(8, 32, 54, .16);
+
+  /* semantic, for wiki/rules pages later */
+  --ok: #1f9d55;
+  --warn: #c98a00;
+  --danger: #c62f2f;
+
+  /* type */
+  --font-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --font-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fs-body: 14px;
+  --fs-small: 12.5px;
+  --fs-h1: 40px;
+  --fs-h2: 34px;
+
+  /* shape and space */
+  --radius: 14px;
+  --radius-sm: 9px;
+  --gutter: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --stage: #0b1824; --panel: rgba(11, 24, 37, .88); --panel-solid: #0f1f2e; --line: rgba(180, 214, 240, .14);
+    --ink: #e6f0f8; --ink-2: #9db3c6; --accent: #ff7a33; --accent-ink: #1d0a00; --chip: #16304a; --chip-ink: #bfe0f7;
+    --sea: #5fb7e0; --shadow: 0 10px 30px rgba(0, 0, 0, .45);
+    --ok: #4cc584; --warn: #f0b429; --danger: #ff6b6b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --stage: #0b1824; --panel: rgba(11, 24, 37, .88); --panel-solid: #0f1f2e; --line: rgba(180, 214, 240, .14);
+  --ink: #e6f0f8; --ink-2: #9db3c6; --accent: #ff7a33; --accent-ink: #1d0a00; --chip: #16304a; --chip-ink: #bfe0f7;
+  --sea: #5fb7e0; --shadow: 0 10px 30px rgba(0, 0, 0, .45);
+  --ok: #4cc584; --warn: #f0b429; --danger: #ff6b6b;
+  color-scheme: dark;
+}

@@ -1,0 +1,63 @@
+{
+  "_status": "complete",
+  "site": {
+    "name": "Young Sails",
+    "tagline": "Learn sailing, part by part"
+  },
+  "ui": {
+    "parts": "Parts",
+    "partsCount": "{n} parts",
+    "partsAria": "Boat parts",
+    "water": "Water",
+    "studio": "Studio",
+    "scene": "Scene",
+    "boom": "Boom",
+    "explode": "Explode",
+    "labels": "Labels",
+    "spin": "Spin",
+    "reset": "Reset",
+    "resetTitle": "Reset the camera",
+    "hullColour": "Hull colour",
+    "viewControls": "View controls",
+    "language": "Language",
+    "prev": "← Prev",
+    "next": "Next →",
+    "prevAria": "Previous part",
+    "nextAria": "Next part",
+    "zoom": "Zoom to it",
+    "overview": "Overview",
+    "overviewAria": "Back to overview",
+    "fade": "Fade the other parts",
+    "startTour": "Start the tour",
+    "loading": "Rigging the boat…",
+    "canvasAria": "3D model of a sailing boat. Drag to rotate, scroll or pinch to zoom, click a part to learn about it."
+  },
+  "trim": {
+    "toPort": "to port",
+    "toStarboard": "to starboard",
+    "centred": "centred",
+    "starboardTack": "starboard tack",
+    "portTack": "port tack"
+  },
+  "pointsOfSail": {
+    "headToWind": "head to wind",
+    "closeHauled": "close-hauled",
+    "closeReach": "close reach",
+    "beamReach": "beam reach",
+    "broadReach": "broad reach",
+    "running": "running"
+  },
+  "colours": {
+    "hull": "{c} hull",
+    "white": "White",
+    "red": "Red",
+    "sunflower": "Sunflower",
+    "blue": "Blue",
+    "teal": "Teal"
+  },
+  "errors": {
+    "notFoundTitle": "Off course",
+    "notFoundText": "This page is not on the chart. It may have moved, or it is still being built.",
+    "home": "Back to the start"
+  }
+}

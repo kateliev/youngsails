@@ -1,0 +1,74 @@
+/* Young Sails — base styles and shared components.
+   Load after tokens.css. Section-specific layouts (explorer.css, wiki.css …)
+   build on these classes instead of restyling them. */
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--stage);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.45;
+}
+h1, h2, h3 { text-wrap: balance; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+button { font: inherit; color: inherit; }
+button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible, label:focus-within {
+  outline: 2px solid var(--accent); outline-offset: 2px;
+}
+a { color: var(--sea); }
+
+/* site mark: small "Young Sails" eyebrow shown on every page */
+.site-mark {
+  font-family: var(--font-display); font-weight: 600; font-size: 13px;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--ink-2); text-decoration: none;
+}
+.site-mark b { color: var(--accent); font-weight: 700; }
+
+/* floating HUD panel */
+.panel {
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+}
+
+/* labels and chips */
+.chip {
+  display: inline-block; background: var(--chip); color: var(--chip-ink);
+  font-family: var(--font-display); font-weight: 600; font-size: 13px; letter-spacing: .1em; text-transform: uppercase;
+  padding: 2px 9px; border-radius: 999px;
+}
+.eyebrow-label {
+  font-family: var(--font-display); font-weight: 600; font-size: 13px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ink-2);
+}
+.note { font-size: var(--fs-small); color: var(--ink-2); }
+
+/* key/value spec table (class-rule figures, flag meanings …) */
+.spec { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; margin: 0 0 14px; padding: 10px 12px; background: var(--chip); border-radius: 10px; }
+.spec dt { color: var(--ink-2); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; font-family: var(--font-display); font-weight: 600; padding-top: 2px; }
+.spec dd { margin: 0; font-variant-numeric: tabular-nums; font-weight: 700; }
+
+/* buttons */
+.btn { background: var(--panel-solid); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 7px 12px; cursor: pointer; font-weight: 700; font-size: 13px; }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.tg { border: 1px solid var(--line); background: var(--panel-solid); border-radius: var(--radius-sm); padding: 6px 10px; cursor: pointer; font-weight: 700; font-size: 13px; white-space: nowrap; }
+.tg[aria-pressed="true"] { background: var(--ink); color: var(--panel-solid); border-color: var(--ink); }
+.seg { display: flex; background: var(--chip); border-radius: var(--radius-sm); padding: 3px; }
+.seg button { border: 0; background: none; padding: 5px 11px; border-radius: 7px; cursor: pointer; font-weight: 700; font-size: 13px; color: var(--chip-ink); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--panel-solid); box-shadow: 0 1px 3px rgba(0, 0, 0, .15); }
+.check { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-2); cursor: pointer; }
+.check input { accent-color: var(--accent); width: 16px; height: 16px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+/* simple centred message page (lander fallback, 404) */
+.message-page { min-height: 100%; display: grid; place-items: center; padding-inline: var(--gutter); padding-block: 40px; }
+.message-page .panel { max-width: 460px; padding: 24px 26px; }
+.message-page h1 { font-family: var(--font-display); font-size: var(--fs-h2); margin: 6px 0 8px; line-height: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
