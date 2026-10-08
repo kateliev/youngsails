@@ -154,6 +154,9 @@ export function createStage(canvas) {
     for (let i = 0; i < HB_N; i++) { const f = i / (HB_N - 1) * (hb.length - 1), a = Math.floor(f), b = Math.min(a + 1, hb.length - 1); out[i] = hb[a] + (hb[b] - hb[a]) * (f - a); }
   }
   function setFloor(y) { shadowFloor.position.y = y; disc.position.y = y - .002; }
+  function setShadowSize(r) {   // half-size of the sun's shadow box: bigger boats need more, small boats keep the detail
+    Object.assign(sun.shadow.camera, { left: -r, right: r, top: r, bottom: -r }); sun.shadow.camera.updateProjectionMatrix();
+  }
   function setMode(mode, stageColor) {
     const w = mode === 'water';
     water.visible = scenery.visible = sky.visible = seabed.visible = w; studio.visible = !w;
@@ -167,5 +170,5 @@ export function createStage(canvas) {
     marks.forEach((m, i) => { m.position.y = Math.sin(t * 1.1 + i * 2) * .06; m.rotation.z = Math.sin(t * .8 + i) * .06; });
   }
 
-  return { renderer, scene, camera, controls, setWaterline, setFloor, setMode, tick };
+  return { renderer, scene, camera, controls, setWaterline, setFloor, setShadowSize, setMode, tick };
 }

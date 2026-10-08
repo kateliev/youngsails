@@ -106,7 +106,7 @@ export function createUI({ stage, registry, model, state, S, M, G, parts, groups
   // Home view, pulled back on tall narrow screens so the whole rig fits above the info card.
   function homeView() {
     const a = camera.aspect, k = a < 1 ? clamp(.95 / a, 1, 2.3) : 1;
-    const tg = model.home.target.clone(); if (a < 1) tg.y -= .75;
+    const tg = model.home.target.clone(); if (a < 1) tg.y -= model.home.tallDrop ?? .75;
     return { pos: tg.clone().add(model.home.pos.clone().sub(model.home.target).multiplyScalar(k)), target: tg };
   }
   const resetView = () => { const h = homeView(); moveTo(h.pos, h.target); };

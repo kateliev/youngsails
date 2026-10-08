@@ -14,3 +14,9 @@ desktop.ini
 node_modules/
 __pycache__/
 *.log
+
+# Owner's private notes and guides (local only)
+documentation/private/
+
+# Agent handouts (local only)
+handouts/

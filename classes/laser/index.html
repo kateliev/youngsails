@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ILCA 6 Explorer · Young Sails</title>
+<meta name="description" content="Interactive 3D model of the ILCA 6 dinghy (formerly Laser Radial), built to class-rule dimensions, with every part selectable and explained for young sailors.">
+<link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/css/tokens.css">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/explorer.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.147.0/examples/jsm/"
+} }
+</script>
+</head>
+<body class="explorer">
+<div id="app">
+  <canvas id="scene" tabindex="0" data-i18n-attr="aria-label:ui.canvasAria"></canvas>
+  <div id="labels" aria-hidden="true"></div>
+  <div id="tip"></div>
+  <div id="loading" data-i18n="ui.loading">Rigging the boat…</div>
+
+  <div class="brand panel">
+    <span class="site-mark">Young <b>Sails</b></span>
+    <div class="brand-row">
+      <h1 id="modelTitle">ILCA 6</h1>
+      <p id="modelTagline"></p>
+      <button id="partsToggle" class="tg" aria-expanded="false" aria-controls="parts" data-i18n="ui.parts">Parts</button>
+      <select id="langSelect" data-i18n-attr="aria-label:ui.language"></select>
+    </div>
+  </div>
+
+  <aside class="parts panel" id="parts" data-i18n-attr="aria-label:ui.partsAria">
+    <header><h2 data-i18n="ui.parts">Parts</h2><small id="partCount"></small></header>
+    <div class="list" id="partList"></div>
+  </aside>
+
+  <section class="card panel" id="card" aria-live="polite"></section>
+
+  <nav class="toolbar panel" data-i18n-attr="aria-label:ui.viewControls">
+    <div class="seg" role="group" data-i18n-attr="aria-label:ui.scene">
+      <button id="sceneWater" aria-pressed="true" data-i18n="ui.water">Water</button>
+      <button id="sceneStudio" aria-pressed="false" data-i18n="ui.studio">Studio</button>
+    </div>
+    <div class="trim">
+      <label for="trim" class="eyebrow-label"><span data-i18n="ui.boom">Boom</span> <output id="trimOut" for="trim"></output></label>
+      <input id="trim" type="range" min="-85" max="85" step="1" value="-20">
+    </div>
+    <button class="tg" id="explode" aria-pressed="false" data-i18n="ui.explode">Explode</button>
+    <button class="tg" id="labelsBtn" aria-pressed="false" data-i18n="ui.labels">Labels</button>
+    <button class="tg" id="spin" aria-pressed="false" data-i18n="ui.spin">Spin</button>
+    <div class="sep"></div>
+    <div class="sw" role="group" id="swatches" data-i18n-attr="aria-label:ui.hullColour"></div>
+    <button class="tg" id="reset" data-i18n="ui.reset" data-i18n-attr="title:ui.resetTitle">Reset</button>
+  </nav>
+</div>
+
+<script type="module">
+  import { startExplorer } from '../../assets/js/explorer/explorer.js';
+  import { createLaser } from '../../models/laser/laser.js';
+  import { PARTS, GROUPS, PAINTS } from '../../models/laser/parts.js';
+
+  startExplorer({ createModel: createLaser, parts: PARTS, groups: GROUPS, paints: PAINTS, ns: 'laser' })
+    .catch(err => {
+      console.error(err);
+      document.getElementById('loading').outerHTML = '<div id="err" class="panel">The 3D view could not start. Check your connection and reload the page.</div>';
+    });
+</script>
+</body>
+</html>

@@ -1,8 +1,10 @@
 // Young Sails explorer — entry point. A class page calls:
 //   startExplorer({ createModel, parts, groups, paints, ns: 'optimist' })
 // createModel({ registry }) must return:
-//   { boat, swing, waterline:{x0,x1,hb[]}, floorY, home:{pos,target}, defaultBoom,
-//     setTrim(boomDeg, time), update(time), onExplode(), anchor?(id, v3), redraw?() }
+//   { boat, swing, waterline:{x0,x1,hb[]}, floorY, home:{pos,target,tallDrop?}, defaultBoom,
+//     setTrim(boomDeg, time), update(time), onExplode(), anchor?(id, v3), redraw?(), shadowSize? }
+// shadowSize (optional): half-size in metres of the sun's shadow box (default 4).
+// home.tallDrop (optional): how far the camera target drops on tall (phone) screens (default 0.75 m).
 import * as THREE from 'three';
 import { pickLang, pickGloss, loadStrings, loadRaw, t } from '../core/i18n.js';
 import { createStage } from './stage.js';
@@ -23,6 +25,7 @@ export async function startExplorer({ createModel, parts, groups, paints, ns }) 
   stage.scene.add(model.boat);
   stage.setWaterline(model.waterline);
   stage.setFloor(model.floorY);
+  if (model.shadowSize) stage.setShadowSize(model.shadowSize);
 
   const ui = createUI({ stage, registry, model, state, S, M, G, parts, groups, paints, lang });
   ui.setTrim(model.defaultBoom, 0);

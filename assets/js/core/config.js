@@ -25,7 +25,7 @@ export const glossFor = lang => (lang === 'en' ? 'bg' : 'en');
 // Sections of the site. `ready: false` sections are planned, not built.
 export const SECTIONS = [
   { id: 'optimist', path: 'classes/optimist/', ready: true },
-  { id: 'laser', path: 'classes/laser/', ready: false },
+  { id: 'laser', path: 'classes/laser/', ready: true },
   { id: 'flags', path: 'wiki/flags/', ready: false },
   { id: 'rules', path: 'wiki/rules/', ready: false },
   { id: 'courses', path: 'wiki/courses/', ready: false },

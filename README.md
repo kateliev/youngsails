@@ -4,9 +4,11 @@ Interactive sailing lessons for young and future sailors, published at **[youngs
 
 The first module is the **Optimist Explorer**: a 3D model of the International Optimist dinghy built to the class-rule dimensions. Click any of its 44 parts (hull, rig, sail corners and edges, foils, ropes, equipment) to read what it is and what it does. You can also explode the boat into its parts, switch between water and studio views, and trim the boom to see the tack, the point of sail and the wind direction.
 
+The second is the **ILCA 6 Explorer** (`/classes/laser/`): the single-handed Olympic dinghy with the ILCA 6 rig, built to the ILCA class rules, with 50 parts. Its mast bends as you trim the boom.
+
 ## Planned
 
-- **Laser (ILCA) explorer**, on the same 3D engine
+- **ILCA 7 and ILCA 4 rigs** for the ILCA explorer
 - **Racing flags library**
 - **Racing rules wiki**
 - **Race courses wiki**
