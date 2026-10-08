@@ -22,7 +22,6 @@ export function createUI({ stage, registry, model, state, S, M, G, parts, groups
   // brand title with one accent letter (the orange "i" in OPTIMIST)
   const title = M.title || '', ai = M.titleAccent ?? -1;
   $('modelTitle').innerHTML = ai >= 0 && ai < title.length ? `${esc(title.slice(0, ai))}<span>${esc(title[ai])}</span>${esc(title.slice(ai + 1))}` : esc(title);
-  $('modelTagline').textContent = M.tagline || '';
   document.title = `${M.pageTitle || title} · ${t(S, 'site.name')}`;
   $('partCount').textContent = t(S, 'ui.partsCount', { n: parts.length });
 
@@ -33,15 +32,26 @@ export function createUI({ stage, registry, model, state, S, M, G, parts, groups
     const h = document.createElement('div'); h.className = 'grp eyebrow-label'; h.textContent = t(M, `groups.${g}`); listEl.appendChild(h);
     for (const p of parts.filter(p => p.group === g)) {
       const b = document.createElement('button'); b.className = 'pbtn' + (p.sub ? ' sub' : ''); b.dataset.id = p.id; b.setAttribute('aria-pressed', 'false');
-      b.innerHTML = `<span class="name">${esc(name(p.id))}</span><span class="gloss" lang="${esc(G?._lang || '')}">${esc(gloss(p.id))}</span>`;
-      b.addEventListener('click', () => { select(p.id, true); if (innerWidth <= 820) togglePartsPanel(false); });
+      b.textContent = name(p.id);
+      b.addEventListener('click', () => choose(p.id, true));
       b.addEventListener('mouseenter', () => { state.hover = p.id; registry.applyLook(); });
       b.addEventListener('mouseleave', () => { state.hover = null; registry.applyLook(); });
       listEl.appendChild(b);
     }
   }
-  function togglePartsPanel(open) { $('parts').classList.toggle('open', open); $('partsToggle').setAttribute('aria-expanded', String(open)); }
-  $('partsToggle').onclick = () => togglePartsPanel(!$('parts').classList.contains('open'));
+  /* ---------------- phone sheets ----------------
+     On phones the parts list and the info card are drop-down sheets of the same kind:
+     closed at start, opened by their buttons (or by choosing a part), one at a time. */
+  const PHONE = matchMedia('(max-width: 820px)');
+  const sheets = { parts: $('parts'), cardPanel: $('cardPanel') };
+  function openSheet(id) {   // id = 'parts' | 'cardPanel' | null (close all)
+    for (const [k, el] of Object.entries(sheets)) el.classList.toggle('open', k === id);
+    document.querySelectorAll('.sheet-toggles [data-sheet]').forEach(b => b.setAttribute('aria-expanded', String(b.dataset.sheet === id)));
+  }
+  document.querySelectorAll('.sheet-toggles [data-sheet]').forEach(b => { b.onclick = () => openSheet(sheets[b.dataset.sheet].classList.contains('open') ? null : b.dataset.sheet); });
+  document.querySelectorAll('.sheet-close').forEach(b => { b.onclick = () => openSheet(null); });
+  // choosing a part (list, boat, label): select it, and on phones show its card
+  function choose(id, focus) { select(id, focus); if (id && PHONE.matches) openSheet('cardPanel'); }
 
   /* ---------------- info card ---------------- */
   const specHtml = (rows, cls = '') => rows?.length ? `<dl class="spec ${cls}">${rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>` : '';
@@ -96,10 +106,10 @@ export function createUI({ stage, registry, model, state, S, M, G, parts, groups
     if (dir.y < .12) { dir.y = .25; dir.normalize(); }
     moveTo(c.clone().addScaledVector(dir, clamp(r / Math.sin(deg(camera.fov / 2)) * 1.05, .9, 9)), c);
   }
-  // Home view, pulled back on tall narrow screens so the whole rig fits above the info card.
+  // Home view, pulled back on tall narrow screens so the whole rig fits between the header and the toolbar.
   function homeView() {
     const a = camera.aspect, k = a < 1 ? clamp(.95 / a, 1, 2.3) : 1;
-    const tg = model.home.target.clone(); if (a < 1) tg.y -= model.home.tallDrop ?? .75;
+    const tg = model.home.target.clone(); if (a < 1) tg.y -= (model.home.tallDrop ?? .75) * .2;   // small drop: the phone header is taller than the toolbar
     return { pos: tg.clone().add(model.home.pos.clone().sub(model.home.target).multiplyScalar(k)), target: tg };
   }
   const resetView = () => { const h = homeView(); moveTo(h.pos, h.target); };
@@ -123,7 +133,8 @@ export function createUI({ stage, registry, model, state, S, M, G, parts, groups
     model.setTrim(d, time); registry.applyLook(); registry.applyExplode();
     const a = windAngleFromBoom(d), tack = tackFromBoom(d);
     const side = d < 0 ? t(S, 'trim.toPort') : d > 0 ? t(S, 'trim.toStarboard') : t(S, 'trim.centred');
-    $('trimOut').textContent = `${Math.abs(d)}° ${side} · ${tack ? t(S, `trim.${tack}`) + ' · ' : ''}${t(S, `pointsOfSail.${pointOfSail(a, d)}`)}`;
+    const out = $('trimOut'); out.textContent = `${Math.abs(d)}° ${side} · ${tack ? t(S, `trim.${tack}`) + ' · ' : ''}${t(S, `pointsOfSail.${pointOfSail(a, d)}`)}`;
+    out.title = out.textContent;   // full text on hover if the fixed-width readout has to cut it
   }
   trimEl.value = model.defaultBoom;
   trimEl.addEventListener('input', e => setTrim(+e.target.value, performance.now() / 1000));
@@ -154,7 +165,7 @@ export function createUI({ stage, registry, model, state, S, M, G, parts, groups
   labelsEl.hidden = true;
   const labelItems = parts.filter(p => p.label).map(p => {
     const el = document.createElement('button'); el.className = 'lbl'; el.innerHTML = `<i></i><span>${esc(name(p.id))}</span>`;
-    el.onclick = () => select(p.id, true); labelsEl.appendChild(el);
+    el.onclick = () => choose(p.id, true); labelsEl.appendChild(el);
     return { id: p.id, el };
   });
   const _box = new THREE.Box3(), _v = new THREE.Vector3();
@@ -186,7 +197,7 @@ export function createUI({ stage, registry, model, state, S, M, G, parts, groups
     return null;
   }
   canvas.addEventListener('pointerdown', e => { downAt = [e.clientX, e.clientY]; });
-  canvas.addEventListener('pointerup', e => { if (downAt && Math.hypot(e.clientX - downAt[0], e.clientY - downAt[1]) <= 6) select(pick(e), false); });
+  canvas.addEventListener('pointerup', e => { if (downAt && Math.hypot(e.clientX - downAt[0], e.clientY - downAt[1]) <= 6) choose(pick(e), false); });
   canvas.addEventListener('pointermove', e => { if (e.pointerType === 'mouse') pending = e; });
   canvas.addEventListener('pointerleave', () => { state.hover = null; tip.style.opacity = 0; registry.applyLook(); });
   function processHover() {
@@ -195,12 +206,12 @@ export function createUI({ stage, registry, model, state, S, M, G, parts, groups
     const id = pick(e);
     if (id !== state.hover) { state.hover = id; registry.applyLook(); }
     canvas.style.cursor = id ? 'pointer' : 'grab';
-    if (id) { const r = canvas.getBoundingClientRect(); tip.innerHTML = `${esc(name(id))}<small>${esc(gloss(id))}</small>`; tip.style.left = (e.clientX - r.left) + 'px'; tip.style.top = (e.clientY - r.top) + 'px'; tip.style.opacity = 1; }
+    if (id) { const r = canvas.getBoundingClientRect(); tip.textContent = name(id); tip.style.left = (e.clientX - r.left) + 'px'; tip.style.top = (e.clientY - r.top) + 'px'; tip.style.opacity = 1; }
     else tip.style.opacity = 0;
   }
   addEventListener('keydown', e => {
     if (e.target.matches('input, select')) return;
-    if (e.key === 'ArrowRight') step(1); else if (e.key === 'ArrowLeft') step(-1); else if (e.key === 'Escape') select(null);
+    if (e.key === 'ArrowRight') step(1); else if (e.key === 'ArrowLeft') step(-1); else if (e.key === 'Escape') { if (PHONE.matches && Object.values(sheets).some(el => el.classList.contains('open'))) openSheet(null); else select(null); }
   });
 
   resize();

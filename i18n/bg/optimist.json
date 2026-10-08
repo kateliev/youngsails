@@ -1,52 +1,182 @@
 {
-  "_status": "partial — part names only; texts still English. Names need review by a Bulgarian coach.",
+  "_status": "partial — interface (tagline, groups, overview) and part names in Bulgarian; part texts still English. Names need review by a Bulgarian coach.",
   "pageTitle": "Оптимист",
   "title": "Оптимист",
   "titleAccent": -1,
   "parts": {
-    "hull": { "name": "Корпус" },
-    "bowTransom": { "name": "Носов транец" },
-    "sternTransom": { "name": "Кърмов транец" },
-    "gunwale": { "name": "Планшир" },
-    "rubbingStrake": { "name": "Предпазна лайсна" },
-    "mastThwart": { "name": "Мачтова банка" },
-    "mastStep": { "name": "Степс на мачтата" },
-    "midshipFrame": { "name": "Среден шпангоут" },
-    "daggerboardCase": { "name": "Швертов кладенец" },
-    "buoyancy": { "name": "Плавателни възглавници" },
-    "toeStraps": { "name": "Ремъци за откренване" },
-    "gudgeons": { "name": "Окачване на кормилото" },
-    "mast": { "name": "Мачта" },
-    "boom": { "name": "Гик" },
-    "boomJaws": { "name": "Вилка на гика" },
-    "sprit": { "name": "Шпринт" },
-    "windIndicator": { "name": "Ветропоказател" },
-    "sail": { "name": "Ветрило" },
-    "luff": { "name": "Предна шкаторина" },
-    "leech": { "name": "Задна шкаторина" },
-    "foot": { "name": "Долна шкаторина" },
-    "head": { "name": "Горна шкаторина" },
-    "tack": { "name": "Галсов ъгъл" },
-    "clew": { "name": "Шкотов ъгъл" },
-    "throat": { "name": "Гърло" },
-    "peak": { "name": "Пик" },
-    "battens": { "name": "Ламели" },
-    "window": { "name": "Прозорец" },
-    "sailNumber": { "name": "Номер на ветрилото" },
-    "daggerboard": { "name": "Шверт" },
-    "rudder": { "name": "Кормило (перо)" },
-    "tiller": { "name": "Румпел" },
-    "tillerExtension": { "name": "Удължител на румпела" },
-    "mainsheet": { "name": "Грот-шкот" },
-    "blocks": { "name": "Макари (блокове)" },
-    "vang": { "name": "Оттяжка на гика" },
-    "spritHalyard": { "name": "Фал на шпринта" },
-    "outhaul": { "name": "Аутхол" },
-    "sailTies": { "name": "Връзки на ветрилото" },
-    "painter": { "name": "Фалин" },
-    "daggerboardRetainer": { "name": "Ластик на шверта" },
-    "bailer": { "name": "Черпак" },
-    "paddle": { "name": "Гребло" },
-    "compass": { "name": "Компас" }
+    "hull": {
+      "name": "Корпус"
+    },
+    "bowTransom": {
+      "name": "Носов транец"
+    },
+    "sternTransom": {
+      "name": "Кърмов транец"
+    },
+    "gunwale": {
+      "name": "Планшир"
+    },
+    "rubbingStrake": {
+      "name": "Предпазна лайсна"
+    },
+    "mastThwart": {
+      "name": "Мачтова банка"
+    },
+    "mastStep": {
+      "name": "Степс на мачтата"
+    },
+    "midshipFrame": {
+      "name": "Среден шпангоут"
+    },
+    "daggerboardCase": {
+      "name": "Швертов кладенец"
+    },
+    "buoyancy": {
+      "name": "Плавателни възглавници"
+    },
+    "toeStraps": {
+      "name": "Ремъци за откренване"
+    },
+    "gudgeons": {
+      "name": "Окачване на кормилото"
+    },
+    "mast": {
+      "name": "Мачта"
+    },
+    "boom": {
+      "name": "Гик"
+    },
+    "boomJaws": {
+      "name": "Вилка на гика"
+    },
+    "sprit": {
+      "name": "Шпринт"
+    },
+    "windIndicator": {
+      "name": "Ветропоказател"
+    },
+    "sail": {
+      "name": "Ветрило"
+    },
+    "luff": {
+      "name": "Предна шкаторина"
+    },
+    "leech": {
+      "name": "Задна шкаторина"
+    },
+    "foot": {
+      "name": "Долна шкаторина"
+    },
+    "head": {
+      "name": "Горна шкаторина"
+    },
+    "tack": {
+      "name": "Галсов ъгъл"
+    },
+    "clew": {
+      "name": "Шкотов ъгъл"
+    },
+    "throat": {
+      "name": "Гърло"
+    },
+    "peak": {
+      "name": "Пик"
+    },
+    "battens": {
+      "name": "Ламели"
+    },
+    "window": {
+      "name": "Прозорец"
+    },
+    "sailNumber": {
+      "name": "Номер на ветрилото"
+    },
+    "daggerboard": {
+      "name": "Шверт"
+    },
+    "rudder": {
+      "name": "Кормило (перо)"
+    },
+    "tiller": {
+      "name": "Румпел"
+    },
+    "tillerExtension": {
+      "name": "Удължител на румпела"
+    },
+    "mainsheet": {
+      "name": "Грот-шкот"
+    },
+    "blocks": {
+      "name": "Макари (блокове)"
+    },
+    "vang": {
+      "name": "Оттяжка на гика"
+    },
+    "spritHalyard": {
+      "name": "Фал на шпринта"
+    },
+    "outhaul": {
+      "name": "Аутхол"
+    },
+    "sailTies": {
+      "name": "Връзки на ветрилото"
+    },
+    "painter": {
+      "name": "Фалин"
+    },
+    "daggerboardRetainer": {
+      "name": "Ластик на шверта"
+    },
+    "bailer": {
+      "name": "Черпак"
+    },
+    "paddle": {
+      "name": "Гребло"
+    },
+    "compass": {
+      "name": "Компас"
+    }
+  },
+  "tagline": "Международна лодка · разгледай частите",
+  "groups": {
+    "hull": "Корпус",
+    "rig": "Рангоут",
+    "sail": "Ветрило",
+    "foils": "Шверт и кормило",
+    "lines": "Въжета и управление",
+    "equipment": "Оборудване"
+  },
+  "overview": {
+    "chip": "Общ преглед",
+    "badge": "По правилата на класа",
+    "heading": "Международен клас Оптимист",
+    "text": "Малка ветроходна лодка за един състезател до 15-годишна възраст. Кларк Милс я проектира през 1947 г. във Флорида, а днес деца се състезават с нея в повече от 100 държави. Всеки Оптимист е построен по едни и същи правила, затова състезанията печели ветроходецът, а не лодката.",
+    "spec": [
+      [
+        "Дължина",
+        "2,30 м"
+      ],
+      [
+        "Ширина",
+        "≈ 1,13 м"
+      ],
+      [
+        "Площ на ветрилото",
+        "≈ 3,3 м²"
+      ],
+      [
+        "Тегло на корпуса",
+        "≈ 35 кг"
+      ],
+      [
+        "Рангоут",
+        "Шпринтово ветрило, без въжета на мачтата"
+      ],
+      [
+        "Екипаж",
+        "1 състезател"
+      ]
+    ],
+    "hint": "Докоснете част от лодката или изберете от списъка. Плъзнете, за да я разгледате; превъртете или щипнете, за да приближите. Местете плъзгача на гика, за да смените курса спрямо вятъра."
   }
 }

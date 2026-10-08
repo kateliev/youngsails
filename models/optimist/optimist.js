@@ -9,7 +9,7 @@
 import * as THREE from 'three';
 import {
   V3, UP, clamp, smooth, deg, rnd, mono, gridGeo, sweep, chaikin, cylBetween, roundRect, slotPath,
-  pillowGeo, canvasTex, ropeMat, tube, polyCurve, clearGroup, decal,
+  pillowGeo, canvasTex, ropeMat, tube, polyCurve, clearGroup, decal, displayFont,
 } from '../../assets/js/explorer/geometry.js';
 import { windAngleFromBoom } from '../../assets/js/core/sailing.js';
 
@@ -455,7 +455,7 @@ export function createOptimist({ registry }) {
     // Seen from starboard the texture is mirrored, so starboard print is drawn mirrored.
     const text = (str, [u, v], mirror, alpha) => {
       g.save(); g.globalAlpha = alpha; g.fillStyle = '#14202c';
-      g.font = `700 ${Math.round(cm(SAILNO.h) * 1.18)}px "Barlow Condensed","Arial Narrow",Arial,sans-serif`;
+      g.font = `700 ${Math.round(cm(SAILNO.h) * 1.18)}px ${displayFont()}`;
       g.textAlign = 'center'; g.textBaseline = 'middle'; g.translate(cx(u), cy(v)); g.scale(mirror ? -1 : 1, 1); g.fillText(str, 0, 0); g.restore();
     };
     const me = SAILNO[side], other = SAILNO[side === 'port' ? 'stbd' : 'port'], mirrorMe = side === 'stbd';
@@ -645,7 +645,7 @@ export function createOptimist({ registry }) {
     const face = new THREE.Mesh(new THREE.CircleGeometry(.042, 32), new THREE.MeshStandardMaterial({ roughness: .2, map: canvasTex(256, 256, (c, w) => {
       c.fillStyle = '#10161c'; c.fillRect(0, 0, w, w); c.strokeStyle = '#e9eef2'; c.lineWidth = 3; c.translate(w / 2, w / 2);
       for (let i = 0; i < 36; i++) { c.rotate(Math.PI / 18); c.beginPath(); c.moveTo(0, -w * .44); c.lineTo(0, -w * (i % 3 === 2 ? .34 : .39)); c.stroke(); }
-      c.font = '700 40px "Barlow Condensed",Arial,sans-serif'; c.textAlign = 'center'; c.fillStyle = '#ff7a33'; c.fillText('N', 0, -w * .2);
+      c.font = `700 40px ${displayFont()}`; c.textAlign = 'center'; c.fillStyle = '#ff7a33'; c.fillText('N', 0, -w * .2);
     }) }));
     const n = new V3(-Math.sin(Math.PI / 2 - .35), Math.cos(Math.PI / 2 - .35), 0);   // housing axis: aft and up, toward the sailor
     face.position.copy(housing.position).addScaledVector(n, .0205); face.quaternion.setFromUnitVectors(new V3(0, 0, 1), n); g.add(face);

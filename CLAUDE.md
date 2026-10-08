@@ -7,7 +7,7 @@ Keep the memory current: when you finish meaningful work, update `history.md` an
 ## Conventions
 
 - Static site for GitHub Pages, **no build step**. Plain ES modules; three.js comes from the import map in each page (pinned `three@0.147.0`). Do not add a bundler without asking the owner.
-- Test through a local server (`python -m http.server 8123`), never `file://`: modules and `fetch` of i18n files need http.
+- Test through the local preview server (`python tools/serve.py`, port 8123, sends no-cache headers), never `file://`: modules and `fetch` of i18n files need http.
 - **One look across the site:** use the variables in `assets/css/tokens.css` and the components in `assets/css/base.css`. New sections add their own layout file (like `explorer.css`) and never restyle base components.
 - **All visible text goes in `i18n/<lang>/<namespace>.json`.** English is the source and the fallback. Keys starting with `_` are notes, not strings. Mark a language `ready: true` in `assets/js/core/config.js` only when its strings are complete.
 - Boat facts must come from the class rules (IODA for the Optimist, ILCA for the Laser). Cite the rule in a code comment when a number comes from it.

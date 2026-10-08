@@ -10,11 +10,15 @@ import { pickLang, pickGloss, loadStrings, loadRaw, t } from '../core/i18n.js';
 import { createStage } from './stage.js';
 import { createRegistry } from './registry.js';
 import { createUI } from './ui.js';
+import { displayFont } from './geometry.js';
 
 export async function startExplorer({ createModel, parts, groups, paints, ns }) {
   const lang = pickLang(), glossLang = pickGloss(lang);
   document.documentElement.lang = lang;
-  const [S, M, G] = await Promise.all([loadStrings('common', lang), loadStrings(ns, lang), loadRaw(ns, glossLang)]);
+  // Load the display font before the model draws its sail numbers and decals onto canvases
+  // (capped wait; model.redraw() repaints the sail again once all fonts are in).
+  const fontReady = Promise.race([document.fonts?.load(`700 40px ${displayFont()}`).catch(() => {}), new Promise(r => setTimeout(r, 1500))]);
+  const [S, M, G] = await Promise.all([loadStrings('common', lang), loadStrings(ns, lang), loadRaw(ns, glossLang), fontReady]);
   if (G) G._lang = glossLang;
 
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;

@@ -46,7 +46,7 @@ documentation/        project documentation (placeholder)
 Pages use JavaScript modules and load translation files, so open them through a local web server, not as files:
 
 ```bash
-python -m http.server 8123
+python tools/serve.py
 ```
 
 Then open <http://127.0.0.1:8123/>. Add `?lang=bg` to try another language.

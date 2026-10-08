@@ -11,7 +11,7 @@
 import * as THREE from 'three';
 import {
   V3, UP, clamp, smooth, deg, rnd, mono, gridGeo, sweep, cylBetween, roundRect,
-  canvasTex, ropeMat, tube, polyCurve, clearGroup,
+  canvasTex, ropeMat, tube, polyCurve, clearGroup, displayFont,
 } from '../../assets/js/explorer/geometry.js';
 import { windAngleFromBoom } from '../../assets/js/core/sailing.js';
 
@@ -354,7 +354,7 @@ export function createLaser({ registry, rig = 'ilca6' }) {
   {
     const tex = canvasTex(256, 128, (c, w, h) => {
       c.fillStyle = '#c9ced3'; c.fillRect(0, 0, w, h); c.strokeStyle = '#7e868e'; c.lineWidth = 6; c.strokeRect(3, 3, w - 6, h - 6);
-      c.fillStyle = '#2b3138'; c.font = '700 64px "Barlow Condensed",Arial,sans-serif'; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText(SAIL_NUMBER, w / 2, h / 2 + 4);
+      c.fillStyle = '#2b3138'; c.font = `700 64px ${displayFont()}`; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText(SAIL_NUMBER, w / 2, h / 2 + 4);
     });
     const m = new THREE.Mesh(new THREE.PlaneGeometry(.08, .04), new THREE.MeshStandardMaterial({ map: tex, metalness: .5, roughness: .35 }));
     const yp = .27, xw = CK.a + CK.ins * (deckY(CK.a, .16) - yp) / (deckY(CK.a, .16) - SOLE(CK.a + CK.ins));
@@ -498,7 +498,7 @@ export function createLaser({ registry, rig = 'ilca6' }) {
     const face = new THREE.Mesh(new THREE.CircleGeometry(.042, 32), new THREE.MeshStandardMaterial({ roughness: .2, map: canvasTex(256, 256, (c, w) => {
       c.fillStyle = '#10161c'; c.fillRect(0, 0, w, w); c.strokeStyle = '#e9eef2'; c.lineWidth = 3; c.translate(w / 2, w / 2);
       for (let i = 0; i < 36; i++) { c.rotate(Math.PI / 18); c.beginPath(); c.moveTo(0, -w * .44); c.lineTo(0, -w * (i % 3 === 2 ? .34 : .39)); c.stroke(); }
-      c.font = '700 40px "Barlow Condensed",Arial,sans-serif'; c.textAlign = 'center'; c.fillStyle = '#ff7a33'; c.fillText('N', 0, -w * .2);
+      c.font = `700 40px ${displayFont()}`; c.textAlign = 'center'; c.fillStyle = '#ff7a33'; c.fillText('N', 0, -w * .2);
     }) }));
     face.position.copy(housing.position).addScaledVector(n, .0235); face.quaternion.setFromUnitVectors(new V3(0, 0, 1), n); g.add(face);
     const dome = new THREE.Mesh(new THREE.SphereGeometry(.044, 24, 12, 0, Math.PI * 2, 0, Math.PI / 2), MAT.glass);
@@ -745,7 +745,7 @@ export function createLaser({ registry, rig = 'ilca6' }) {
     const ang = tg => Math.atan2(tg[0], tg[1]);   // glyph up = tg; glyph right = −nin (toward the leech)
     const glyphs = (str, row, mirror, alpha, fromLeech) => {
       g.save(); g.globalAlpha = alpha; g.fillStyle = '#14202c';
-      g.font = `700 ${Math.round(cm(NUM_H) * 1.36)}px "Barlow Condensed","Arial Narrow",Arial,sans-serif`; g.textAlign = 'center'; g.textBaseline = 'middle';
+      g.font = `700 ${Math.round(cm(NUM_H) * 1.36)}px ${displayFont()}`; g.textAlign = 'center'; g.textBaseline = 'middle';
       [...str].forEach((ch, i) => {
         const k = fromLeech ? i : str.length - 1 - i, [u, v] = charCentre(row, k);
         g.save(); g.translate(cx(u), cy(v)); g.rotate(ang(row.tg)); g.scale(mirror ? -1 : 1, 1); g.fillText(ch, 0, cm(.012)); g.restore();

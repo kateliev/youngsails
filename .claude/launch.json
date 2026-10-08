@@ -4,13 +4,19 @@
     {
       "name": "site",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8123", "--bind", "127.0.0.1"],
+      "runtimeArgs": [
+        "tools/serve.py",
+        "8123"
+      ],
       "port": 8123
     },
     {
       "name": "site-alt",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8124", "--bind", "127.0.0.1"],
+      "runtimeArgs": [
+        "tools/serve.py",
+        "8124"
+      ],
       "port": 8124
     }
   ]

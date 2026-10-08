@@ -29,7 +29,7 @@ export async function mountSiteNav({ current }) {
   const options = LANGS.map(l => {
     const usable = l.ready || l.partial || l.code === lang;
     const note = l.ready ? '' : l.partial ? ` (${t(S, 'nav.partial')})` : ` (${t(S, 'nav.soon')})`;
-    return `<option value="${l.code}" ${l.code === lang ? 'selected' : ''} ${usable ? '' : 'disabled'}>${l.code.toUpperCase()} · ${esc(l.label)}${esc(note)}</option>`;
+    return `<option value="${l.code}" lang="${l.code}" ${l.code === lang ? 'selected' : ''} ${usable ? '' : 'disabled'}>${l.code.toUpperCase()} · ${esc(l.label)}${esc(note)}</option>`;
   }).join('');
 
   el.setAttribute('aria-label', t(S, 'nav.aria'));

@@ -109,6 +109,11 @@ export function pillowGeo(lx, ly, lz, e = .42) {
   for (let i = 0; i < p.count; i++) p.setXYZ(i, f(p.getX(i)) * lx / 2, f(p.getY(i)) * ly / 2, f(p.getZ(i)) * lz / 2);
   g.computeVertexNormals(); return g;
 }
+// Font stack for text printed onto models (sail numbers, decals, compass card):
+// the site display font from tokens.css, so a font change there reaches the boats too.
+export const displayFont = () =>
+  (getComputedStyle(document.documentElement).getPropertyValue('--font-display').trim() || '"Sofia Sans Condensed", sans-serif');
+
 export function canvasTex(w, h, draw, srgb = true) {
   const c = document.createElement('canvas'); c.width = w; c.height = h;
   draw(c.getContext('2d'), w, h);
@@ -140,7 +145,7 @@ export function clearGroup(g) { for (const c of [...g.children]) { g.remove(c); 
 export function decal(text, w, h) {
   const tex = canvasTex(512, Math.round(512 * h / w), (c, W, H) => {
     c.clearRect(0, 0, W, H); c.fillStyle = '#1b2733';
-    c.font = `700 ${Math.round(H * .78)}px "Barlow Condensed","Arial Narrow",Arial,sans-serif`;
+    c.font = `700 ${Math.round(H * .78)}px ${displayFont()}`;
     c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText(text, W / 2, H / 2 + H * .04);
   });
   return new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshStandardMaterial({ map: tex, transparent: true, depthWrite: false, roughness: .4, polygonOffset: true, polygonOffsetFactor: -2 }));

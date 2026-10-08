@@ -1,5 +1,9 @@
 {
-  "_status": "partial — only the site navigation is translated; copy the other keys from ../en/common.json and translate",
+  "_status": "complete — interface words; sailing terms to be checked by a Bulgarian coach",
+  "site": {
+    "name": "Young Sails",
+    "tagline": "Учим ветроходство, част по част"
+  },
   "nav": {
     "aria": "Раздели на сайта",
     "optimist": "Оптимист",
@@ -9,6 +13,62 @@
     "soon": "скоро"
   },
   "ui": {
-    "language": "Език"
+    "parts": "Части",
+    "partsCount": "{n} части",
+    "partsAria": "Части на лодката",
+    "info": "Инфо",
+    "infoAria": "Описание на избраната част",
+    "close": "Затвори",
+    "water": "Вода",
+    "studio": "Студио",
+    "scene": "Сцена",
+    "boom": "Гик",
+    "explode": "Разглоби",
+    "labels": "Надписи",
+    "spin": "Въртене",
+    "reset": "Нулиране",
+    "resetTitle": "Върни камерата в началния изглед",
+    "hullColour": "Цвят на корпуса",
+    "viewControls": "Управление на изгледа",
+    "language": "Език",
+    "prev": "← Назад",
+    "next": "Напред →",
+    "prevAria": "Предишна част",
+    "nextAria": "Следваща част",
+    "zoom": "Покажи отблизо",
+    "overview": "Общ преглед",
+    "overviewAria": "Обратно към общия преглед",
+    "fade": "Избледни останалите части",
+    "startTour": "Започни обиколката",
+    "loading": "Подготвяме лодката…",
+    "canvasAria": "3D модел на ветроходна лодка. Плъзнете, за да я завъртите; превъртете или щипнете, за да я приближите; докоснете част, за да научите повече за нея."
+  },
+  "trim": {
+    "toPort": "към бакборд",
+    "toStarboard": "към щирборд",
+    "centred": "в средата",
+    "starboardTack": "десен галс",
+    "portTack": "ляв галс"
+  },
+  "pointsOfSail": {
+    "headToWind": "срещу вятъра",
+    "closeHauled": "бейдевинд",
+    "closeReach": "пълен бейдевинд",
+    "beamReach": "галфвинд",
+    "broadReach": "бакщаг",
+    "running": "фордевинд"
+  },
+  "colours": {
+    "hull": "{c} корпус",
+    "white": "Бял",
+    "red": "Червен",
+    "sunflower": "Слънчогледов",
+    "blue": "Син",
+    "teal": "Тюркоазен"
+  },
+  "errors": {
+    "notFoundTitle": "Извън курса",
+    "notFoundText": "Тази страница я няма на картата. Може да е преместена или още да се строи.",
+    "home": "Към началото"
   }
 }

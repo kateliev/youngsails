@@ -4,6 +4,10 @@
    Look: a regatta race display — bright water and sky, white HUD panels,
    race-mark orange as the single accent. */
 
+/* Fonts: the only place they are loaded. Sofia Sans (Lettersoup, OFL) has Bulgarian
+   Cyrillic letterforms by default; Russian forms switch on through locl for lang="ru". */
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,400;0,700;1,400&family=Sofia+Sans+Condensed:wght@500;600;700&display=swap");
+
 :root {
   /* colour */
   --stage: #d3e8f5;               /* page ground behind 3D scenes and content */
@@ -30,8 +34,8 @@
   --flag-backing-line: #cfd8e0;
 
   /* type */
-  --font-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
-  --font-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Sofia Sans Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --font-body: "Sofia Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --fs-body: 14px;
   --fs-small: 12.5px;
   --fs-h1: 40px;

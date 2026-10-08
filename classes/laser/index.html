@@ -8,7 +8,6 @@
 <link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="../../assets/css/tokens.css">
 <link rel="stylesheet" href="../../assets/css/base.css">
 <link rel="stylesheet" href="../../assets/css/explorer.css">
@@ -26,22 +25,33 @@
   <div id="tip"></div>
   <div id="loading" data-i18n="ui.loading">Rigging the boat…</div>
 
-  <nav id="siteNav" class="site-nav panel"></nav>
-
-  <div class="brand panel">
-    <div class="brand-row">
-      <h1 id="modelTitle">ILCA 6</h1>
-      <p id="modelTagline"></p>
-      <button id="partsToggle" class="tg" aria-expanded="false" aria-controls="parts" data-i18n="ui.parts">Parts</button>
-    </div>
+  <!-- right column: site navigation, parts list -->
+  <div class="rail rail-nav">
+    <nav id="siteNav" class="site-nav panel"></nav>
+    <aside class="parts panel sheet" id="parts" data-i18n-attr="aria-label:ui.partsAria">
+      <header><h2 data-i18n="ui.parts">Parts</h2><small id="partCount"></small>
+        <button class="sheet-close" data-sheet="parts" data-i18n-attr="aria-label:ui.close">&times;</button></header>
+      <div class="list" id="partList"></div>
+    </aside>
   </div>
 
-  <aside class="parts panel" id="parts" data-i18n-attr="aria-label:ui.partsAria">
-    <header><h2 data-i18n="ui.parts">Parts</h2><small id="partCount"></small></header>
-    <div class="list" id="partList"></div>
-  </aside>
-
-  <section class="card panel" id="card" aria-live="polite"></section>
+  <!-- left column: boat title, info card -->
+  <div class="rail rail-boat">
+    <div class="rail-head">
+      <a class="brand-site panel" href="../../">Young <b>Sails</b></a>
+      <div class="brand panel">
+        <h1 id="modelTitle">ILCA 6</h1>
+        <div class="sheet-toggles">
+          <button class="tg" data-sheet="parts" aria-expanded="false" aria-controls="parts" data-i18n="ui.parts">Parts</button>
+          <button class="tg" data-sheet="cardPanel" aria-expanded="false" aria-controls="cardPanel" data-i18n="ui.info">Info</button>
+        </div>
+      </div>
+    </div>
+    <section class="card panel sheet" id="cardPanel" data-i18n-attr="aria-label:ui.infoAria">
+      <button class="sheet-close" data-sheet="cardPanel" data-i18n-attr="aria-label:ui.close">&times;</button>
+      <div id="card" aria-live="polite"></div>
+    </section>
+  </div>
 
   <nav class="toolbar panel" data-i18n-attr="aria-label:ui.viewControls">
     <div class="seg" role="group" data-i18n-attr="aria-label:ui.scene">
