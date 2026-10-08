@@ -39,6 +39,8 @@
     "over": "over",
     "with": "with",
     "openCard": "Show details for {name}",
+    "links": { "courses": "Race courses explained" },
+    "soon": "{name}: coming soon on Young Sails.",
     "loadError": "The flag library could not load. Check your connection and reload the page."
   },
 
@@ -281,6 +283,45 @@
         "opt-support": {
           "name": "Coach and support boats",
           "means": "Coach and support boats may fly their own flags, for example a white flag with a country code. They have no meaning for your race.",
+          "youDo": "Only follow race committee signals. Coach boats must keep out of the racing area while you race."
+        }
+      }
+    },
+    "ilca": {
+      "name": "ILCA",
+      "intro": "ILCA races use the same race signals as every other class. ILCA 4 and ILCA 6 are the usual youth rigs; ILCA 6 is also the Olympic rig for women and ILCA 7 the Olympic rig for men. The three rigs often race at the same event, each with its own start. Notes marked “Event rule” change from event to event: always read your sailing instructions.",
+      "notes": {
+        "class": "ILCA 4, ILCA 6 and ILCA 7 often race at the same event. Each fleet starts with its own flag, and the sailing instructions say which one is yours. Many events use yellow for ILCA 4, green for ILCA 6 and white for ILCA 7, each with the red ILCA logo.",
+        "yellow": "The ILCA class rules do not change rule 42, so the full rule applies in any wind. Pumping: fanning the sail again and again with the sheet or your body. Rocking: rolling the boat again and again. Ooching: a sudden forward body movement, stopped hard. Allowed: one pull of the sheet per wave or gust to start surfing or planing, and roll tacks that do not make you faster than before the tack. Most ILCA championships use Appendix P (the notice of race says so): then judges penalise you on the water.",
+        "O": "Not used in ILCA racing: the ILCA class rules do not change rule 42, so there is no wind limit above which pumping is allowed. You may see this flag in other classes.",
+        "R": "Not used in ILCA racing (no flag O, so no flag R). You may see it in other classes.",
+        "Y": "The ILCA class rules have no life-jacket rule, so flag Y or the notice of race decides. Most youth events and championships say: wear it at all times afloat (the 2025 ILCA 6 Women's and ILCA 7 Men's Worlds did). If you are not sure, wear it.",
+        "C": "ILCA events usually sail trapezoid courses. After one leg is changed, the committee may move the later marks without new signals, to keep the shape of the course (rule 33(c)).",
+        "FS": "With three ILCA fleets starting one after another, a general recall delays every start after yours. Fleets waiting for their start must keep clear of the starting area."
+      },
+      "flags": {
+        "ilca-rigs": {
+          "name": "ILCA 4, 6 and 7 flags",
+          "means": "When the three rigs race at the same event, each fleet starts with its own class flag. Many events use yellow for ILCA 4, green for ILCA 6 and white for ILCA 7.",
+          "youDo": "Learn your fleet's flag from the sailing instructions. When it goes up with one sound, your 5 minutes start.",
+          "sound": "Like a class flag. Up: one sound (warning). Down: one sound (start).",
+          "tip": "Drawn here without the real ILCA logo. The real flags carry it in red."
+        },
+        "ilca-fleets": {
+          "name": "Fleet colours",
+          "means": "At big events a fleet is split into groups (for example yellow, blue and red) for a qualifying series, then into gold and silver fleets (sometimes bronze) for the final series.",
+          "youDo": "Check your group every day. You may have to show its colour on your boat, for example a coloured sleeve on the lower mast.",
+          "sound": "Like a class flag. Up: one sound (warning). Down: one sound (start)."
+        },
+        "ilca-course": {
+          "name": "Course board",
+          "means": "No later than your warning signal, the committee boat shows which course you sail. ILCA events often use trapezoid courses: for example “I2” for an inner-loop course and “O2” for an outer-loop course.",
+          "youDo": "Read the board before your warning signal. Find that course on the diagram in your sailing instructions: which marks, in which order, and on which side.",
+          "tip": "Look for the compass bearing to the first mark too. It is often shown next to the course."
+        },
+        "ilca-support": {
+          "name": "Coach boats",
+          "means": "Coach and support boats are marked as the event says, for example with a three-letter country code and a number. Their flags and markings have no meaning for your race.",
           "youDo": "Only follow race committee signals. Coach boats must keep out of the racing area while you race."
         }
       }

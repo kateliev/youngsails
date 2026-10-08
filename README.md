@@ -6,12 +6,11 @@ The first module is the **Optimist Explorer**: a 3D model of the International O
 
 The second is the **ILCA 6 Explorer** (`/classes/laser/`): the single-handed Olympic dinghy with the ILCA 6 rig, built to the ILCA class rules, with 50 parts. Its mast bends as you trim the boom.
 
-The third is the **Race Flags** library (`/wiki/flags/`): every race signal of the Racing Rules of Sailing 2025–2028, drawn as SVG, with what it means, what to do, the sound and the rule. It has a start-sequence trainer (flags, sounds and clock for P, I, Z, U and black flag starts, recalls and postponement) and a quiz. Class notes for Optimist events come from a data overlay.
+The third is the **Race Flags** library (`/wiki/flags/`): every race signal of the Racing Rules of Sailing 2025–2028, drawn as SVG, with what it means, what to do, the sound and the rule. It has a start-sequence trainer (flags, sounds and clock for P, I, Z, U and black flag starts, recalls and postponement) and a quiz. Class notes for Optimist and ILCA events come from data overlays (`?class=optimist` or `?class=ilca`).
 
 ## Planned
 
 - **ILCA 7 and ILCA 4 rigs** for the ILCA explorer
-- **ILCA notes for the flags library**
 - **Racing rules wiki**
 - **Race courses wiki**
 - **Federations and class associations**

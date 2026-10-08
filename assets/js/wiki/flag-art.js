@@ -13,8 +13,11 @@
 //   plain-black | plain-orange | plain-blue | plain-yellow
 //   shape-starboard | shape-port | board-minus | board-plus   course-change signals (RRS 33)
 //   class           a generic class flag (no class insignia: trademarks)
-//   set-groups      four example group/division flags
-//   text-XXX        a white flag with three letters (e.g. a country code on a coach boat)
+//   mark-<bg>-<ink> a generic class-style flag in two named colours (e.g. mark-green-red)
+//   set-groups      four example group/division flags (yellow, blue, red, green)
+//   set-ilca        example ILCA 4 / 6 / 7 flags (yellow, green, white with a red mark)
+//   set-fleets3     three example fleet flags (yellow, blue, red)
+//   text-XXX        a white flag or board with 2-4 letters or digits (country code, course name)
 //
 // Proportions: letter flags 5:6 (hoist:fly; the ICS does not fix one ratio, this is
 // the common one). Pennants taper to 0.3 of the hoist and are cut off square at the
@@ -100,13 +103,19 @@ const DESIGNS = {
 function classMark(bg, ink) {
   return R(0, 0, FW, FH, bg) + P([[52, 16], [52, 70], [84, 70]], ink) + P([[46, 24], [46, 70], [28, 70]], ink) + R(30, 76, 60, 7, ink);
 }
-const GROUPS = [[COL.yellow, COL.black], [COL.blue, COL.white], [COL.red, COL.white], [COL.green, COL.white]];
+// Sets expand to several flags drawn side by side or in a grid.
+const SETS = {
+  'set-groups': ['mark-yellow-black', 'mark-blue-white', 'mark-red-white', 'mark-green-white'],
+  'set-fleets3': ['mark-yellow-black', 'mark-blue-white', 'mark-red-white'],
+  'set-ilca': ['mark-yellow-red', 'mark-green-red', 'mark-white-red'],
+};
 
 function design(id) {
   if (DESIGNS[id]) return DESIGNS[id];
-  const m = /^text-([A-Z]{2,4})$/.exec(id);
+  const m = /^text-([A-Z0-9]{2,4})$/.exec(id);
   if (m) return letter(R(0, 0, FW, FH, COL.white) + `<text x="${FW / 2}" y="${FH / 2 + 12}" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="34" fill="${COL.black}">${m[1]}</text>`);
-  if (id.startsWith('group-')) { const [bg, ink] = GROUPS[+id.slice(6)] || GROUPS[0]; return letter(classMark(bg, ink)); }
+  const k = /^mark-(\w+)-(\w+)$/.exec(id);
+  if (k && COL[k[1]] && COL[k[2]]) return letter(classMark(COL[k[1]], COL[k[2]]));
   return null;
 }
 
@@ -123,7 +132,7 @@ function piece(d, x, y) {
 }
 
 // Expand set-* ids into their member flags.
-const expand = ids => ids.flatMap(id => (id === 'set-groups' ? GROUPS.map((_, i) => `group-${i}`) : [id]));
+const expand = ids => ids.flatMap(id => SETS[id] || [id]);
 
 /**
  * signalSVG(['ics-AP', 'ics-H'], { label, layout })

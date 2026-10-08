@@ -1,0 +1,20 @@
+{
+  "_about": "ILCA class layer for the flags library (ILCA 4, ILCA 6, ILCA 7). It never changes an RRS meaning. Same format as optimist.json. Sources: ILCA Class Rules 2026 (valid from 2023-08-21): no rule changes RRS 42 and no personal flotation device rule; EurILCA 'RRS 42 Guide ILCA 4, 6 & 7' (March 2022): 'ILCA class rules affecting RRS 42: None'; 2025 ILCA 6 Women's & ILCA 7 Men's Worlds NoR (Appendix P, PFD at all times afloat, yellow/blue/red fleet colours, trapezoid course); ILCA SIs: 2024 Oceania & Australian Masters, 2022 US Open (San Diego), 2022 ILCA Atlantic Coast Championships (Larchmont), 2025 ILCA Sprint Series (Dublin). See .claude/memory/flags-sources.md.",
+  "id": "ilca",
+  "notes": [
+    { "for": "class", "si": true },
+    { "for": "yellow" },
+    { "for": "O" },
+    { "for": "R" },
+    { "for": "Y" },
+    { "for": "C", "si": true },
+    { "for": "FS", "si": true }
+  ],
+  "add": [
+    { "id": "ilca-rigs", "stack": ["set-ilca"], "layout": "side", "groups": ["start"], "rule": "SI", "si": true, "sound": { "up": "1", "down": "1" } },
+    { "id": "ilca-fleets", "stack": ["set-fleets3"], "layout": "side", "groups": ["start"], "rule": "SI", "si": true, "sound": { "up": "1", "down": "1" } },
+    { "id": "ilca-course", "stack": ["text-O2"], "groups": ["course"], "rule": "SI", "si": true, "link": "courses" },
+    { "id": "ilca-support", "stack": ["text-BUL"], "groups": ["safety"], "rule": "SI", "si": true }
+  ],
+  "hide": []
+}

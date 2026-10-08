@@ -2,7 +2,7 @@
   "_about": "Race signals from the Racing Rules of Sailing (RRS). Language-neutral: texts are in /i18n/<lang>/flags.json under the same ids. Every meaning and sound was checked against the RRS 2025-2028 text (with World Sailing changes and corrections to 2026-04-20): Race Signals pages, Part 3 rules 25-37, rule 40 and Appendix P. Sound codes: '1' '2' '3' = that many sounds, 'long' = one long sound, 'rep' = repetitive sounds, 'none' = no sound, 'whistle' = a sound signal from a judge. 'up' is when the signal is displayed, 'down' when it is removed; a missing key means the rules give no sound for that moment.",
   "edition": "RRS 2025-2028",
   "editionYears": "2025-2028",
-  "classes": ["optimist"],
+  "classes": ["optimist", "ilca"],
   "groups": ["start", "recall", "postpone", "abandon", "course", "finish", "penalty", "safety", "ashore"],
   "signals": [
     { "id": "class", "stack": ["class"], "groups": ["start"], "rule": "RRS 26", "sound": { "up": "1", "down": "1" } },

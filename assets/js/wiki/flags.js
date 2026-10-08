@@ -5,7 +5,7 @@
 // Text:  /i18n/<lang>/flags.json            flags.<id>, classes.<class>.{notes,flags}, ui, trainer, quiz
 // A class overlay never changes an RRS meaning; it only adds notes and entries.
 import { pickLang, pickGloss, loadStrings, loadRaw, t, applyDom, setLang } from '../core/i18n.js';
-import { LANGS } from '../core/config.js';
+import { LANGS, SECTIONS } from '../core/config.js';
 import { signalSVG, flagGroup } from './flag-art.js';
 
 const DATA = new URL('../../../data/flags/', import.meta.url);
@@ -51,7 +51,7 @@ export async function startFlags() {
     return ['up', 'down'].filter(k => e.sound[k]).map(k => t(S, `sounds.${k}`, { s: soundWord(e.sound[k]) })).join('. ') + '.';
   }
   const soundMarks = e => (e.sound ? ['up', 'down'].filter(k => e.sound[k] && MARKS[e.sound[k]]).map(k => `${k === 'up' ? '↑' : '↓'} ${MARKS[e.sound[k]]}`).join('   ') : '');
-  const artFor = (e, label = '') => signalSVG(e.stack, { label, layout: e.side ? 'side' : 'stack' });
+  const artFor = (e, label = '') => signalSVG(e.stack, { label, layout: e.layout || (e.side ? 'side' : 'stack') });
 
   /* ---------------- class layer ---------------- */
   let entries = [], notes = {}, byId = {};
@@ -183,6 +183,7 @@ export async function startFlags() {
       ])}
       ${extras}
       ${x.tip ? `<p class="note"><b>${esc(t(S, 'ui.tip'))}:</b> ${esc(x.tip)}</p>` : ''}
+      ${linkHtml(e.link)}
       ${n && ct.notes?.[id] ? `<div class="callout"><div class="eyebrow-label">${esc(t(S, 'ui.classNote', { c: ct.name }))}${n.si ? `<span class="badge-si">${esc(t(S, 'ui.si'))}</span>` : ''}</div><p>${esc(ct.notes[id])}</p></div>` : ''}
       <div class="row">
         <button class="btn" id="prev" aria-label="${esc(t(S, 'ui.prevAria'))}">${esc(t(S, 'ui.prev'))}</button>
@@ -191,6 +192,13 @@ export async function startFlags() {
       </div>`;
     $('prev').onclick = () => step(-1); $('next').onclick = () => step(1);
     $('closeCard').onclick = () => select(null);
+  }
+  // An entry may point to another section of the site; it becomes a link once that section is ready.
+  function linkHtml(id) {
+    const sec = id && SECTIONS.find(s => s.id === id);
+    if (!sec) return '';
+    const label = t(S, `ui.links.${id}`);
+    return sec.ready ? `<p><a href="../../${sec.path}">${esc(label)} →</a></p>` : `<p class="note">${esc(t(S, 'ui.soon', { name: label }))}</p>`;
   }
   let lastTile = null;
   function setSheet(open) {
