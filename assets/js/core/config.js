@@ -18,10 +18,10 @@ export const SITE = {
 //   neither: listed in the menu as "soon" and disabled. ?lang=xx still forces it for testing.
 export const LANGS = [
   { code: 'en', label: 'English', ready: true },
-  { code: 'bg', label: 'Български', ready: false, partial: true },
-  { code: 'de', label: 'Deutsch', ready: false, partial: true },
+  { code: 'bg', label: 'Български', ready: true },   // all strings translated; terms still to be reviewed by a coach
+  { code: 'de', label: 'Deutsch', ready: true },     // all strings translated; terms still to be reviewed by a coach
   { code: 'fr', label: 'Français', ready: false },
-  { code: 'ru', label: 'Русский', ready: false, partial: true },
+  { code: 'ru', label: 'Русский', ready: true },     // all strings translated; terms still to be reviewed by a coach
 ];
 export const DEFAULT_LANG = 'en';
 
