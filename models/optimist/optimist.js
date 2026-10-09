@@ -13,7 +13,7 @@ import {
 } from '../../assets/js/explorer/geometry.js';
 import { windAngleFromBoom } from '../../assets/js/core/sailing.js';
 
-const SAIL_LETTERS = 'BUL', SAIL_NUMBER = '1947';   // 1947: the year Clark Mills designed the Optimist
+const SAIL_LETTERS = 'BUL', SAIL_NUMBER = '9000';   // 1947: the year Clark Mills designed the Optimist. 9000 Postal code of Varna, Bulgaria
 
 export function createOptimist({ registry }) {
   const { reg, add, adopt, offsetOf, PART } = registry;

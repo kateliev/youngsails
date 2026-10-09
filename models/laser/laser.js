@@ -15,7 +15,7 @@ import {
 } from '../../assets/js/explorer/geometry.js';
 import { windAngleFromBoom } from '../../assets/js/core/sailing.js';
 
-const SAIL_LETTERS = 'BUL', SAIL_NUMBER = '2026';
+const SAIL_LETTERS = 'BUL', SAIL_NUMBER = '9000';  // 9000 Postal code of Varna, Bulgaria
 
 // Rig variants. Only the lower mast and the sail change (class rules Part Four, diagrams pp. 35–39).
 // Lower-mast diameters are not in the rules: ≈ 65 mm (ILCA 7) from published studies, ILCA 6/4 smaller.
