@@ -1,3 +1,420 @@
 {
-  "_status": "not started — copy keys from ../en/flags.json and translate"
+  "_status": "complete — all strings in German (2026-10-09). Wording NOT yet checked against the official German WR 2025–2028 (DSV) and not reviewed by a German coach; see .claude/memory/terms-de.md.",
+  "pageTitle": "Regattaflaggen",
+  "title": "Regattaflaggen",
+  "titleAccent": 7,
+  "tagline": "Was dir das Startschiff sagt",
+  "edition": "Wettfahrtregeln Segeln {e}",
+
+  "ui": {
+    "views": "Bereiche",
+    "library": "Bibliothek",
+    "trainer": "Starttrainer",
+    "quiz": "Quiz",
+    "classLabel": "Bootsklasse",
+    "search": "Suchen",
+    "searchPlaceholder": "Flaggen suchen: „AP“, „Rückruf“ …",
+    "filters": "Flaggen zeigen für",
+    "all": "Alle",
+    "count": { "one": "{n} Signal", "other": "{n} Signale" },
+    "noResults": "Keine Flagge passt. Versuch ein anderes Wort oder wähle „Alle“.",
+    "means": "Bedeutet",
+    "youDo": "Das tust du",
+    "sound": "Schallsignal",
+    "rule": "Regel",
+    "tip": "Tipp",
+    "classNote": "Hinweis für {c}",
+    "si": "Meist in den Segelanweisungen festgelegt",
+    "siShort": "Regel der Veranstaltung",
+    "variants": "Wimpel 1 bis 9 = Stunden",
+    "extras": "Zusammen mit Flagge C",
+    "prev": "← Zurück",
+    "next": "Weiter →",
+    "prevAria": "Vorige Flagge",
+    "nextAria": "Nächste Flagge",
+    "close": "Schließen",
+    "closeAria": "Flaggenkarte schließen",
+    "language": "Sprache",
+    "over": "über",
+    "with": "mit",
+    "openCard": "Details zu {name} anzeigen",
+    "links": { "courses": "Regattabahnen erklärt" },
+    "soon": "{name}: bald auf Young Sails.",
+    "loadError": "Die Flaggen konnten nicht geladen werden. Prüfe deine Verbindung und lade die Seite neu."
+  },
+
+  "groups": {
+    "start": "Start",
+    "recall": "Rückrufe",
+    "postpone": "Verschieben",
+    "abandon": "Abbrechen",
+    "course": "Bahnänderung",
+    "finish": "Ziel",
+    "penalty": "Strafen",
+    "safety": "Sicherheit",
+    "ashore": "An Land"
+  },
+
+  "sounds": {
+    "1": "ein Schallsignal",
+    "2": "zwei Schallsignale",
+    "3": "drei Schallsignale",
+    "long": "ein langes Schallsignal",
+    "rep": "wiederholte Schallsignale",
+    "none": "kein Schallsignal",
+    "whistle": "ein Pfiff oder ein anderes Schallsignal",
+    "up": "Setzen: {s}",
+    "down": "Einholen: {s}"
+  },
+
+  "intro": {
+    "chip": "So funktionieren Signale",
+    "heading": "Flaggen sprechen, Töne helfen",
+    "text": "Die Wettfahrtleitung spricht mit Flaggen zu dir. Ein Horn oder eine Pfeife sorgt dafür, dass du hinschaust. Die Regeln sagen: Die Zeiten zählen nach den Flaggen. Fehlt ein Schallsignal, ist das egal.",
+    "rule": "WR 26 und Wettfahrtsignale",
+    "legend": [
+      ["↑", "die Flagge wird gesetzt"],
+      ["↓", "die Flagge wird eingeholt"],
+      ["●", "ein Schallsignal"],
+      ["● ●", "zwei Schallsignale"],
+      ["● ● ●", "drei Schallsignale"],
+      ["▬▬", "ein langes Schallsignal"],
+      ["- - - - -", "wiederholte Schallsignale"]
+    ],
+    "over": "Eine Flagge über deiner Klassenflagge (oder deiner Gruppen- oder Flottenflagge) gilt nur für diese Klasse oder Gruppe.",
+    "tip": "Achte auf die Flagge, nicht auf das Horn. Das Horn kann zu spät kommen, leise sein oder vom Wind verweht werden.",
+    "hint": "Wähle eine Flagge, um zu lernen, was sie bedeutet und was du tun musst."
+  },
+
+  "flags": {
+    "class": {
+      "name": "Klassenflagge",
+      "means": "Ankündigungssignal: Dein Start ist in 5 Minuten.",
+      "youDo": "Starte deine Uhr. Segle in die Nähe der Startlinie, prüfe den Wind und die Bahn. Wenn deine Klassenflagge eingeholt wird, startest du.",
+      "sound": "Setzen: ein Schallsignal (Ankündigung, 5 Minuten). Einholen: ein Schallsignal (Start, 0).",
+      "tip": "Die Ausschreibung oder die Segelanweisungen können eine andere Zeit als 5 Minuten festlegen. Dort steht auch, welche Flagge deine Klassenflagge ist."
+    },
+    "P": {
+      "name": "Flagge P",
+      "means": "Vorbereitungssignal: noch 4 Minuten bis zu deinem Start. Keine besondere Startregel.",
+      "youDo": "Schau auf deine Uhr. Wenn P mit einem langen Schallsignal eingeholt wird, ist noch 1 Minute. Bist du beim Start über der Linie, fahr zurück und starte noch einmal.",
+      "tip": "P heißt auch „Blauer Peter“."
+    },
+    "I": {
+      "name": "Flagge I",
+      "means": "Vorbereitungssignal mit Regel 30.1: Bist du in der letzten Minute über der Linie, musst du um ein Ende der Linie herum zurück.",
+      "youDo": "Bleib in der letzten Minute hinter der Linie. Bist du drüber, segle über eine der Verlängerungen der Linie zurück, außerhalb der Enden. Dann starte.",
+      "tip": "Du darfst nicht einfach durch die Linie zurücktauchen. Fahr um ein Ende herum."
+    },
+    "Z": {
+      "name": "Flagge Z",
+      "means": "Vorbereitungssignal mit Regel 30.2: Bist du in der letzten Minute im Dreieck, bekommst du eine Wertungsstrafe von 20 %.",
+      "youDo": "Bleib in der letzten Minute aus dem Dreieck zwischen den beiden Enden der Linie und der ersten Tonne. Wirst du erwischt, bleibt die Strafe, auch wenn der Start wiederholt wird.",
+      "tip": "Es gibt keine Strafe, wenn die Wettfahrt vor dem Start verschoben oder abgebrochen wird. Jedes Mal, wenn du bei einem neuen Startversuch erwischt wirst, bekommst du noch einmal 20 %."
+    },
+    "ZI": {
+      "name": "Z mit I",
+      "means": "Flaggen Z und I zusammen als Vorbereitungssignal: Die Regeln 30.1 und 30.2 gelten beide.",
+      "youDo": "Bleib in der letzten Minute aus dem Dreieck. Bist du über der Linie, fahr um ein Ende der Linie herum zurück."
+    },
+    "U": {
+      "name": "Flagge U",
+      "means": "Vorbereitungssignal mit Regel 30.3: Bist du in der letzten Minute im Dreieck, wirst du disqualifiziert.",
+      "youDo": "Bleib in der letzten Minute aus dem Dreieck. Wird der Start wiederholt (allgemeiner Rückruf), darfst du beim neuen Start mitsegeln.",
+      "tip": "Bei U oder der schwarzen Flagge gibt es keinen Einzelrückruf. Wer in der letzten Minute im Dreieck ist, wird disqualifiziert."
+    },
+    "black": {
+      "name": "Schwarze Flagge",
+      "means": "Vorbereitungssignal mit Regel 30.4: Bist du in der letzten Minute im Dreieck, wirst du disqualifiziert, auch wenn es einen allgemeinen Rückruf gibt.",
+      "youDo": "Bleib in der letzten Minute weit hinter der Linie. Wirst du erwischt, wird deine Segelnummer vor dem nächsten Ankündigungssignal gezeigt, und du darfst beim neuen Start nicht mitsegeln.",
+      "tip": "Das gilt nicht, wenn die Wettfahrt vor dem Start verschoben oder abgebrochen wird. Segelst du den neuen Start trotzdem, darf dieses Ergebnis nicht dein Streichergebnis sein."
+    },
+    "orange": {
+      "name": "Orange Flagge",
+      "means": "Der Flaggenstock mit dieser Flagge ist ein Ende der Startlinie.",
+      "youDo": "Finde beide Enden der Linie: die orange Flagge auf dem Startschiff und die Tonne (oder ein anderes Boot) am anderen Ende. Peile sie an, dann weißt du, wo die Linie ist.",
+      "tip": "Übe „Deckpeilungen“: Schau über ein Ende hinweg auf etwas an Land. So findest du die Linie auch von weit weg."
+    },
+    "X": {
+      "name": "Flagge X",
+      "means": "Einzelrückruf: Beim Start waren ein oder mehrere Boote über der Linie (oder haben Regel 30.1 nicht eingehalten).",
+      "youDo": "Warst du drüber, fahr zurück, bis dein ganzer Rumpf hinter der Linie ist. Dann starte. Bei Flagge I fährst du um ein Ende herum. Niemand muss deine Nummer rufen.",
+      "tip": "X bleibt oben, bis alle diese Boote zurück sind, aber höchstens 4 Minuten nach dem Start (oder bis 1 Minute vor dem nächsten Start)."
+    },
+    "FS": {
+      "name": "Erster Hilfsstander",
+      "means": "Allgemeiner Rückruf: Der Start wird abgesagt und wiederholt.",
+      "youDo": "Fahr zurück auf die Vorstartseite der Linie und warte. Wenn die Flagge eingeholt wird, kommt 1 Minute später das neue Ankündigungssignal.",
+      "tip": "Für den neuen Start nimmt die Wettfahrtleitung oft eine strengere Vorbereitungsflagge (U oder Schwarz). Schau noch einmal genau hin."
+    },
+    "AP": {
+      "name": "Antwortwimpel AP",
+      "means": "Startverschiebung: Wettfahrten, die noch nicht gestartet sind, starten später.",
+      "youDo": "Bleib in der Nähe des Startgebiets und schau weiter hin. Wenn AP eingeholt wird, kommt 1 Minute später das Ankündigungssignal.",
+      "tip": "Nutze die Wartezeit: trinken, einen Snack essen, warm bleiben, den Wind beobachten."
+    },
+    "AP-H": {
+      "name": "AP über H",
+      "means": "Nicht gestartete Wettfahrten sind verschoben. Weitere Signale an Land.",
+      "youDo": "Segle zurück in den Hafen. Achte am offiziellen Flaggenmast an Land auf das nächste Signal."
+    },
+    "AP-A": {
+      "name": "AP über A",
+      "means": "Nicht gestartete Wettfahrten sind verschoben. Heute keine Wettfahrten mehr.",
+      "youDo": "Segle zurück in den Hafen. Für heute ist Schluss."
+    },
+    "AP-num": {
+      "name": "AP über einem Zahlenwimpel",
+      "means": "Nicht gestartete Wettfahrten sind um 1 bis 9 Stunden nach der geplanten Startzeit verschoben.",
+      "youDo": "Die Zahl auf dem Wimpel ist die Zahl der Stunden. AP über Wimpel 2 heißt: zwei Stunden später als geplant."
+    },
+    "N": {
+      "name": "Flagge N",
+      "means": "Alle laufenden Wettfahrten sind abgebrochen. Kehre ins Startgebiet zurück.",
+      "youDo": "Hör auf zu wettsegeln und segle zurück ins Startgebiet. Wenn N eingeholt wird, kommt 1 Minute später das Ankündigungssignal.",
+      "tip": "Abgebrochen heißt: Die Wettfahrt zählt nicht. Meist wird sie noch einmal gesegelt."
+    },
+    "N-H": {
+      "name": "N über H",
+      "means": "Alle laufenden Wettfahrten sind abgebrochen. Weitere Signale an Land.",
+      "youDo": "Hör auf zu wettsegeln und segle zurück in den Hafen. Achte auf den Flaggenmast an Land."
+    },
+    "N-A": {
+      "name": "N über A",
+      "means": "Alle laufenden Wettfahrten sind abgebrochen. Heute keine Wettfahrten mehr.",
+      "youDo": "Hör auf zu wettsegeln und segle nach Hause."
+    },
+    "C": {
+      "name": "Flagge C",
+      "means": "Die Lage der nächsten Tonne wurde geändert.",
+      "youDo": "Achte auf das Zeichen daneben: Ein grünes Dreieck heißt, die Tonne wurde nach Steuerbord (rechts) verlegt, ein rotes Rechteck nach Backbord (links). „−“ heißt ein kürzerer Schenkel, „+“ ein längerer. Manchmal steht auch ein Kompasskurs dabei.",
+      "sound": "Wiederholte Schallsignale, an einer Tonne, bevor du den neuen Schenkel beginnst.",
+      "tip": "Die neue Tonne liegt vielleicht noch nicht. Segle dorthin, wo sie liegen soll."
+    },
+    "M": {
+      "name": "Flagge M",
+      "means": "Der Gegenstand mit dieser Flagge (oft ein Boot) ersetzt eine fehlende Tonne.",
+      "youDo": "Runde oder passiere ihn so, als wäre er die Tonne."
+    },
+    "S": {
+      "name": "Flagge S",
+      "means": "Die Bahn wurde verkürzt.",
+      "youDo": "Geh jetzt durchs Ziel: An einer Tonne, die du runden musst, liegt die Ziellinie zwischen der Tonne und dem Flaggenstock mit Flagge S.",
+      "tip": "S muss gesetzt werden, bevor das erste Boot durchs Ziel geht. Zwei Schallsignale sagen dir: Schau hin."
+    },
+    "blue": {
+      "name": "Blaue Flagge",
+      "means": "Der Flaggenstock mit dieser Flagge ist ein Ende der Ziellinie.",
+      "youDo": "Geh durchs Ziel, indem du die Linie zwischen der blauen Flagge und der Tonne am anderen Ende kreuzt, von der Bahnseite her.",
+      "tip": "Nach dem Zieldurchgang: Halte dich von Booten fern, die noch wettsegeln."
+    },
+    "yellow": {
+      "name": "Gelbe Flagge (Jury)",
+      "means": "Anhang P: Ein Jurymitglied hat gesehen, dass du Regel 42 gebrochen hast (Pumpen, Schaukeln, Ooching, Wriggen …). Es gibt ein Schallsignal, zeigt mit einer gelben Flagge auf dich und ruft deine Nummer.",
+      "youDo": "Beim ersten Mal: Mach dich frei von anderen Booten und führe sofort eine Zwei-Drehungen-Strafe aus (zwei Drehungen, jede mit einer Wende und einer Halse). Beim zweiten Mal: Gib die Wettfahrt auf. Beim dritten Mal: Gib auf; dieses Ergebnis darf nicht dein Streichergebnis sein.",
+      "tip": "Anhang P gilt nur, wenn die Ausschreibung oder die Segelanweisungen es sagen. Regel 42: Bring das Boot nur mit Wind und Wasser in Fahrt."
+    },
+    "O": {
+      "name": "Flagge O",
+      "means": "Pumpen, Schaukeln und Ooching sind erlaubt, so wie es die Klassenregeln sagen, weil der Wind über ihrer Grenze liegt.",
+      "youDo": "Nur für Klassen, deren Klassenregeln das erlauben. Hat deine Klasse keine solche Regel, ändert sich für dich nichts.",
+      "sound": "Vor dem Start: gesetzt vor oder mit dem Ankündigungssignal. Nach dem Start: wiederholte Schallsignale, an einer Tonne."
+    },
+    "R": {
+      "name": "Flagge R",
+      "means": "Der Wind hat nachgelassen: Regel 42 (so wie die Klassenregeln sie ändern) gilt wieder.",
+      "youDo": "Hör auf zu pumpen, zu schaukeln und mit Ooching, sobald du an der Tonne vorbei bist.",
+      "sound": "Vor dem Start: gesetzt vor oder mit einem neuen Ankündigungssignal. Nach dem Start: wiederholte Schallsignale, an einer Tonne."
+    },
+    "V": {
+      "name": "Flagge V",
+      "means": "Sicherheit: Hör auf dem Funkkanal der Wettfahrtleitung nach Anweisungen für Suche und Rettung.",
+      "youDo": "Hast du ein Funkgerät, hör zu. Wenn nicht, achte auf die Sicherungsboote, tu, was sie dir sagen, und hilf, wenn du kannst."
+    },
+    "Y": {
+      "name": "Flagge Y",
+      "means": "Trage eine persönliche Auftriebshilfe (Rettungsweste).",
+      "youDo": "Zieh deine Rettungsweste an und schließ jeden Gurt. Auf dem Wasser gesetzt: für die Wettfahrt. An Land gesetzt: die ganze Zeit, die du an diesem Tag auf dem Wasser bist.",
+      "tip": "Ein Neoprenanzug oder ein Trockenanzug ist keine Rettungsweste."
+    },
+    "L": {
+      "name": "Flagge L",
+      "means": "An Land: Eine neue Mitteilung an die Teilnehmer hängt aus. Auf dem Wasser: Komm in Rufweite, oder folge diesem Boot.",
+      "youDo": "An Land: Geh zur offiziellen Bekanntmachungstafel und lies sie. Auf dem Wasser: Segle so nah heran, dass du die Nachricht hörst, oder folge dem Boot mit L."
+    }
+  },
+
+  "extras": {
+    "shape-starboard": "nach Steuerbord",
+    "shape-port": "nach Backbord",
+    "board-minus": "kürzerer Schenkel",
+    "board-plus": "längerer Schenkel"
+  },
+
+  "classes": {
+    "optimist": {
+      "name": "Optimist",
+      "intro": "Bei Optimist-Regatten gelten dieselben Wettfahrtsignale wie in jeder anderen Klasse. Jede Veranstaltung hat außerdem eine Ausschreibung und Segelanweisungen. Hinweise mit „Regel der Veranstaltung“ ändern sich von Regatta zu Regatta: Lies immer deine Segelanweisungen.",
+      "notes": {
+        "class": "Bei großen Optimist-Regatten wird das Feld in Gruppen geteilt (auch Flotten oder Divisionen genannt), jede mit ihrer eigenen farbigen Flagge. Dann ist die Flagge deiner Gruppe deine Klassenflagge. Prüfe jeden Morgen, in welcher Gruppe du bist.",
+        "Y": "Optimist-Klassenregel 4.2(a) sagt schon, dass du eine Rettungsweste tragen musst, mit einer daran befestigten Pfeife. Flagge Y ändert für dich also nichts: Deine Weste ist an. Viele Veranstaltungen gehen weiter: „jederzeit, solange du auf dem Wasser bist“.",
+        "yellow": "Bei Optimist-Meisterschaften gilt meist Anhang P, mit Jurybooten auf der Bahn. Die Segelanweisungen können die Strafen ändern, zum Beispiel was passiert, wenn du nach dem Zieldurchgang bestraft wirst. Lies sie.",
+        "O": "Bei Optimist-Regatten nicht verwendet: Die Optimist-Klassenregeln erlauben Pumpen, Schaukeln und Ooching bei keinem Wind. Du siehst diese Flagge vielleicht in anderen Klassen.",
+        "R": "Bei Optimist-Regatten nicht verwendet (keine Flagge O, also keine Flagge R). Du siehst sie vielleicht in anderen Klassen.",
+        "orange": "Bei vielen Veranstaltungen wird die orange Flagge mit einem Schallsignal mindestens 5 Minuten vor dem ersten Ankündigungssignal gesetzt. Das heißt: Die Wettfahrten beginnen bald.",
+        "AP": "An Land ändern viele Veranstaltungen „1 Minute“ in eine längere Zeit, zum Beispiel „nicht weniger als 45 Minuten“. So hast du Zeit, ins Wasser zu gehen und hinauszusegeln.",
+        "FS": "Bei vielen Gruppen warten die anderen Gruppen in einem Wartebereich, bis dein Start vorbei ist. Ein allgemeiner Rückruf lässt alle länger warten. Starte also vorsichtig."
+      },
+      "flags": {
+        "opt-groups": {
+          "name": "Gruppenflaggen",
+          "means": "Bei einer großen Regatta startet jede Gruppe mit ihrer eigenen Flagge (zum Beispiel Gelb, Blau, Rot, Grün). In einer Finalserie stehen die Flaggen oft für Gold-, Silber- und Bronzeflotte.",
+          "youDo": "Lern die Flagge und die Farbe deiner Gruppe. Manche Veranstaltungen geben dir ein Band in dieser Farbe, das du oben an dein Spriet bindest.",
+          "sound": "Wie bei einer Klassenflagge. Setzen: ein Schallsignal (Ankündigung). Einholen: ein Schallsignal (Start).",
+          "tip": "Die Flaggen hier sind Beispiele. Die echten tragen oft das Optimist-Logo."
+        },
+        "opt-D": {
+          "name": "Flagge D (an Land)",
+          "means": "An Land: Du darfst jetzt ins Wasser. Das Ankündigungssignal kommt frühestens nach einer festgelegten Zeit (zum Beispiel 45 Minuten).",
+          "youDo": "Geh nicht ins Wasser, bevor D gesetzt ist. Wenn es so weit ist: aufriggen, ins Wasser und zum Startgebiet segeln.",
+          "sound": "Setzen: ein Schallsignal."
+        },
+        "opt-support": {
+          "name": "Trainer- und Betreuerboote",
+          "means": "Trainer- und Betreuerboote können eigene Flaggen führen, zum Beispiel eine weiße Flagge mit einem Länderkürzel. Für deine Wettfahrt haben sie keine Bedeutung.",
+          "youDo": "Folge nur den Signalen der Wettfahrtleitung. Trainerboote müssen sich aus dem Wettfahrtgebiet fernhalten, während du segelst."
+        }
+      }
+    },
+    "ilca": {
+      "name": "ILCA",
+      "intro": "Bei ILCA-Regatten gelten dieselben Wettfahrtsignale wie in jeder anderen Klasse. ILCA 4 und ILCA 6 sind die üblichen Jugend-Riggs. ILCA 6 ist außerdem das olympische Rigg der Frauen, ILCA 7 das der Männer. Oft segeln alle drei Riggs bei derselben Veranstaltung, jedes mit eigenem Start. Hinweise mit „Regel der Veranstaltung“ ändern sich von Regatta zu Regatta: Lies immer deine Segelanweisungen.",
+      "notes": {
+        "class": "ILCA 4, ILCA 6 und ILCA 7 segeln oft bei derselben Veranstaltung. Jede Flotte startet mit ihrer eigenen Flagge, und in den Segelanweisungen steht, welche deine ist. Viele Veranstaltungen nehmen Gelb für ILCA 4, Grün für ILCA 6 und Weiß für ILCA 7, jeweils mit dem roten ILCA-Logo.",
+        "yellow": "Die ILCA-Klassenregeln ändern Regel 42 nicht, also gilt die volle Regel bei jedem Wind. Pumpen: das Segel immer wieder mit der Schot oder dem Körper fächeln. Schaukeln: das Boot immer wieder hin und her rollen. Ooching: eine plötzliche Vorwärtsbewegung des Körpers, hart gestoppt. Erlaubt: ein Zug an der Schot pro Welle oder Bö, um ins Surfen oder Gleiten zu kommen, und Rollwenden, nach denen du nicht schneller bist als vor der Wende. Die meisten ILCA-Meisterschaften wenden Anhang P an (das steht in der Ausschreibung): Dann bestraft dich die Jury auf dem Wasser.",
+        "O": "Bei ILCA-Regatten nicht verwendet: Die ILCA-Klassenregeln ändern Regel 42 nicht, also gibt es keine Windgrenze, ab der Pumpen erlaubt ist. Du siehst diese Flagge vielleicht in anderen Klassen.",
+        "R": "Bei ILCA-Regatten nicht verwendet (keine Flagge O, also keine Flagge R). Du siehst sie vielleicht in anderen Klassen.",
+        "Y": "Die ILCA-Klassenregeln haben keine Regel zur Rettungsweste, also entscheiden Flagge Y oder die Ausschreibung. Die meisten Jugendregatten und Meisterschaften sagen: jederzeit auf dem Wasser tragen (so war es bei den ILCA-6-Weltmeisterschaften der Frauen und den ILCA-7-Weltmeisterschaften der Männer 2025). Wenn du nicht sicher bist, trag sie.",
+        "C": "Bei ILCA-Regatten werden meist Trapezbahnen gesegelt. Nachdem ein Schenkel geändert wurde, darf die Wettfahrtleitung die späteren Tonnen ohne neue Signale verlegen, damit die Form der Bahn erhalten bleibt (Regel 33(c)).",
+        "FS": "Wenn drei ILCA-Flotten nacheinander starten, verzögert ein allgemeiner Rückruf jeden Start nach deinem. Flotten, die auf ihren Start warten, müssen sich vom Startgebiet fernhalten."
+      },
+      "flags": {
+        "ilca-rigs": {
+          "name": "Flaggen für ILCA 4, 6 und 7",
+          "means": "Wenn die drei Riggs bei derselben Veranstaltung segeln, startet jede Flotte mit ihrer eigenen Klassenflagge. Viele Veranstaltungen nehmen Gelb für ILCA 4, Grün für ILCA 6 und Weiß für ILCA 7.",
+          "youDo": "Lern die Flagge deiner Flotte aus den Segelanweisungen. Wenn sie mit einem Schallsignal gesetzt wird, beginnen deine 5 Minuten.",
+          "sound": "Wie bei einer Klassenflagge. Setzen: ein Schallsignal (Ankündigung). Einholen: ein Schallsignal (Start).",
+          "tip": "Hier ohne das echte ILCA-Logo gezeichnet. Die echten Flaggen tragen es in Rot."
+        },
+        "ilca-fleets": {
+          "name": "Flottenfarben",
+          "means": "Bei großen Veranstaltungen wird eine Flotte für die Qualifikationsserie in Gruppen geteilt (zum Beispiel Gelb, Blau und Rot), dann für die Finalserie in Gold- und Silberflotte (manchmal auch Bronze).",
+          "youDo": "Prüfe jeden Tag, in welcher Gruppe du bist. Vielleicht musst du ihre Farbe am Boot zeigen, zum Beispiel mit einer farbigen Hülle am unteren Mastteil.",
+          "sound": "Wie bei einer Klassenflagge. Setzen: ein Schallsignal (Ankündigung). Einholen: ein Schallsignal (Start)."
+        },
+        "ilca-course": {
+          "name": "Bahntafel",
+          "means": "Spätestens mit deinem Ankündigungssignal zeigt das Startschiff, welche Bahn du segelst. Bei ILCA-Regatten gibt es oft Trapezbahnen: zum Beispiel „I2“ für eine Bahn mit innerer Schleife und „O2“ für eine Bahn mit äußerer Schleife.",
+          "youDo": "Lies die Tafel vor deinem Ankündigungssignal. Such diese Bahn in der Skizze deiner Segelanweisungen: welche Tonnen, in welcher Reihenfolge und auf welcher Seite.",
+          "tip": "Achte auch auf den Kompasskurs zur ersten Tonne. Er steht oft neben der Bahn."
+        },
+        "ilca-support": {
+          "name": "Trainerboote",
+          "means": "Trainer- und Betreuerboote werden so gekennzeichnet, wie es die Veranstaltung sagt, zum Beispiel mit einem dreibuchstabigen Länderkürzel und einer Nummer. Ihre Flaggen und Zeichen haben für deine Wettfahrt keine Bedeutung.",
+          "youDo": "Folge nur den Signalen der Wettfahrtleitung. Trainerboote müssen sich aus dem Wettfahrtgebiet fernhalten, während du segelst."
+        }
+      }
+    }
+  },
+
+  "trainer": {
+    "heading": "Starttrainer",
+    "intro": "Schau zu, wie die Flaggen auf dem Startschiff gesetzt und eingeholt werden, hör die Schallsignale und folge der Uhr. Wähle eine Vorbereitungsflagge und sieh, wie sich die Regeln für die letzte Minute ändern.",
+    "prep": "Vorbereitungsflagge",
+    "scenario": "Situation",
+    "scenarios": {
+      "clean": "Sauberer Start",
+      "x": "Einzelrückruf",
+      "gr": "Allgemeiner Rückruf",
+      "ap": "Startverschiebung"
+    },
+    "start": "Start",
+    "pause": "Pause",
+    "resume": "Weiter",
+    "restart": "Noch einmal",
+    "reset": "Zurücksetzen",
+    "speed": "Tempo",
+    "soundOn": "Töne",
+    "soundHint": "Töne gibt es erst, nachdem du auf Start gedrückt hast.",
+    "toStart": "bis zum Start",
+    "afterStart": "nach dem Start",
+    "next": "Als Nächstes: {what} in {s} s",
+    "nothingNext": "Startablauf beendet.",
+    "ready": "Drück auf Start. Das Ankündigungssignal kommt in 10 Sekunden.",
+    "lastMinute": "Letzte Minute",
+    "timeline": "Zeitleiste",
+    "log": "Was passiert ist",
+    "courseAria": "Der Start von oben: die Startlinie zwischen dem Startschiff und der Starttonne am Pin-End, und die erste Tonne in Luv.",
+    "boatAria": "Seitenansicht des Startschiffs mit seinen Flaggen.",
+    "wind": "Wind",
+    "mark1": "Tonne 1",
+    "pin": "Pin-End",
+    "committee": "Startschiff",
+    "course": "Der Start von oben",
+    "triangle": "In der letzten Minute nicht hinein",
+    "extensions": "Drüber? Um ein Ende herum",
+    "phases": {
+      "waiting": "Warten",
+      "warning": "Ankündigung",
+      "prep": "Vorbereitung",
+      "last": "Letzte Minute",
+      "started": "Gestartet",
+      "postponed": "Verschoben",
+      "recall": "Allgemeiner Rückruf",
+      "done": "Wettfahrt läuft!"
+    },
+    "events": {
+      "classUp": "Klassenflagge gesetzt: Ankündigungssignal",
+      "prepUp": "{flag} gesetzt: Vorbereitungssignal",
+      "prepDown": "{flag} eingeholt: noch eine Minute",
+      "classDown": "Klassenflagge eingeholt: Start!",
+      "xUp": "X gesetzt: Einzelrückruf",
+      "xDown": "X eingeholt: Alle Boote, die drüber waren, sind zurück",
+      "noX": "Kein X: {flag} gilt, also sind Boote, die in der letzten Minute im Dreieck waren, disqualifiziert (kein Einzelrückruf)",
+      "fsUp": "Erster Hilfsstander gesetzt: allgemeiner Rückruf",
+      "fsDown": "Erster Hilfsstander eingeholt: neues Ankündigungssignal in 1 Minute",
+      "blackNumbers": "Die Segelnummern der Boote mit schwarzer Flagge werden gezeigt: Sie dürfen beim neuen Start nicht mitsegeln",
+      "apUp": "AP gesetzt: Startverschiebung",
+      "apDown": "AP eingeholt: Ankündigungssignal in 1 Minute",
+      "end": "Wettfahrt läuft!"
+    },
+    "rules": {
+      "heading": "In der letzten Minute über der Linie?",
+      "P": "Flagge P: keine besondere Regel. Bist du beim Start über der Linie, wird Flagge X gesetzt. Fahr zurück und starte richtig.",
+      "I": "Flagge I (Regel 30.1): Bist du in der letzten Minute über der Linie, segle um ein Ende der Linie herum zurück. Dann starte.",
+      "Z": "Flagge Z (Regel 30.2): in der letzten Minute im Dreieck = Wertungsstrafe von 20 %, auch wenn der Start wiederholt wird.",
+      "U": "Flagge U (Regel 30.3): in der letzten Minute im Dreieck = disqualifiziert. Nach einem allgemeinen Rückruf darfst du beim neuen Start mitsegeln.",
+      "black": "Schwarze Flagge (Regel 30.4): in der letzten Minute im Dreieck = disqualifiziert, auch nach einem allgemeinen Rückruf. Beim neuen Start darfst du nicht mitsegeln."
+    }
+  },
+
+  "quiz": {
+    "heading": "Flaggen-Quiz",
+    "intro": "Zehn Fragen. Kannst du das Startschiff lesen?",
+    "modeMeaning": "Welche Flagge bedeutet …?",
+    "modeFlag": "Was bedeutet diese Flagge?",
+    "qMeaning": "Welche Flagge bedeutet: „{means}“",
+    "qFlag": "Was bedeutet diese Flagge?",
+    "start": "Quiz starten",
+    "next": "Nächste Frage",
+    "again": "Noch einmal",
+    "right": "Richtig!",
+    "wrong": "Nicht ganz. Es ist: {name}.",
+    "progress": "Frage {i} von {n}",
+    "score": "Punkte: {s}",
+    "result": "Du hast {s} von {n} richtig.",
+    "great": "Super! Du bist bereit für die Startlinie.",
+    "good": "Gut. Schau dir die Flaggen noch einmal an, die du nicht wusstest.",
+    "keepGoing": "Üb weiter. Schau in die Flaggen-Bibliothek und spiel dann noch einmal."
+  }
 }

@@ -1,3 +1,75 @@
 {
-  "_status": "not started — copy keys from ../en/common.json and translate"
+  "_status": "complete — all strings in Russian (2026-10-09). Sailing terms NOT yet reviewed by a Russian-speaking coach; see .claude/memory/terms-ru.md.",
+  "site": {
+    "name": "Young Sails",
+    "tagline": "Учимся ходить под парусом, деталь за деталью"
+  },
+  "nav": {
+    "aria": "Разделы сайта",
+    "optimist": "Оптимист",
+    "laser": "ILCA 6",
+    "flags": "Флаги",
+    "courses": "Трассы",
+    "partial": "частично",
+    "soon": "скоро"
+  },
+  "ui": {
+    "parts": "Детали",
+    "partsCount": { "one": "{n} деталь", "few": "{n} детали", "many": "{n} деталей", "other": "{n} детали" },
+    "partsAria": "Детали лодки",
+    "info": "Инфо",
+    "infoAria": "О выбранной детали",
+    "close": "Закрыть",
+    "water": "Вода",
+    "studio": "Студия",
+    "scene": "Сцена",
+    "boom": "Гик",
+    "explode": "Разобрать",
+    "labels": "Подписи",
+    "spin": "Вращать",
+    "reset": "Сброс",
+    "resetTitle": "Вернуть камеру в начальный вид",
+    "hullColour": "Цвет корпуса",
+    "viewControls": "Управление видом",
+    "language": "Язык",
+    "prev": "← Назад",
+    "next": "Вперёд →",
+    "prevAria": "Предыдущая деталь",
+    "nextAria": "Следующая деталь",
+    "zoom": "Приблизить",
+    "overview": "Обзор",
+    "overviewAria": "Назад к обзору",
+    "fade": "Приглушить остальные детали",
+    "startTour": "Начать экскурсию",
+    "loading": "Вооружаем лодку…",
+    "canvasAria": "3D-модель парусной лодки. Потяни, чтобы повернуть; прокрути колёсико или сведи пальцы, чтобы приблизить; нажми на деталь, чтобы узнать о ней."
+  },
+  "trim": {
+    "toPort": "влево",
+    "toStarboard": "вправо",
+    "centred": "по центру",
+    "starboardTack": "правый галс",
+    "portTack": "левый галс"
+  },
+  "pointsOfSail": {
+    "headToWind": "левентик",
+    "closeHauled": "бейдевинд",
+    "closeReach": "полный бейдевинд",
+    "beamReach": "галфвинд",
+    "broadReach": "бакштаг",
+    "running": "фордевинд"
+  },
+  "colours": {
+    "hull": "{c} корпус",
+    "white": "Белый",
+    "red": "Красный",
+    "sunflower": "Подсолнечный",
+    "blue": "Синий",
+    "teal": "Бирюзовый"
+  },
+  "errors": {
+    "notFoundTitle": "Сбились с курса",
+    "notFoundText": "Этой страницы нет на карте. Может быть, она переехала или ещё строится.",
+    "home": "К началу"
+  }
 }

@@ -1,3 +1,327 @@
 {
-  "_status": "not started — copy keys from ../en/courses.json and translate"
+  "_status": "complete — all strings in German (2026-10-09). Course terms NOT yet reviewed by a German coach or race officer; see .claude/memory/terms-de.md.",
+  "pageTitle": "Regattabahnen",
+  "title": "Regattabahnen",
+  "titleAccent": 7,
+  "tagline": "Welche Tonnen, in welcher Reihenfolge, auf welcher Seite",
+  "ui": {
+    "views": "Bereiche",
+    "library": "Bahnen",
+    "player": "Bahn absegeln",
+    "boardView": "Bahntafel",
+    "quiz": "Quiz",
+    "classLabel": "Bootsklasse",
+    "filters": "Bahnen zeigen",
+    "all": "Alle",
+    "typicalFilter": "Typisch für {c}",
+    "count": { "one": "{n} Bahn", "other": "{n} Bahnen" },
+    "typical": "Typisch für {c}",
+    "siBadge": "Deine Segelanweisungen gelten",
+    "footer": "Die Skizzen folgen diesen Quellen: {e}. Jede Veranstaltung kann sie ändern: Lies immer deine Segelanweisungen.",
+    "soon": "{name}: bald auf Young Sails.",
+    "links": { "rules": "Regeln an den Tonnen" },
+    "board": "Auf der Tafel",
+    "beatsAria": "Anzahl der Kreuzen",
+    "sailIt": "Diese Bahn absegeln ▶",
+    "route": "Reihenfolge der Tonnen",
+    "code": "Kürzel",
+    "beats": "Kreuzen",
+    "beatsN": { "one": "{n} Kreuz", "other": "{n} Kreuzen" },
+    "legs": "Schenkel",
+    "legsN": { "one": "{n} Schenkel", "other": "{n} Schenkel" },
+    "finish": "Ziel",
+    "source": "Quelle",
+    "why": "Warum",
+    "classNote": "Hinweis für {c}",
+    "si": "Meist in den Segelanweisungen festgelegt",
+    "checkSi": "Das ist ein typisches Beispiel. Die Segelanweisungen deiner Veranstaltung zeigen die echte Bahn, und sie gelten immer.",
+    "prev": "← Zurück",
+    "next": "Weiter →",
+    "prevAria": "Vorige Bahn",
+    "nextAria": "Nächste Bahn",
+    "close": "Schließen",
+    "closeAria": "Bahnkarte schließen",
+    "loadError": "Die Bahnen konnten nicht geladen werden. Prüfe deine Verbindung und lade die Seite neu."
+  },
+  "families": {
+    "wl": "Luv-Lee",
+    "trapezoid": "Trapez",
+    "triangle": "Dreieck"
+  },
+  "art": {
+    "wind": "Wind",
+    "startFinish": "Start und Ziel",
+    "rc": "Startschiff",
+    "aria": "Skizze der Bahn: {name}. Der Wind kommt von oben."
+  },
+  "route": {
+    "start": "Start",
+    "finish": "Ziel",
+    "mark": "Tonne {m}",
+    "gate": "Tor {g}",
+    "port": "Backbord (links von dir)",
+    "starboard": "Steuerbord (rechts von dir)",
+    "startHow": "Kreuze die Linie zwischen dem Startschiff (orange Flagge) und dem Pin-End.",
+    "finishHow": "Kreuze die Ziellinie von der Bahnseite her.",
+    "gateHow": "Segle zwischen den beiden Tonnen hindurch und runde dann eine von beiden.",
+    "leave": "An {side} lassen.",
+    "gateOne": "Nur diese Tonne des Tors, nicht {other}.",
+    "offsetHow": "Die Ablauftonne: ein kurzer Schenkel direkt nach Tonne 1."
+  },
+  "legs": {
+    "beat": "Kreuz",
+    "reach": "Raumschenkel",
+    "run": "Vorwindschenkel"
+  },
+  "intro": {
+    "chip": "So funktionieren Bahnen",
+    "heading": "Tonnen, Reihenfolge, Seite",
+    "text": "Eine Regattabahn besteht aus Tonnen (in den Regeln heißen sie Bahnmarken). Die Bahn sagt dir drei Dinge: um welche Tonnen du segelst, in welcher Reihenfolge, und an welcher Seite du jede Tonne lässt. In den Skizzen kommt der Wind immer von oben.",
+    "si": "Jede Skizze hier ist ein typisches Beispiel. Am Regattatag zeigen die Segelanweisungen deiner Veranstaltung die echte Bahn. Sie gelten immer.",
+    "hint": "Wähle eine Bahn, um ihre Tonnen zu sehen, oder drück auf „Diese Bahn absegeln“, um einem Boot dabei zuzuschauen."
+  },
+  "teach": {
+    "si": {
+      "title": "Die Segelanweisungen gelten",
+      "text": "Jede Regatta kann ihre Tonnen anders nummerieren, ihre Bahnen anders zeichnen und eigene Kürzel wählen. Bevor du aufs Wasser gehst, such die Bahnskizze in deinen Segelanweisungen und lern sie. Wenn du nicht sicher bist, frag deine Trainerin oder deinen Trainer.",
+      "rule": "WR 28 und die Definition „Bahn absegeln“: Du segelst die Bahn, die in den Segelanweisungen beschrieben ist."
+    },
+    "lines": {
+      "title": "Startlinie und Ziellinie",
+      "text": "Die Startlinie liegt zwischen einem Flaggenstock mit oranger Flagge auf dem Startschiff und dem Pin-End. Die Ziellinie liegt zwischen einem Flaggenstock mit blauer Flagge und der Tonne am anderen Ende. Manche Bahnen nutzen für beides dieselbe Linie. Kreuze die Ziellinie von der Bahnseite her.",
+      "rule": "WR Wettfahrtsignale; WR Anhang S, SA 9.2 und 11.1."
+    },
+    "sides": {
+      "title": "Eine Tonne an Backbord oder Steuerbord lassen",
+      "text": "„Eine Tonne an Backbord lassen“ heißt: Die Tonne bleibt links von dir, du drehst also links herum um sie. „An Steuerbord“ heißt: rechts von dir. In den Skizzen zeigt der Pfeil um jede Tonne, wie herum es geht. Bei den meisten Bahnen lässt du jede Tonne an Backbord.",
+      "rule": "Bahn absegeln: Eine Schnur entlang deines Wegs muss jede Tonne auf der richtigen Seite und in der richtigen Reihenfolge passieren."
+    },
+    "gates": {
+      "title": "Tore",
+      "text": "Ein Tor sind zwei Tonnen nebeneinander, zum Beispiel 2s und 2p. Segle zwischen ihnen hindurch und runde dann eine davon: 2s an Steuerbord oder 2p an Backbord. Wähle die Seite der Bahn, die dir für die nächste Kreuz besser gefällt. Ein Tor verhindert auch, dass sich ein großes Feld an einer einzigen Tonne drängt.",
+      "rule": "Bahn absegeln (b)(3): zwischen den Tonnen eines Tors hindurch, aus der Richtung der vorigen Tonne."
+    },
+    "legs": {
+      "title": "Kreuz, Raumschenkel und Vorwindschenkel",
+      "text": "Eine Kreuz geht gegen den Wind: Du kannst nicht direkt zur Tonne segeln, also segelst du hart am Wind und wendest. Ein Raumschenkel geht quer zum Wind. Ein Vorwindschenkel geht mit dem Wind, der Wind kommt von hinten. Die Zahl im Kürzel einer Bahn (L2, O3) sagt dir, wie viele Kreuzen du segelst.",
+      "rule": "World Sailing Race Management Manual: Die Zahl nach den Buchstaben ist die Anzahl der Kreuzen."
+    },
+    "signals": {
+      "title": "So wird die Bahn angezeigt",
+      "text": "Spätestens mit deinem Ankündigungssignal zeigt das Startschiff die Bahn, oft auf einer Tafel: „L3“, „O2“, „IOD“. Manchmal zeigt es auch den Kompasskurs zu Tonne 1. Manche Veranstaltungen nehmen stattdessen Zahlenwimpel oder Bahnnummern. In den Segelanweisungen steht, wie es gemacht wird.",
+      "rule": "WR Anhang S, SA 7.1."
+    },
+    "changes": {
+      "title": "Wenn sich die Bahn ändert",
+      "text": "Flagge C mit wiederholten Schallsignalen an einer Tonne: Die nächste Tonne wurde verlegt, also segle zu ihrer neuen Lage. Flagge M auf einem Boot: Es ersetzt eine fehlende Tonne, also runde es wie die Tonne. Flagge S: Die Bahn ist verkürzt, also geh an dieser Tonne durchs Ziel.",
+      "rule": "WR 32, 33 und 34."
+    },
+    "rules": {
+      "title": "Regeln an den Tonnen",
+      "text": "Wenn Boote gleichzeitig an einer Tonne ankommen, entscheiden die Regeln, wer Raum zum Runden bekommt (Bahnmarkenraum, WR 18). Bitte deine Trainerin oder deinen Trainer, es dir auf dem Wasser zu erklären."
+    },
+    "flagNames": {
+      "orange": "Orange Flagge",
+      "blue": "Blaue Flagge",
+      "C": "Flagge C",
+      "M": "Flagge M",
+      "S": "Flagge S"
+    }
+  },
+  "courses": {
+    "L": {
+      "name": "Luv-Lee, Ziel in Lee",
+      "summary": "Hoch zu Tonne 1 und runter zum Tor, immer wieder. Du gehst vor dem Wind durchs Ziel, auf derselben Linie, auf der du gestartet bist.",
+      "finish": "Vor dem Wind, auf der Startlinie (dieselbe Linie).",
+      "why": "Die einfachste Bahn zum Auslegen. Wenn der Wind dreht, lässt sie sich leicht verlegen. So bleibt jede Kreuz eine echte Kreuz."
+    },
+    "LA": {
+      "name": "Luv-Lee mit Ablauftonne",
+      "summary": "Wie Bahn L, aber mit einem kurzen Schenkel von Tonne 1 zur Ablauftonne 1a, bevor du zum Tor hinuntersegelst.",
+      "finish": "Vor dem Wind, auf der Startlinie (dieselbe Linie).",
+      "why": "Tonne 1a schickt die Boote, die Tonne 1 schon gerundet haben, weg von den Booten, die noch zu ihr hochkreuzen."
+    },
+    "W": {
+      "name": "Luv-Lee, Ziel in Luv",
+      "summary": "Hoch und runter wie Bahn L, aber der letzte Schenkel ist eine Kreuz. Die Ziellinie liegt in Luv von Tonne 1.",
+      "finish": "Gegen den Wind, auf einer Linie hinter Tonne 1.",
+      "why": "Die Boote gehen auf einer Kreuz durchs Ziel. So sind sie weit verteilt und leicht zu notieren. Auf der letzten Kreuz zählt Tonne 1 nicht: Du darfst sie auf jeder Seite passieren."
+    },
+    "WA": {
+      "name": "Luv-Lee mit Ablauftonne, Ziel in Luv",
+      "summary": "Bahn W mit der Ablauftonne 1a nach jeder Rundung von Tonne 1. Der letzte Schenkel ist eine Kreuz zu einem Ziel hinter Tonne 1.",
+      "finish": "Gegen den Wind, auf einer Linie hinter Tonne 1."
+    },
+    "TL": {
+      "name": "Dreieck, Ziel in Lee",
+      "summary": "Die klassische Vereinsbahn: eine Kreuz zu Tonne 1, ein Raumschenkel zu Tonne 2, ein Raumschenkel zu Tonne 3, dann eine Kreuz zurück zu Tonne 1. Mit mehr Kreuzen (TL3) kommen zwischen Tonne 3 und 1 ein Vorwindschenkel und eine Kreuz dazu: das „Dreieck mit Wurst“.",
+      "finish": "Vor dem Wind, auf der Startlinie (dieselbe Linie).",
+      "why": "Zwei Raumschenkel bringen Abwechslung. Bei Vereinsregatten immer noch üblich."
+    },
+    "TW": {
+      "name": "Dreieck, Ziel in Luv",
+      "summary": "Kreuz, Raumschenkel, Raumschenkel, dann wieder hoch. Der letzte Schenkel ist eine Kreuz zu einer Ziellinie hinter Tonne 1.",
+      "finish": "Gegen den Wind, auf einer Linie hinter Tonne 1."
+    },
+    "I": {
+      "name": "Trapez, innere Schleife",
+      "summary": "Zuerst Luv-Lee auf der inneren Seite: Tonne 1, Tor 4s/4p, noch einmal Tonne 1. Dann ein Raumschenkel zu Tonne 2, ein Vorwindschenkel zu Tonne 3p und ein Raumschenkel ins Ziel.",
+      "finish": "Auf einem Raumschenkel von Tonne 3p, zu einer Linie nahe am Startschiff.",
+      "why": "Ein Trapez sind zwei Luv-Lee-Bahnen nebeneinander. So können zwei Flotten gleichzeitig segeln: eine auf der inneren Schleife, eine auf der äußeren."
+    },
+    "O": {
+      "name": "Trapez, äußere Schleife",
+      "summary": "Eine Kreuz zu Tonne 1, ein Raumschenkel zu Tonne 2, dann Luv-Lee auf der äußeren Seite zwischen Tor 3s/3p und Tonne 2. Zuletzt ein Raumschenkel von Tonne 3p ins Ziel.",
+      "finish": "Auf einem Raumschenkel von Tonne 3p, zu einer Linie nahe am Startschiff.",
+      "why": "Der Raumschenkel von Tonne 1 zu Tonne 2 verteilt das Feld, bevor der Vorwindschenkel kommt."
+    },
+    "IOD": {
+      "name": "Optimist-Bahn",
+      "summary": "Die Bahn der Optimist-Meisterschaften: eine Kreuz zu Tonne 1, ein Raumschenkel zu Tonne 2, ein Vorwindschenkel zum Tor 3s/3p und eine Kreuz ins Ziel, knapp innerhalb von Tonne 2. Vier Schenkel, die ersten drei gleich lang.",
+      "finish": "Gegen den Wind, am Ende der zweiten Kreuz, auf einer Linie knapp innerhalb von Tonne 2.",
+      "why": "Eine Bahn mit allen Kursen zum Wind, und ein Ziel auf einer Kreuz, wo das Feld weit verteilt ist."
+    }
+  },
+  "classes": {
+    "optimist": {
+      "name": "Optimist",
+      "intro": "Bei Optimist-Meisterschaften wird die Optimist-Bahn („IOD“) gesegelt: ein Trapez mit äußerer Schleife und dem Ziel am Ende der zweiten Kreuz. Vereins- und Landesregatten nutzen auch Luv-Lee-, Trapez- und Dreiecksbahnen.",
+      "notes": {
+        "IOD": "IODA-Weltmeisterschaften nutzen diese Form: ein Trapez mit äußerer Schleife und der Ziellinie am Ende des zweiten Schenkels gegen den Wind. Der Zielschenkel kann kürzer oder länger sein als die anderen Schenkel.",
+        "O": "Bei vielen Optimist-Regatten steht „O2“ oder „I2“ auf der Tafel. Die Nummern der Tonnen können anders sein als in dieser Skizze: Prüfe die Bahnskizze in deinen Segelanweisungen.",
+        "I": "Bei mehreren Flotten segelt oft eine die äußere Schleife und die nächste die innere. Achte darauf, welche Tafel vor deinem Ankündigungssignal gezeigt wird.",
+        "L": "Üblich für jüngere Flotten und kurze Wettfahrten: leicht auszulegen und leicht zu verstehen."
+      },
+      "courses": {}
+    },
+    "ilca": {
+      "name": "ILCA",
+      "intro": "Bei ILCA-Meisterschaften werden Trapezbahnen mit innerer und äußerer Schleife gesegelt, mit Toren in Lee und getrennten Start- und Ziellinien. Auf der Tafel steht „I2“ oder „O2“. Die ILCA-Versionen weichen etwas von der Tabelle von World Sailing ab: Sieh dir die ILCA-Karten an.",
+      "notes": {
+        "ilca-I": "Aus den Segelanweisungen der ILCA-Weltmeisterschaften: Die innere Schleife hat nach der ersten Rundung von Tonne 1 die Ablauftonne 1a, und du gehst durch das Tor 3s/3p ins Ziel.",
+        "ilca-O": "Aus den Segelanweisungen der ILCA-Weltmeisterschaften: Nach dem zweiten Vorwindschenkel rundest du eine der beiden Tonnen von Tor 3, dann geht es raumschots ins Ziel.",
+        "I": "Das ist die Version von World Sailing. Bei ILCA-Meisterschaften kommt auf der inneren Schleife Tonne 1a dazu, und sie endet durch Tor 3: Sieh dir „ILCA innere Schleife“ an.",
+        "O": "Das ist die Version von World Sailing. Bei ILCA-Meisterschaften darfst du vor dem Ziel eine der beiden Tonnen von Tor 3 runden: Sieh dir „ILCA äußere Schleife“ an."
+      },
+      "courses": {
+        "ilca-I": {
+          "name": "ILCA-Trapez, innere Schleife",
+          "summary": "Kreuz zu Tonne 1, kurzer Schenkel zur Ablauftonne 1a, Vorwindschenkel zum Tor 4s/4p, Kreuz zu Tonne 1, Raumschenkel zu Tonne 2, Vorwindschenkel zum Tor 3s/3p, Raumschenkel ins Ziel.",
+          "finish": "Auf einem Raumschenkel von Tor 3, auf einer eigenen Ziellinie zwischen den Schleifen.",
+          "why": "Die eigene Ziellinie hält Boote im Zieleinlauf von der Startlinie fern. So kann die nächste Flotte starten."
+        },
+        "ilca-O": {
+          "name": "ILCA-Trapez, äußere Schleife",
+          "summary": "Kreuz zu Tonne 1, Raumschenkel zu Tonne 2, Vorwindschenkel zum Tor 3s/3p, Kreuz zu Tonne 2, noch einmal Vorwindschenkel zum Tor 3s/3p, Raumschenkel ins Ziel.",
+          "finish": "Auf einem Raumschenkel von Tor 3, auf einer eigenen Ziellinie zwischen den Schleifen."
+        }
+      }
+    }
+  },
+  "player": {
+    "heading": "Bahn absegeln",
+    "intro": "Schau zu, wie ein Boot die Bahn Schenkel für Schenkel absegelt. Auf der Kreuz wendet es, auf Raum- und Vorwindschenkeln segelt es geradeaus. Der Pfeil um jede Tonne leuchtet auf, wenn das Boot sie rundet.",
+    "course": "Bahn",
+    "play": "▶ Abspielen",
+    "pause": "❚❚ Pause",
+    "resume": "▶ Weiter",
+    "again": "▶ Noch einmal",
+    "back": "◀ Schenkel",
+    "backAria": "Einen Schenkel zurück",
+    "step": "Schenkel ▶",
+    "stepAria": "Einen Schenkel weiter",
+    "reset": "Zurück zum Start",
+    "reduced": "Auf diesem Gerät sind Bewegungen reduziert: Geh mit den Schenkel-Knöpfen Schritt für Schritt durch die Bahn.",
+    "speed": "Tempo",
+    "wind": "Wind",
+    "steady": "Stetig",
+    "shiftRight": "20° nach rechts",
+    "shiftLeft": "20° nach links",
+    "right": "rechts",
+    "left": "links",
+    "legOf": "Schenkel {i} von {n}: {from} → {to}",
+    "rounding": "{m} runden: an {side} lassen",
+    "tacking": "kreuzen",
+    "finished": "Im Ziel!",
+    "finishedSub": "Du hast die Ziellinie gekreuzt.",
+    "siNote": "Das ist ein typisches Beispiel. Deine Segelanweisungen zeigen die echte Bahn.",
+    "shiftNote": "Der Wind hat um {d}° nach {dir} gedreht. Die Kreuzen sind jetzt schief: Ein Schlag ist lang, der andere kurz, und der Vorwindschenkel geht nicht mehr genau mit dem Wind. Die Wettfahrtleitung kann die nächste Tonne verlegen, damit der nächste Schenkel zum neuen Wind passt. Das zeigt sie dir mit Flagge C an der Tonne, die du gerade rundest."
+  },
+  "board": {
+    "heading": "Bahntafel",
+    "intro": "Tipp ein, was du auf dem Startschiff siehst, oder wähle ein Kürzel. Wir zeigen dir die Bahn und erklären das Kürzel.",
+    "label": "Auf der Tafel steht",
+    "hint": "Buchstaben = Art der Bahn. Die Zahl = wie viele Kreuzen.",
+    "empty": "Tipp ein Bahnkürzel ein, zum Beispiel L2 oder IOD.",
+    "lookSi": "Schau in deine Segelanweisungen: Dort steht jedes Kürzel erklärt, das die Wettfahrtleitung zeigen wird.",
+    "beatsLine": { "one": "{n} = du segelst {n} Kreuz (Schenkel gegen den Wind).", "other": "{n} = du segelst {n} Kreuzen (Schenkel gegen den Wind)." },
+    "unknown": "„{code}“ kennen wir nicht. Viele Veranstaltungen nutzen eigene Kürzel oder Bahnnummern.",
+    "noDiagram": "Für diese Bahn haben wir noch keine Skizze. Bei Optimist- und ILCA-Regatten ist sie selten.",
+    "noNumber": "Die Anzahl der Kreuzen fehlt. Sie steht meist nach den Buchstaben, zum Beispiel {code}.",
+    "odd": "Diese Anzahl Kreuzen ist ungewöhnlich. Prüfe sie in deinen Segelanweisungen.",
+    "many": "Eine lange Wettfahrt! Dieselben Tonnen, mit mehr Runden.",
+    "openCard": "Bahnkarte öffnen",
+    "otherClass": "Diese Bahn gehört zur Klasse {c}. Wähle oben diese Bootsklasse, um sie abzusegeln."
+  },
+  "designations": {
+    "I": "Trapez, innere Schleife, Ziel auf einem Raumschenkel",
+    "O": "Trapez, äußere Schleife, Ziel auf einem Raumschenkel",
+    "IW": "Trapez, innere Schleife, Ziel auf einer Kreuz",
+    "OW": "Trapez, äußere Schleife, Ziel auf einer Kreuz",
+    "IA": "Trapez, innere Schleife, mit Ablauftonne 1a",
+    "OA": "Trapez, äußere Schleife, mit Ablauftonne 1a",
+    "L": "Luv-Lee, Ziel vor dem Wind",
+    "W": "Luv-Lee, Ziel gegen den Wind",
+    "LA": "Luv-Lee mit Ablauftonne 1a, Ziel vor dem Wind",
+    "WA": "Luv-Lee mit Ablauftonne 1a, Ziel gegen den Wind",
+    "LG": "Luv-Lee, Ziel auf einem Raumschenkel nach Steuerbord nach einem Vorwindschenkel",
+    "LR": "Luv-Lee, Ziel auf einem Raumschenkel nach Backbord nach einem Vorwindschenkel",
+    "WG": "Luv-Lee, Ziel auf einem Raumschenkel nach Steuerbord nach einer Kreuz",
+    "WR": "Luv-Lee, Ziel auf einem Raumschenkel nach Backbord nach einer Kreuz",
+    "T": "Dreieck, Start und Ziel in der Mitte der Kreuz",
+    "TL": "Dreieck, Ziel vor dem Wind",
+    "TW": "Dreieck, Ziel gegen den Wind",
+    "TR": "Dreieck, Ziel auf einem Raumschenkel",
+    "TLA": "Dreieck mit Ablauftonne 1a, Ziel vor dem Wind",
+    "TWA": "Dreieck mit Ablauftonne 1a, Ziel gegen den Wind",
+    "IS": "Trapez, innere Schleife, mit Slalom vor dem Ziel (Windsurfen)",
+    "OS": "Trapez, äußere Schleife, mit Slalom vor dem Ziel (Windsurfen)",
+    "LS": "Luv-Lee mit Slalom vor dem Ziel (Windsurfen)",
+    "M": "Match Race: Luv-Lee, Tonnen an Steuerbord lassen",
+    "IOD": "die Optimist-Bahn"
+  },
+  "quiz": {
+    "heading": "Bahnen-Quiz",
+    "intro": "Zehn Fragen zu Tonnen, Seiten, Schenkeln und Zielen. Lies die Skizze: Der Wind kommt von oben.",
+    "start": "Quiz starten",
+    "mode": {
+      "next": "Welche Tonne als Nächstes?",
+      "side": "Backbord oder Steuerbord?",
+      "leg": "Kreuz, Raum- oder Vorwindschenkel?",
+      "finish": "Wo ist das Ziel?"
+    },
+    "times": { "1": "zum ersten Mal", "2": "zum zweiten Mal", "3": "zum dritten Mal", "4": "noch einmal" },
+    "qNext": "Bahn {code}: Du hast gerade {m} gerundet ({times}). Wohin geht es als Nächstes?",
+    "qSide": "Bahn {code}: An welcher Seite lässt du Tonne {m}?",
+    "side": { "port": "An Backbord (links von mir)", "starboard": "An Steuerbord (rechts von mir)" },
+    "explainSide": "Tonne {m}: an {side} lassen. Schau auf den Pfeil um die Tonne.",
+    "explainGate": "Tonne {m} gehört zu einem Tor: Das verrät dir der Buchstabe. „s“ = an Steuerbord lassen, „p“ (englisch „port“) = an Backbord lassen. Also {m}: {side}.",
+    "qLeg": "Der orange Schenkel, von {from} nach {to}: Ist das eine Kreuz, ein Raumschenkel oder ein Vorwindschenkel?",
+    "explainLeg": {
+      "beat": "Er geht gegen den Wind, also ist es eine Kreuz: Du musst wenden.",
+      "reach": "Er geht quer zum Wind, also ist es ein Raumschenkel.",
+      "run": "Er geht mit dem Wind, also ist es ein Vorwindschenkel."
+    },
+    "qFinish": "Auf der Tafel steht {code}. Wo ist das Ziel?",
+    "progress": "Frage {i} von {n}",
+    "score": "Punkte: {s}",
+    "next": "Nächste Frage",
+    "again": "Noch einmal",
+    "right": "Richtig!",
+    "wrong": "Nicht ganz. Die Antwort ist: {a}.",
+    "result": "Du hast {s} von {n} richtig.",
+    "great": "Super! Du kannst jetzt jede Bahntafel lesen.",
+    "good": "Gut. Segle die Bahnen, die du nicht wusstest, im Abspieler ab.",
+    "keepGoing": "Üb weiter. Öffne die Bahnen, segle sie ab und spiel dann noch einmal."
+  }
 }

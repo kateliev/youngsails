@@ -1,3 +1,75 @@
 {
-  "_status": "not started — copy keys from ../en/common.json and translate"
+  "_status": "complete — all strings in German (2026-10-09). Sailing terms NOT yet reviewed by a German coach; see .claude/memory/terms-de.md.",
+  "site": {
+    "name": "Young Sails",
+    "tagline": "Segeln lernen, Teil für Teil"
+  },
+  "nav": {
+    "aria": "Bereiche der Website",
+    "optimist": "Optimist",
+    "laser": "ILCA 6",
+    "flags": "Flaggen",
+    "courses": "Bahnen",
+    "partial": "teilweise",
+    "soon": "bald"
+  },
+  "ui": {
+    "parts": "Teile",
+    "partsCount": { "one": "{n} Teil", "other": "{n} Teile" },
+    "partsAria": "Teile des Boots",
+    "info": "Info",
+    "infoAria": "Über das gewählte Teil",
+    "close": "Schließen",
+    "water": "Wasser",
+    "studio": "Studio",
+    "scene": "Szene",
+    "boom": "Baum",
+    "explode": "Zerlegen",
+    "labels": "Namen",
+    "spin": "Drehen",
+    "reset": "Zurücksetzen",
+    "resetTitle": "Kamera zurücksetzen",
+    "hullColour": "Rumpffarbe",
+    "viewControls": "Ansicht",
+    "language": "Sprache",
+    "prev": "← Zurück",
+    "next": "Weiter →",
+    "prevAria": "Voriges Teil",
+    "nextAria": "Nächstes Teil",
+    "zoom": "Heranzoomen",
+    "overview": "Übersicht",
+    "overviewAria": "Zurück zur Übersicht",
+    "fade": "Andere Teile ausblenden",
+    "startTour": "Rundgang starten",
+    "loading": "Das Boot wird aufgeriggt …",
+    "canvasAria": "3D-Modell eines Segelboots. Zum Drehen ziehen, zum Zoomen scrollen oder die Finger spreizen. Klicke auf ein Teil, um mehr darüber zu erfahren."
+  },
+  "trim": {
+    "toPort": "backbords",
+    "toStarboard": "steuerbords",
+    "centred": "mittig",
+    "starboardTack": "Steuerbordbug",
+    "portTack": "Backbordbug"
+  },
+  "pointsOfSail": {
+    "headToWind": "im Wind",
+    "closeHauled": "hart am Wind",
+    "closeReach": "am Wind",
+    "beamReach": "halber Wind",
+    "broadReach": "raumer Wind",
+    "running": "vor dem Wind"
+  },
+  "colours": {
+    "hull": "Rumpf in {c}",
+    "white": "Weiß",
+    "red": "Rot",
+    "sunflower": "Sonnengelb",
+    "blue": "Blau",
+    "teal": "Petrol"
+  },
+  "errors": {
+    "notFoundTitle": "Vom Kurs abgekommen",
+    "notFoundText": "Diese Seite steht nicht auf der Seekarte. Vielleicht ist sie umgezogen, oder sie wird gerade noch gebaut.",
+    "home": "Zurück zum Start"
+  }
 }

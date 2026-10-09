@@ -19,9 +19,9 @@ export const SITE = {
 export const LANGS = [
   { code: 'en', label: 'English', ready: true },
   { code: 'bg', label: 'Български', ready: false, partial: true },
-  { code: 'de', label: 'Deutsch', ready: false },
+  { code: 'de', label: 'Deutsch', ready: false, partial: true },
   { code: 'fr', label: 'Français', ready: false },
-  { code: 'ru', label: 'Русский', ready: false },
+  { code: 'ru', label: 'Русский', ready: false, partial: true },
 ];
 export const DEFAULT_LANG = 'en';
 
