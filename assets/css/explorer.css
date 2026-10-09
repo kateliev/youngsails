@@ -106,8 +106,7 @@ body.explorer { overflow: hidden; }
   .brand h1 { font-size: 30px; }
   .sheet-toggles { display: flex; }
 
-  .sheet { display: none; position: absolute; left: 12px; right: 12px; top: var(--sheet-top); z-index: 5;
-    max-height: calc(100% - var(--sheet-top) - 100px); flex-direction: column; }
+  .sheet { display: none; position: absolute; left: 12px; right: 12px; top: var(--sheet-top); z-index: 5; flex-direction: column; }
   .sheet.open { display: flex; }
   #card { padding: 14px 16px; }
   .parts, .card { width: auto; }
@@ -118,6 +117,19 @@ body.explorer { overflow: hidden; }
   .card .sheet-close { position: absolute; top: 10px; right: 10px; z-index: 1; }
   .parts header { align-items: center; }
 
-  .toolbar { left: 12px; right: 12px; transform: none; max-width: none; gap: 10px; }
-  .trim { width: 260px; }
+  /* toolbar folds into rows instead of scrolling sideways:
+       1. boom slider, full width (its readout gets the whole line)
+       2. Explode / Labels / Spin / Reset, four equal buttons (a basis near a quarter forces the break after them)
+       3. Water / Studio and the hull colours
+     If a very narrow screen or a long translation does not fit, items wrap to another row; nothing scrolls. */
+  .toolbar { left: 12px; right: 12px; bottom: 24px; transform: none; max-width: none; overflow: visible;
+    flex-wrap: wrap; justify-content: space-between; gap: 8px 8px; padding: 10px 12px; }
+  .toolbar > .trim { order: 1; flex: 1 1 100%; width: auto; min-width: 0; }   /* min-width: a long readout cuts with "…" instead of widening the row */
+  .toolbar > .tg { order: 2; flex: 1 1 20%; padding: 8px 6px; }
+  .toolbar > .seg, .toolbar > .sw { order: 3; }
+  .toolbar > .sep { display: none; }
+  .sw { align-items: center; gap: 8px; }
+  .sw button { width: 26px; height: 26px; }   /* finger-sized */
+  /* sheets stop above the toolbar; ui.js writes its real height into --toolbar-h */
+  .sheet { max-height: calc(100% - var(--sheet-top) - var(--toolbar-h, 150px) - 36px); }
 }

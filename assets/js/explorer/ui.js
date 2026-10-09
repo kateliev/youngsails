@@ -129,6 +129,9 @@ export function createUI({ stage, registry, model, state, S, M, G, parts, groups
 
   /* ---------------- toolbar ---------------- */
   const trimEl = $('trim');
+  // On phones the toolbar folds into rows; the CSS keeps the sheets above it with this height.
+  const toolbarEl = document.querySelector('.toolbar'), appEl = $('app');
+  new ResizeObserver(() => appEl.style.setProperty('--toolbar-h', `${toolbarEl.offsetHeight}px`)).observe(toolbarEl);
   function setTrim(d, time) {
     model.setTrim(d, time); registry.applyLook(); registry.applyExplode();
     const a = windAngleFromBoom(d), tack = tackFromBoom(d);
