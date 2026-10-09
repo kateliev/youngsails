@@ -1,3 +1,420 @@
 {
-  "_status": "not started — copy keys from ../en/flags.json and translate"
+  "_status": "complete — all strings in French (2026-10-09). Wording of the meanings NOT yet checked against the official RCV 2025–2028 (FFVoile) « Signaux de course » page; see .claude/memory/terms-fr.md.",
+  "pageTitle": "Pavillons de course",
+  "title": "Pavillons de course",
+  "titleAccent": 0,
+  "tagline": "Ce que le bateau comité te dit",
+  "edition": "Règles de course à la voile {e}",
+
+  "ui": {
+    "views": "Rubriques",
+    "library": "Pavillons",
+    "trainer": "Entraîneur de départ",
+    "quiz": "Quiz",
+    "classLabel": "Série",
+    "search": "Rechercher",
+    "searchPlaceholder": "Chercher un pavillon : « AP », « rappel »…",
+    "filters": "Afficher les pavillons pour",
+    "all": "Tous",
+    "count": { "one": "{n} signal", "other": "{n} signaux" },
+    "noResults": "Aucun pavillon ne correspond. Essaie un autre mot ou choisis « Tous ».",
+    "means": "Signification",
+    "youDo": "Ce que tu fais",
+    "sound": "Son",
+    "rule": "Règle",
+    "tip": "Astuce",
+    "classNote": "Note {c}",
+    "si": "En général fixé par les instructions de course",
+    "siShort": "Règle de l’épreuve",
+    "variants": "Flamme 1 à 9 = heures",
+    "extras": "Montré avec le pavillon C",
+    "prev": "← Préc.",
+    "next": "Suiv. →",
+    "prevAria": "Pavillon précédent",
+    "nextAria": "Pavillon suivant",
+    "close": "Fermer",
+    "closeAria": "Fermer la fiche du pavillon",
+    "language": "Langue",
+    "over": "sur",
+    "with": "avec",
+    "openCard": "Voir les détails : {name}",
+    "links": { "courses": "Les parcours expliqués" },
+    "soon": "{name} : bientôt sur Young Sails.",
+    "loadError": "La bibliothèque de pavillons n’a pas pu se charger. Vérifie ta connexion et recharge la page."
+  },
+
+  "groups": {
+    "start": "Départ",
+    "recall": "Rappels",
+    "postpone": "Retard",
+    "abandon": "Annulation",
+    "course": "Changements de parcours",
+    "finish": "Arrivée",
+    "penalty": "Pénalités",
+    "safety": "Sécurité",
+    "ashore": "À terre"
+  },
+
+  "sounds": {
+    "1": "un signal sonore",
+    "2": "deux signaux sonores",
+    "3": "trois signaux sonores",
+    "long": "un signal sonore long",
+    "rep": "signaux sonores répétés",
+    "none": "pas de signal sonore",
+    "whistle": "un coup de sifflet ou un autre son",
+    "up": "Envoi : {s}",
+    "down": "Affalé : {s}"
+  },
+
+  "intro": {
+    "chip": "Comment marchent les signaux",
+    "heading": "Les pavillons parlent, la corne aide",
+    "text": "Le comité de course te parle avec des pavillons. Une corne ou un sifflet te fait lever les yeux. Les règles disent que l’heure est donnée par les pavillons, et qu’on ne tient pas compte d’un signal sonore oublié.",
+    "rule": "RCV 26 et Signaux de course",
+    "legend": [
+      ["↑", "le pavillon est envoyé (il monte)"],
+      ["↓", "le pavillon est affalé (il descend)"],
+      ["●", "un signal sonore"],
+      ["● ●", "deux signaux sonores"],
+      ["● ● ●", "trois signaux sonores"],
+      ["▬▬", "un signal sonore long"],
+      ["- - - - -", "signaux sonores répétés"]
+    ],
+    "over": "Un pavillon montré au-dessus de ton pavillon de série (ou de ton pavillon de groupe ou de flotte) ne concerne que cette série ou ce groupe.",
+    "tip": "Regarde le pavillon, pas la corne. La corne peut être en retard, trop faible ou emportée par le vent.",
+    "hint": "Choisis un pavillon pour savoir ce qu’il veut dire et ce que tu dois faire."
+  },
+
+  "flags": {
+    "class": {
+      "name": "Pavillon de série",
+      "means": "Signal d’avertissement : ton départ est dans 5 minutes.",
+      "youDo": "Lance ton chrono. Navigue près de la ligne de départ, vérifie le vent et le parcours. Quand ton pavillon de série est affalé, c’est le départ.",
+      "sound": "Envoi : un signal sonore (avertissement, 5 minutes). Affalé : un signal sonore (départ, 0).",
+      "tip": "L’avis de course ou les instructions de course peuvent fixer un autre temps que 5 minutes. Ils te disent aussi quel est ton pavillon de série."
+    },
+    "P": {
+      "name": "Pavillon P",
+      "means": "Signal préparatoire : 4 minutes avant ton départ. Pas de règle de départ spéciale.",
+      "youDo": "Vérifie ton chrono. Quand P est affalé avec un signal sonore long, il reste 1 minute. Si tu es au-delà de la ligne au départ, reviens et prends le départ à nouveau.",
+      "tip": "On appelle P le « Blue Peter »."
+    },
+    "I": {
+      "name": "Pavillon I",
+      "means": "Signal préparatoire avec la règle 30.1 : si tu es au-delà de la ligne pendant la dernière minute, tu dois revenir en contournant une extrémité de la ligne.",
+      "youDo": "Reste derrière la ligne pendant la dernière minute. Si tu es au-delà, reviens en coupant un des prolongements de la ligne, à l’extérieur des extrémités, puis prends ton départ.",
+      "tip": "Tu ne peux pas juste repasser la ligne. Fais le tour par une extrémité."
+    },
+    "Z": {
+      "name": "Pavillon Z",
+      "means": "Signal préparatoire avec la règle 30.2 : si tu es dans le triangle pendant la dernière minute, tu reçois une pénalité de 20 % sur ton score.",
+      "youDo": "Pendant la dernière minute, reste hors du triangle formé par les deux extrémités de la ligne et la première bouée. Si tu es pris, la pénalité reste, même si le départ est redonné.",
+      "tip": "Pas de pénalité si la course est retardée ou annulée avant le départ. Chaque fois que tu es pris à une nouvelle tentative de départ, tu reçois 20 % de plus."
+    },
+    "ZI": {
+      "name": "Z avec I",
+      "means": "Pavillons Z et I ensemble comme signal préparatoire : les règles 30.1 et 30.2 s’appliquent toutes les deux.",
+      "youDo": "Reste hors du triangle pendant la dernière minute. Si tu es au-delà de la ligne, reviens en contournant une extrémité de la ligne."
+    },
+    "U": {
+      "name": "Pavillon U",
+      "means": "Signal préparatoire avec la règle 30.3 : si tu es dans le triangle pendant la dernière minute, tu es disqualifié.",
+      "youDo": "Reste hors du triangle pendant la dernière minute. Si le départ est redonné (rappel général), tu peux courir le nouveau départ.",
+      "tip": "Avec U ou le pavillon noir, il n’y a pas de rappel individuel. Être dans le triangle pendant la dernière minute suffit pour être disqualifié."
+    },
+    "black": {
+      "name": "Pavillon noir",
+      "means": "Signal préparatoire avec la règle 30.4 : si tu es dans le triangle pendant la dernière minute, tu es disqualifié, même s’il y a un rappel général.",
+      "youDo": "Reste bien derrière la ligne pendant la dernière minute. Si tu es pris, ton numéro de voile est affiché avant le signal d’avertissement suivant et tu ne peux pas courir le nouveau départ.",
+      "tip": "Ça ne compte pas si la course est retardée ou annulée avant le départ. Si tu cours quand même le nouveau départ, tu ne pourras pas retirer ce résultat de ton classement."
+    },
+    "orange": {
+      "name": "Pavillon orange",
+      "means": "La hampe qui porte ce pavillon est une extrémité de la ligne de départ.",
+      "youDo": "Trouve les deux extrémités de la ligne : le pavillon orange sur le bateau comité et la bouée (ou un autre bateau) à l’autre bout. Aligne-les pour savoir où est la ligne.",
+      "tip": "Entraîne-toi aux « alignements » : regarde au-delà d’une extrémité vers un repère sur la côte, pour retrouver la ligne de loin."
+    },
+    "X": {
+      "name": "Pavillon X",
+      "means": "Rappel individuel : au départ, un ou plusieurs bateaux étaient au-delà de la ligne (ou n’ont pas respecté la règle 30.1).",
+      "youDo": "Si tu étais au-delà, reviens jusqu’à ce que toute ta coque soit derrière la ligne, puis prends ton départ. Avec le pavillon I, contourne une extrémité. Personne n’est obligé d’annoncer ton numéro.",
+      "tip": "X reste envoyé jusqu’à ce que tous ces bateaux soient revenus, mais au plus 4 minutes après le départ (ou jusqu’à 1 minute avant le départ suivant)."
+    },
+    "FS": {
+      "name": "Premier substitut",
+      "means": "Rappel général : le départ est annulé et sera redonné.",
+      "youDo": "Reviens du côté pré-départ de la ligne et attends. Quand le pavillon est affalé, le nouveau signal d’avertissement est fait 1 minute plus tard.",
+      "tip": "Pour le nouveau départ, le comité utilise souvent un pavillon préparatoire plus sévère (U ou noir). Regarde bien à nouveau."
+    },
+    "AP": {
+      "name": "Aperçu (AP)",
+      "means": "Retard : les courses qui n’ont pas commencé partiront plus tard.",
+      "youDo": "Reste près de la zone de départ et continue à regarder. Quand l’Aperçu est affalé, le signal d’avertissement est fait 1 minute plus tard.",
+      "tip": "Profite de l’attente : bois, mange un en-cas, reste au chaud, observe le vent."
+    },
+    "AP-H": {
+      "name": "Aperçu sur H",
+      "means": "Les courses non commencées sont retardées. Autres signaux à terre.",
+      "youDo": "Rentre au port. Regarde le mât de pavillons officiel à terre pour le signal suivant."
+    },
+    "AP-A": {
+      "name": "Aperçu sur A",
+      "means": "Les courses non commencées sont retardées. Plus de course aujourd’hui.",
+      "youDo": "Rentre au port. Les courses sont finies pour aujourd’hui."
+    },
+    "AP-num": {
+      "name": "Aperçu sur une flamme numérique",
+      "means": "Les courses non commencées sont retardées de 1 à 9 heures après l’heure de départ prévue.",
+      "youDo": "Le chiffre de la flamme est le nombre d’heures. Aperçu sur la flamme 2 veut dire : deux heures plus tard que prévu."
+    },
+    "N": {
+      "name": "Pavillon N",
+      "means": "Toutes les courses en cours sont annulées. Retour vers la zone de départ.",
+      "youDo": "Arrête de courir et reviens vers la zone de départ. Quand N est affalé, le signal d’avertissement est fait 1 minute plus tard.",
+      "tip": "Annulée veut dire que la course ne compte pas. En général, elle sera courue à nouveau."
+    },
+    "N-H": {
+      "name": "N sur H",
+      "means": "Toutes les courses en cours sont annulées. Autres signaux à terre.",
+      "youDo": "Arrête de courir et rentre au port. Regarde le mât de pavillons à terre."
+    },
+    "N-A": {
+      "name": "N sur A",
+      "means": "Toutes les courses en cours sont annulées. Plus de course aujourd’hui.",
+      "youDo": "Arrête de courir et rentre à terre."
+    },
+    "C": {
+      "name": "Pavillon C",
+      "means": "La position de la bouée suivante a changé.",
+      "youDo": "Cherche le signal qui va avec : un triangle vert veut dire que la bouée a été déplacée vers tribord (à droite), un rectangle rouge vers bâbord (à gauche), « − » un bord plus court, « + » un bord plus long. Il peut aussi y avoir un cap au compas.",
+      "sound": "Signaux sonores répétés, à une bouée à contourner, avant que tu commences le nouveau bord.",
+      "tip": "La nouvelle bouée n’est peut-être pas encore en place. Navigue vers l’endroit où elle devrait être."
+    },
+    "M": {
+      "name": "Pavillon M",
+      "means": "L’objet qui porte ce pavillon (souvent un bateau) remplace une bouée manquante.",
+      "youDo": "Contourne-le ou passe-le comme si c’était la bouée."
+    },
+    "S": {
+      "name": "Pavillon S",
+      "means": "Le parcours a été réduit.",
+      "youDo": "Finis maintenant : à une bouée à contourner, la ligne d’arrivée est entre la bouée et la hampe qui porte le pavillon S.",
+      "tip": "S doit être envoyé avant que le premier bateau finisse. Deux signaux sonores te disent de regarder."
+    },
+    "blue": {
+      "name": "Pavillon bleu",
+      "means": "La hampe qui porte ce pavillon est une extrémité de la ligne d’arrivée.",
+      "youDo": "Finis en coupant la ligne entre le pavillon bleu et la bouée à l’autre bout, en venant du côté du parcours.",
+      "tip": "Après ton arrivée, reste à l’écart des bateaux qui courent encore."
+    },
+    "yellow": {
+      "name": "Pavillon jaune (jury)",
+      "means": "Annexe P : un juge t’a vu enfreindre la règle 42 (pomper, rouler, donner des à-coups, godiller…). Le juge fait un signal sonore, pointe un pavillon jaune vers toi et annonce ton numéro.",
+      "youDo": "La première fois : dégage-toi des autres bateaux et fais tout de suite une pénalité de deux tours (deux tours, chacun avec un virement de bord et un empannage). La deuxième fois : abandonne la course. La troisième fois : abandonne ; tu ne pourras pas retirer ce résultat de ton classement.",
+      "tip": "L’annexe P ne s’applique que si l’avis de course ou les instructions de course le disent. Règle 42 : n’utilise que le vent et l’eau pour faire avancer le bateau."
+    },
+    "O": {
+      "name": "Pavillon O",
+      "means": "Pomper, rouler et donner des à-coups sont permis, comme le disent les règles de classe, parce que le vent dépasse leur limite.",
+      "youDo": "Seulement pour les séries dont les règles de classe le permettent. Si ta série n’a pas une telle règle, rien ne change pour toi.",
+      "sound": "Avant le départ : envoyé avant le signal d’avertissement ou avec lui. Après le départ : signaux sonores répétés, à une bouée."
+    },
+    "R": {
+      "name": "Pavillon R",
+      "means": "Le vent a molli : la règle 42 (telle que la modifient les règles de classe) s’applique à nouveau.",
+      "youDo": "Arrête de pomper, de rouler et de donner des à-coups après avoir passé la bouée.",
+      "sound": "Avant le départ : envoyé avant un nouveau signal d’avertissement ou avec lui. Après le départ : signaux sonores répétés, à une bouée."
+    },
+    "V": {
+      "name": "Pavillon V",
+      "means": "Sécurité : écoute le canal radio du comité de course pour des instructions de recherche et de sauvetage.",
+      "youDo": "Si tu as une radio, écoute. Sinon, cherche les bateaux de sécurité, fais ce qu’ils te disent et aide si tu peux."
+    },
+    "Y": {
+      "name": "Pavillon Y",
+      "means": "Porte un équipement individuel de flottabilité (gilet de sauvetage).",
+      "youDo": "Mets ton gilet et ferme chaque sangle. Montré sur l’eau : pour la course. Montré à terre : pendant tout le temps où tu es sur l’eau ce jour-là.",
+      "tip": "Une combinaison néoprène ou une combinaison étanche n’est pas un gilet de sauvetage."
+    },
+    "L": {
+      "name": "Pavillon L",
+      "means": "À terre : un nouvel avis aux concurrents est affiché. Sur l’eau : viens à portée de voix, ou suis ce bateau.",
+      "youDo": "À terre : va lire le tableau officiel d’information. Sur l’eau : approche assez près pour entendre le message, ou suis le bateau qui porte L."
+    }
+  },
+
+  "extras": {
+    "shape-starboard": "vers tribord",
+    "shape-port": "vers bâbord",
+    "board-minus": "bord plus court",
+    "board-plus": "bord plus long"
+  },
+
+  "classes": {
+    "optimist": {
+      "name": "Optimist",
+      "intro": "Les courses d’Optimist utilisent les mêmes signaux de course que toutes les autres séries. Chaque épreuve a aussi un avis de course et des instructions de course. Les notes marquées « Règle de l’épreuve » changent d’une épreuve à l’autre : lis toujours tes instructions de course.",
+      "notes": {
+        "class": "Dans les grandes épreuves d’Optimist, la flotte est divisée en groupes (on dit aussi flottes ou divisions), chacun avec son pavillon de couleur. Le pavillon de ton groupe est alors ton pavillon de série. Vérifie ton groupe chaque matin.",
+        "Y": "La règle de classe Optimist 4.2(a) dit déjà que tu dois porter un gilet de sauvetage, avec un sifflet attaché dessus. Le pavillon Y ne change donc rien pour toi : ton gilet est déjà sur toi. Beaucoup d’épreuves vont plus loin : « à tout moment sur l’eau ».",
+        "yellow": "Les championnats d’Optimist utilisent en général l’annexe P, avec des juges en bateau sur le parcours. Les instructions de course peuvent changer les pénalités, par exemple ce qui se passe si tu es pénalisé après ton arrivée. Lis-les.",
+        "O": "Pas utilisé en Optimist : les règles de classe Optimist n’autorisent pas à pomper, rouler ou donner des à-coups, quel que soit le vent. Tu peux voir ce pavillon dans d’autres séries.",
+        "R": "Pas utilisé en Optimist (pas de pavillon O, donc pas de pavillon R). Tu peux le voir dans d’autres séries.",
+        "orange": "Dans beaucoup d’épreuves, le pavillon orange est envoyé avec un signal sonore au moins 5 minutes avant le premier signal d’avertissement. Il veut dire : les courses vont bientôt commencer.",
+        "AP": "À terre, beaucoup d’épreuves remplacent « 1 minute » par un temps plus long, par exemple « pas moins de 45 minutes » : tu as le temps de mettre à l’eau et de rejoindre la zone de course.",
+        "FS": "Avec plusieurs groupes, les autres groupes attendent dans une zone d’attente jusqu’à ce que ton départ soit donné. Un rappel général fait attendre tout le monde plus longtemps : prends ton départ avec soin."
+      },
+      "flags": {
+        "opt-groups": {
+          "name": "Pavillons de groupe",
+          "means": "Dans une grande épreuve, chaque groupe part avec son propre pavillon (par exemple jaune, bleu, rouge, vert). En phase finale, les pavillons désignent souvent les flottes or, argent et bronze.",
+          "youDo": "Apprends le pavillon et la couleur de ton groupe. Certaines épreuves te donnent un ruban de cette couleur à attacher en haut de ta livarde.",
+          "sound": "Comme un pavillon de série. Envoi : un signal sonore (avertissement). Affalé : un signal sonore (départ).",
+          "tip": "Les pavillons dessinés ici sont des exemples. Les vrais portent souvent le logo Optimist."
+        },
+        "opt-D": {
+          "name": "Pavillon D (à terre)",
+          "means": "À terre : tu peux mettre à l’eau maintenant. Le signal d’avertissement sera fait au moins un certain temps plus tard (par exemple 45 minutes).",
+          "youDo": "Ne mets pas à l’eau avant l’envoi de D. Quand il est envoyé, grée ton bateau, mets à l’eau et rejoins la zone de départ.",
+          "sound": "Envoi : un signal sonore."
+        },
+        "opt-support": {
+          "name": "Bateaux entraîneurs et accompagnateurs",
+          "means": "Les bateaux entraîneurs et accompagnateurs peuvent porter leurs propres pavillons, par exemple un pavillon blanc avec un code pays. Ils n’ont aucun sens pour ta course.",
+          "youDo": "Suis seulement les signaux du comité de course. Les bateaux entraîneurs doivent rester hors de la zone de course pendant que tu cours."
+        }
+      }
+    },
+    "ilca": {
+      "name": "ILCA",
+      "intro": "Les courses d’ILCA utilisent les mêmes signaux de course que toutes les autres séries. ILCA 4 et ILCA 6 sont les gréements jeunes habituels ; l’ILCA 6 est aussi le gréement olympique des femmes, et l’ILCA 7 celui des hommes. Les trois gréements courent souvent dans la même épreuve, chacun avec son départ. Les notes marquées « Règle de l’épreuve » changent d’une épreuve à l’autre : lis toujours tes instructions de course.",
+      "notes": {
+        "class": "ILCA 4, ILCA 6 et ILCA 7 courent souvent dans la même épreuve. Chaque flotte part avec son propre pavillon, et les instructions de course disent lequel est le tien. Beaucoup d’épreuves utilisent le jaune pour l’ILCA 4, le vert pour l’ILCA 6 et le blanc pour l’ILCA 7, chacun avec le logo ILCA rouge.",
+        "yellow": "Les règles de classe ILCA ne modifient pas la règle 42 : la règle complète s’applique, quel que soit le vent. Pomper : éventer la voile encore et encore avec l’écoute ou avec ton corps. Rouler : balancer le bateau encore et encore. Donner des à-coups : un mouvement brusque du corps vers l’avant, arrêté net. Permis : une traction sur l’écoute par vague ou par risée pour commencer à surfer ou à planer, et les virements roulés qui ne te rendent pas plus rapide qu’avant le virement. La plupart des championnats ILCA utilisent l’annexe P (l’avis de course le dit) : les juges te pénalisent alors sur l’eau.",
+        "O": "Pas utilisé en ILCA : les règles de classe ILCA ne modifient pas la règle 42, il n’y a donc pas de limite de vent au-dessus de laquelle on peut pomper. Tu peux voir ce pavillon dans d’autres séries.",
+        "R": "Pas utilisé en ILCA (pas de pavillon O, donc pas de pavillon R). Tu peux le voir dans d’autres séries.",
+        "Y": "Les règles de classe ILCA n’ont pas de règle sur le gilet de sauvetage : c’est le pavillon Y ou l’avis de course qui décide. La plupart des épreuves jeunes et des championnats disent : porte-le à tout moment sur l’eau (c’était le cas aux Mondiaux 2025 ILCA 6 femmes et ILCA 7 hommes). Dans le doute, porte-le.",
+        "C": "Les épreuves ILCA courent en général sur des parcours trapèze. Après le changement d’un bord, le comité peut déplacer les bouées suivantes sans nouveaux signaux, pour garder la forme du parcours (règle 33(c)).",
+        "FS": "Avec trois flottes ILCA qui partent l’une après l’autre, un rappel général retarde tous les départs après le tien. Les flottes qui attendent leur départ doivent rester à l’écart de la zone de départ."
+      },
+      "flags": {
+        "ilca-rigs": {
+          "name": "Pavillons ILCA 4, 6 et 7",
+          "means": "Quand les trois gréements courent dans la même épreuve, chaque flotte part avec son propre pavillon de série. Beaucoup d’épreuves utilisent le jaune pour l’ILCA 4, le vert pour l’ILCA 6 et le blanc pour l’ILCA 7.",
+          "youDo": "Apprends le pavillon de ta flotte dans les instructions de course. Quand il est envoyé avec un signal sonore, tes 5 minutes commencent.",
+          "sound": "Comme un pavillon de série. Envoi : un signal sonore (avertissement). Affalé : un signal sonore (départ).",
+          "tip": "Dessinés ici sans le vrai logo ILCA. Les vrais pavillons le portent en rouge."
+        },
+        "ilca-fleets": {
+          "name": "Couleurs de flotte",
+          "means": "Dans les grandes épreuves, une flotte est divisée en groupes (par exemple jaune, bleu et rouge) pour une phase qualificative, puis en flottes or et argent (parfois bronze) pour la phase finale.",
+          "youDo": "Vérifie ton groupe chaque jour. Tu devras peut-être montrer sa couleur sur ton bateau, par exemple avec un manchon de couleur sur le mât inférieur.",
+          "sound": "Comme un pavillon de série. Envoi : un signal sonore (avertissement). Affalé : un signal sonore (départ)."
+        },
+        "ilca-course": {
+          "name": "Panneau de parcours",
+          "means": "Au plus tard à ton signal d’avertissement, le bateau comité montre le parcours que tu vas courir. Les épreuves ILCA utilisent souvent des parcours trapèze : par exemple « I2 » pour un parcours en boucle intérieure et « O2 » pour un parcours en boucle extérieure.",
+          "youDo": "Lis le panneau avant ton signal d’avertissement. Trouve ce parcours sur le schéma de tes instructions de course : quelles bouées, dans quel ordre, et de quel côté.",
+          "tip": "Cherche aussi le cap au compas vers la première bouée. Il est souvent affiché à côté du parcours."
+        },
+        "ilca-support": {
+          "name": "Bateaux entraîneurs",
+          "means": "Les bateaux entraîneurs et accompagnateurs sont identifiés comme le dit l’épreuve, par exemple avec un code pays de trois lettres et un numéro. Leurs pavillons et leurs marques n’ont aucun sens pour ta course.",
+          "youDo": "Suis seulement les signaux du comité de course. Les bateaux entraîneurs doivent rester hors de la zone de course pendant que tu cours."
+        }
+      }
+    }
+  },
+
+  "trainer": {
+    "heading": "Entraîneur de séquence de départ",
+    "intro": "Regarde les pavillons monter et descendre sur le bateau comité, écoute les signaux sonores et suis le chrono. Choisis un pavillon préparatoire pour voir comment changent les règles de la dernière minute.",
+    "prep": "Pavillon préparatoire",
+    "scenario": "Situation",
+    "scenarios": {
+      "clean": "Départ propre",
+      "x": "Rappel individuel",
+      "gr": "Rappel général",
+      "ap": "Retard"
+    },
+    "start": "Démarrer",
+    "pause": "Pause",
+    "resume": "Reprendre",
+    "restart": "Recommencer",
+    "reset": "Remettre à zéro",
+    "speed": "Vitesse",
+    "soundOn": "Sons",
+    "soundHint": "Les sons ne jouent qu’après avoir appuyé sur Démarrer.",
+    "toStart": "avant le départ",
+    "afterStart": "après le départ",
+    "next": "Ensuite : {what} dans {s} s",
+    "nothingNext": "Séquence terminée.",
+    "ready": "Appuie sur Démarrer. Le signal d’avertissement arrive dans 10 secondes.",
+    "lastMinute": "Dernière minute",
+    "timeline": "Chronologie",
+    "log": "Ce qui s’est passé",
+    "courseAria": "Vue de dessus du départ : la ligne de départ entre le bateau comité et la bouée de départ, et la première bouée au vent.",
+    "boatAria": "Vue de côté du bateau comité avec ses pavillons.",
+    "wind": "Vent",
+    "mark1": "Bouée 1",
+    "pin": "Bouée de départ",
+    "committee": "Bateau comité",
+    "course": "Le départ vu d’en haut",
+    "triangle": "Reste dehors pendant la dernière minute",
+    "extensions": "Au-delà ? Fais le tour par une extrémité",
+    "phases": {
+      "waiting": "Attente",
+      "warning": "Avertissement",
+      "prep": "Préparatoire",
+      "last": "Dernière minute",
+      "started": "Départ donné",
+      "postponed": "Retardé",
+      "recall": "Rappel général",
+      "done": "C’est parti !"
+    },
+    "events": {
+      "classUp": "Envoi du pavillon de série : signal d’avertissement",
+      "prepUp": "Envoi de {flag} : signal préparatoire",
+      "prepDown": "{flag} affalé : plus qu’une minute",
+      "classDown": "Pavillon de série affalé : départ !",
+      "xUp": "Envoi de X : rappel individuel",
+      "xDown": "X affalé : tous les bateaux au-delà de la ligne sont revenus",
+      "noX": "Pas de X : avec {flag}, les bateaux dans le triangle pendant la dernière minute sont disqualifiés (pas de rappel individuel)",
+      "fsUp": "Envoi du Premier substitut : rappel général",
+      "fsDown": "Premier substitut affalé : nouvel avertissement dans 1 minute",
+      "blackNumbers": "Les numéros de voile des bateaux pris au pavillon noir sont affichés : ils ne peuvent pas courir le nouveau départ",
+      "apUp": "Envoi de l’Aperçu : retard",
+      "apDown": "Aperçu affalé : signal d’avertissement dans 1 minute",
+      "end": "C’est parti !"
+    },
+    "rules": {
+      "heading": "Au-delà de la ligne pendant la dernière minute ?",
+      "P": "Pavillon P : pas de règle spéciale. Si tu es au-delà de la ligne au départ, le pavillon X est envoyé. Reviens et prends ton départ correctement.",
+      "I": "Pavillon I (règle 30.1) : si tu es au-delà de la ligne pendant la dernière minute, fais le tour par une extrémité de la ligne pour revenir, puis prends ton départ.",
+      "Z": "Pavillon Z (règle 30.2) : dans le triangle pendant la dernière minute = pénalité de 20 % sur ton score, même si le départ est redonné.",
+      "U": "Pavillon U (règle 30.3) : dans le triangle pendant la dernière minute = disqualifié. Après un rappel général, tu peux courir le nouveau départ.",
+      "black": "Pavillon noir (règle 30.4) : dans le triangle pendant la dernière minute = disqualifié, même après un rappel général. Tu ne peux pas courir le nouveau départ."
+    }
+  },
+
+  "quiz": {
+    "heading": "Quiz des pavillons",
+    "intro": "Dix questions. Sais-tu lire le bateau comité ?",
+    "modeMeaning": "Quel pavillon veut dire… ?",
+    "modeFlag": "Que veut dire ce pavillon ?",
+    "qMeaning": "Quel pavillon veut dire : « {means} »",
+    "qFlag": "Que veut dire ce pavillon ?",
+    "start": "Commencer le quiz",
+    "next": "Question suivante",
+    "again": "Rejouer",
+    "right": "Bravo !",
+    "wrong": "Pas tout à fait. C’est : {name}.",
+    "progress": "Question {i} sur {n}",
+    "score": "Score : {s}",
+    "result": "Tu as {s} sur {n}.",
+    "great": "Super ! La ligne de départ t’attend.",
+    "good": "Bien. Revois les pavillons que tu as manqués.",
+    "keepGoing": "Continue à t’entraîner. Regarde la bibliothèque, puis rejoue."
+  }
 }

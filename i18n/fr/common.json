@@ -1,3 +1,76 @@
 {
-  "_status": "not started — copy keys from ../en/common.json and translate"
+  "_status": "complete — all strings in French (2026-10-09). Sailing terms NOT yet reviewed by a French coach; see .claude/memory/terms-fr.md.",
+  "_note": "colours.* are feminine adjectives: they agree with « coque » in colours.hull.",
+  "site": {
+    "name": "Young Sails",
+    "tagline": "Apprendre la voile, pièce par pièce"
+  },
+  "nav": {
+    "aria": "Rubriques du site",
+    "optimist": "Optimist",
+    "laser": "ILCA 6",
+    "flags": "Pavillons",
+    "courses": "Parcours",
+    "partial": "partiel",
+    "soon": "bientôt"
+  },
+  "ui": {
+    "parts": "Pièces",
+    "partsCount": { "one": "{n} pièce", "other": "{n} pièces" },
+    "partsAria": "Pièces du bateau",
+    "info": "Infos",
+    "infoAria": "À propos de la pièce choisie",
+    "close": "Fermer",
+    "water": "Eau",
+    "studio": "Studio",
+    "scene": "Décor",
+    "boom": "Bôme",
+    "explode": "Éclater",
+    "labels": "Noms",
+    "spin": "Tourner",
+    "reset": "Recentrer",
+    "resetTitle": "Remettre la caméra en place",
+    "hullColour": "Couleur de la coque",
+    "viewControls": "Affichage",
+    "language": "Langue",
+    "prev": "← Préc.",
+    "next": "Suiv. →",
+    "prevAria": "Pièce précédente",
+    "nextAria": "Pièce suivante",
+    "zoom": "Zoomer dessus",
+    "overview": "Vue d’ensemble",
+    "overviewAria": "Retour à la vue d’ensemble",
+    "fade": "Estomper les autres pièces",
+    "startTour": "Commencer la visite",
+    "loading": "On grée le bateau…",
+    "canvasAria": "Modèle 3D d’un voilier. Fais glisser pour le tourner, fais défiler ou pince pour zoomer, clique sur une pièce pour la découvrir."
+  },
+  "trim": {
+    "toPort": "à bâbord",
+    "toStarboard": "à tribord",
+    "centred": "au centre",
+    "starboardTack": "tribord amures",
+    "portTack": "bâbord amures"
+  },
+  "pointsOfSail": {
+    "headToWind": "vent debout",
+    "closeHauled": "près",
+    "closeReach": "bon plein",
+    "beamReach": "travers",
+    "broadReach": "largue",
+    "running": "vent arrière"
+  },
+  "colours": {
+    "hull": "Coque {c}",
+    "white": "blanche",
+    "red": "rouge",
+    "sunflower": "tournesol",
+    "blue": "bleue",
+    "teal": "bleu canard"
+  },
+  "errors": {
+    "notFoundTitle": "Hors parcours",
+    "notFoundText": "Cette page n’est pas sur la carte. Elle a peut-être changé de place, ou elle est encore en construction.",
+    "home": "Retour au départ"
+  }
 }

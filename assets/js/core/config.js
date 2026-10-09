@@ -20,7 +20,7 @@ export const LANGS = [
   { code: 'en', label: 'English', ready: true },
   { code: 'bg', label: 'Български', ready: true },   // all strings translated; terms still to be reviewed by a coach
   { code: 'de', label: 'Deutsch', ready: true },     // all strings translated; terms still to be reviewed by a coach
-  { code: 'fr', label: 'Français', ready: false },
+  { code: 'fr', label: 'Français', ready: true },    // all strings translated; terms still to be reviewed by a coach
   { code: 'ru', label: 'Русский', ready: true },     // all strings translated; terms still to be reviewed by a coach
 ];
 export const DEFAULT_LANG = 'en';

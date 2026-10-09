@@ -1,3 +1,328 @@
 {
-  "_status": "not started — copy keys from ../en/courses.json and translate"
+  "_status": "complete — all strings in French (2026-10-09). Course words NOT yet reviewed by a French coach / race officer; see .claude/memory/terms-fr.md.",
+  "_note": "« bouée » is used for mark (kids’ word); the intro says the rules say « marque ». route.mark / route.gate are feminine (Bouée, Porte): player.rounding and route.leave use « la ».",
+  "pageTitle": "Parcours de régate",
+  "title": "Parcours de régate",
+  "titleAccent": 0,
+  "tagline": "Quelles bouées, dans quel ordre, de quel côté",
+  "ui": {
+    "views": "Rubriques",
+    "library": "Parcours",
+    "player": "Courir un parcours",
+    "boardView": "Panneau de parcours",
+    "quiz": "Quiz",
+    "classLabel": "Série",
+    "filters": "Afficher les parcours",
+    "all": "Tous",
+    "typicalFilter": "Courants en {c}",
+    "count": { "one": "{n} parcours", "other": "{n} parcours" },
+    "typical": "Courant en {c}",
+    "siBadge": "Tes instructions de course priment",
+    "footer": "Schémas d’après : {e}. Chaque épreuve peut les changer : lis toujours tes instructions de course.",
+    "soon": "{name} : bientôt sur Young Sails.",
+    "links": { "rules": "Les règles aux bouées" },
+    "board": "Sur le panneau",
+    "beatsAria": "Nombre de bords de près",
+    "sailIt": "Courir ce parcours ▶",
+    "route": "Ordre des bouées",
+    "code": "Code",
+    "beats": "Bords de près",
+    "beatsN": { "one": "{n} bord de près", "other": "{n} bords de près" },
+    "legs": "Bords",
+    "legsN": { "one": "{n} bord", "other": "{n} bords" },
+    "finish": "Arrivée",
+    "source": "Source",
+    "why": "Pourquoi",
+    "classNote": "Note {c}",
+    "si": "En général fixé par les instructions de course",
+    "checkSi": "Ceci est un exemple typique. Les instructions de course de ton épreuve montrent le vrai parcours, et ce sont toujours elles qui priment.",
+    "prev": "← Préc.",
+    "next": "Suiv. →",
+    "prevAria": "Parcours précédent",
+    "nextAria": "Parcours suivant",
+    "close": "Fermer",
+    "closeAria": "Fermer la fiche du parcours",
+    "loadError": "La bibliothèque de parcours n’a pas pu se charger. Vérifie ta connexion et recharge la page."
+  },
+  "families": {
+    "wl": "Banane",
+    "trapezoid": "Trapèze",
+    "triangle": "Triangle"
+  },
+  "art": {
+    "wind": "Vent",
+    "startFinish": "Départ et arrivée",
+    "rc": "Bateau comité",
+    "aria": "Schéma du parcours : {name}. Le vent vient du haut."
+  },
+  "route": {
+    "start": "Départ",
+    "finish": "Arrivée",
+    "mark": "Bouée {m}",
+    "gate": "Porte {g}",
+    "port": "bâbord (à ta gauche)",
+    "starboard": "tribord (à ta droite)",
+    "startHow": "Coupe la ligne entre le bateau comité (pavillon orange) et la bouée de départ.",
+    "finishHow": "Coupe la ligne d’arrivée en venant du côté du parcours.",
+    "gateHow": "Passe entre les deux bouées, puis contourne l’une ou l’autre.",
+    "leave": "Laisse-la à {side}.",
+    "gateOne": "Seulement cette bouée de la porte, pas {other}.",
+    "offsetHow": "La bouée de dégagement : un petit bord juste après la bouée 1."
+  },
+  "legs": {
+    "beat": "Près",
+    "reach": "Largue",
+    "run": "Vent arrière"
+  },
+  "intro": {
+    "chip": "Comment marchent les parcours",
+    "heading": "Bouées, ordre, côté",
+    "text": "Un parcours de course, c’est un ensemble de bouées (dans les règles, on dit « marques »). Le parcours te dit trois choses : quelles bouées tu contournes, dans quel ordre, et de quel côté tu laisses chacune. Sur les schémas, le vent vient toujours du haut.",
+    "si": "Chaque schéma ici est un exemple typique. Le jour de la course, les instructions de course de ton épreuve montrent le vrai parcours. Ce sont toujours elles qui priment.",
+    "hint": "Choisis un parcours pour voir ses bouées, ou appuie sur « Courir ce parcours » pour regarder un bateau le faire."
+  },
+  "teach": {
+    "si": {
+      "title": "Les instructions de course priment",
+      "text": "Chaque régate peut numéroter ses bouées, dessiner ses parcours et choisir ses codes à sa façon. Avant d’aller sur l’eau, trouve le schéma du parcours dans tes instructions de course et apprends-le. Si tu as un doute, demande à ton entraîneur.",
+      "rule": "RCV 28 et la définition « Effectuer le parcours » : tu fais le parcours décrit dans les instructions de course."
+    },
+    "lines": {
+      "title": "Lignes de départ et d’arrivée",
+      "text": "La ligne de départ est entre une hampe avec un pavillon orange sur le bateau comité et la bouée de départ. La ligne d’arrivée est entre une hampe avec un pavillon bleu et la bouée à l’autre bout. Certains parcours utilisent la même ligne pour les deux. Coupe la ligne d’arrivée en venant du côté du parcours.",
+      "rule": "RCV Signaux de course ; RCV annexe S, IC 9.2 et 11.1."
+    },
+    "sides": {
+      "title": "Laisser une bouée à bâbord ou à tribord",
+      "text": "« Laisser une bouée à bâbord » veut dire que la bouée reste sur ta gauche : tu tournes à gauche autour d’elle. « À tribord » veut dire sur ta droite. Sur les schémas, la flèche autour de chaque bouée montre le sens. La plupart des parcours laissent toutes les bouées à bâbord.",
+      "rule": "Effectuer le parcours : un fil qui suit ta trace doit passer chaque bouée du côté prescrit, dans le bon ordre."
+    },
+    "gates": {
+      "title": "Les portes",
+      "text": "Une porte, ce sont deux bouées côte à côte, par exemple 2s et 2p. Passe entre elles, puis contourne l’une ou l’autre : 2s en la laissant à tribord, ou 2p en la laissant à bâbord. Choisis le côté du plan d’eau que tu préfères pour le bord de près suivant. Une porte évite aussi qu’une grande flotte s’entasse autour d’une seule bouée.",
+      "rule": "Effectuer le parcours (b)(3) : passe entre les bouées d’une porte en venant de la direction de la bouée précédente."
+    },
+    "legs": {
+      "title": "Près, largue et vent arrière",
+      "text": "Un bord de près remonte au vent : tu ne peux pas aller tout droit vers la bouée, alors tu navigues au près et tu tires des bords (tu louvoies). Un bord de largue traverse le vent. Un bord de vent arrière descend avec le vent dans le dos. Le chiffre d’un code de parcours (L2, O3) te dit combien de bords de près tu fais.",
+      "rule": "Manuel de gestion des courses de World Sailing : le chiffre après les lettres est le nombre de bords de près."
+    },
+    "signals": {
+      "title": "Comment le parcours est signalé",
+      "text": "Au plus tard à ton signal d’avertissement, le bateau comité montre le parcours, souvent sur un panneau : « L3 », « O2 », « IOD ». Il peut aussi montrer le cap au compas vers la bouée 1. Certaines épreuves utilisent plutôt des flammes numériques ou des numéros de parcours. Les instructions de course disent comment.",
+      "rule": "RCV annexe S, IC 7.1."
+    },
+    "changes": {
+      "title": "Quand le parcours change",
+      "text": "Pavillon C avec des signaux sonores répétés à une bouée : la bouée suivante a été déplacée, va vers sa nouvelle position. Pavillon M sur un bateau : il remplace une bouée manquante, contourne-le comme la bouée. Pavillon S : le parcours est réduit, finis à cette bouée.",
+      "rule": "RCV 32, 33 et 34."
+    },
+    "rules": {
+      "title": "Les règles aux bouées",
+      "text": "Quand des bateaux arrivent ensemble à une bouée, les règles décident qui a la place pour la contourner (place à la marque, RCV 18). Demande à ton entraîneur de te l’expliquer sur l’eau."
+    },
+    "flagNames": {
+      "orange": "Pavillon orange",
+      "blue": "Pavillon bleu",
+      "C": "Pavillon C",
+      "M": "Pavillon M",
+      "S": "Pavillon S"
+    }
+  },
+  "courses": {
+    "L": {
+      "name": "Banane, arrivée sous le vent",
+      "summary": "On monte à la bouée 1 et on redescend à la porte, encore et encore. Tu finis au vent arrière, sur la même ligne que celle du départ.",
+      "finish": "Sous le vent, sur la ligne de départ (la même ligne).",
+      "why": "Le parcours le plus simple à mouiller. Il est facile à déplacer quand le vent tourne : chaque bord de près reste un vrai bord de près."
+    },
+    "LA": {
+      "name": "Banane avec dégagement",
+      "summary": "Comme le parcours L, mais avec un petit bord de la bouée 1 à la bouée de dégagement 1a avant de redescendre à la porte.",
+      "finish": "Sous le vent, sur la ligne de départ (la même ligne).",
+      "why": "La bouée 1a éloigne les bateaux qui ont passé la bouée 1 de ceux qui remontent encore vers elle."
+    },
+    "W": {
+      "name": "Banane, arrivée au vent",
+      "summary": "On monte et on descend comme sur le parcours L, mais le dernier bord est un bord de près. La ligne d’arrivée est au vent de la bouée 1.",
+      "finish": "Au vent, sur une ligne au-delà de la bouée 1.",
+      "why": "Les bateaux finissent au près : ils sont étalés, et c’est facile de noter leur ordre. La bouée 1 ne compte pas au dernier bord de près : passe-la d’un côté ou de l’autre."
+    },
+    "WA": {
+      "name": "Banane avec dégagement, arrivée au vent",
+      "summary": "Le parcours W avec la bouée de dégagement 1a après chaque passage à la bouée 1. Le dernier bord est un bord de près vers une arrivée au-delà de la bouée 1.",
+      "finish": "Au vent, sur une ligne au-delà de la bouée 1."
+    },
+    "TL": {
+      "name": "Triangle, arrivée sous le vent",
+      "summary": "Le parcours de club classique : un bord de près vers la bouée 1, un largue vers la bouée 2, un largue vers la bouée 3, puis un bord de près pour revenir à la bouée 1. Avec plus de bords de près (TL3), tu ajoutes un vent arrière et un bord de près entre les bouées 3 et 1 : le « triangle-banane ».",
+      "finish": "Sous le vent, sur la ligne de départ (la même ligne).",
+      "why": "Deux bords de largue apportent de la variété. Encore courant dans les régates de club."
+    },
+    "TW": {
+      "name": "Triangle, arrivée au vent",
+      "summary": "Près, largue, largue, puis on remonte. Le dernier bord est un bord de près vers une ligne d’arrivée au-delà de la bouée 1.",
+      "finish": "Au vent, sur une ligne au-delà de la bouée 1."
+    },
+    "I": {
+      "name": "Trapèze, boucle intérieure",
+      "summary": "D’abord une banane du côté intérieur : bouée 1, porte 4s/4p, à nouveau bouée 1. Puis un largue vers la bouée 2, un vent arrière vers la bouée 3p et un largue vers l’arrivée.",
+      "finish": "Au largue depuis la bouée 3p, vers une ligne près du bateau comité.",
+      "why": "Un trapèze, ce sont deux bananes côte à côte. Deux flottes peuvent courir en même temps : une sur la boucle intérieure, une sur la boucle extérieure."
+    },
+    "O": {
+      "name": "Trapèze, boucle extérieure",
+      "summary": "Un bord de près vers la bouée 1, un largue vers la bouée 2, puis une banane du côté extérieur entre la porte 3s/3p et la bouée 2. Pour finir, un largue de la bouée 3p vers l’arrivée.",
+      "finish": "Au largue depuis la bouée 3p, vers une ligne près du bateau comité.",
+      "why": "Le largue de la bouée 1 à la bouée 2 étale la flotte avant le vent arrière."
+    },
+    "IOD": {
+      "name": "Parcours Optimist",
+      "summary": "Le parcours des championnats d’Optimist : un bord de près vers la bouée 1, un largue vers la bouée 2, un vent arrière vers la porte 3s/3p, et un bord de près vers l’arrivée juste à l’intérieur de la bouée 2. Quatre bords, les trois premiers de la même longueur.",
+      "finish": "Au vent, à la fin du deuxième bord de près, sur une ligne juste à l’intérieur de la bouée 2.",
+      "why": "Un seul parcours avec toutes les allures, et une arrivée au près, quand la flotte est étalée."
+    }
+  },
+  "classes": {
+    "optimist": {
+      "name": "Optimist",
+      "intro": "Les championnats d’Optimist courent le parcours Optimist (« IOD ») : un trapèze en boucle extérieure avec l’arrivée à la fin du deuxième bord de près. Les épreuves de club et nationales utilisent aussi des parcours banane, trapèze et triangle.",
+      "notes": {
+        "IOD": "Les championnats du monde IODA utilisent cette forme : « un trapèze en boucle extérieure, avec la ligne d’arrivée à la fin du deuxième bord au vent ». Le bord d’arrivée peut être plus court ou plus long que les autres bords.",
+        "O": "Beaucoup de régates d’Optimist affichent « O2 » ou « I2 » sur le panneau. Les numéros des bouées peuvent être différents de ce schéma : vérifie le schéma du parcours dans tes instructions de course.",
+        "I": "Avec plusieurs flottes, l’une court souvent la boucle extérieure et la suivante la boucle intérieure. Regarde quel panneau est montré avant ton signal d’avertissement.",
+        "L": "Courant pour les flottes plus jeunes et les courses courtes : facile à mouiller et facile à suivre."
+      },
+      "courses": {}
+    },
+    "ilca": {
+      "name": "ILCA",
+      "intro": "Les championnats ILCA utilisent des parcours trapèze avec des boucles intérieures et extérieures, des portes sous le vent et des lignes de départ et d’arrivée séparées. Le panneau affiche « I2 » ou « O2 ». Les versions ILCA sont un peu différentes du tableau de World Sailing : regarde les fiches ILCA.",
+      "notes": {
+        "ilca-I": "D’après les instructions de course des championnats du monde ILCA : la boucle intérieure a la bouée de dégagement 1a après le premier passage à la bouée 1, et tu finis en passant la porte 3s/3p.",
+        "ilca-O": "D’après les instructions de course des championnats du monde ILCA : après le deuxième vent arrière, contourne l’une ou l’autre bouée de la porte 3, puis va au largue vers l’arrivée.",
+        "I": "Ceci est la version de World Sailing. Aux championnats ILCA, la boucle intérieure ajoute la bouée 1a et finit par la porte 3 : vois « ILCA, boucle intérieure ».",
+        "O": "Ceci est la version de World Sailing. Aux championnats ILCA, tu peux contourner l’une ou l’autre bouée de la porte 3 avant l’arrivée : vois « ILCA, boucle extérieure »."
+      },
+      "courses": {
+        "ilca-I": {
+          "name": "Trapèze ILCA, boucle intérieure",
+          "summary": "Près vers la bouée 1, petit bord vers la bouée de dégagement 1a, vent arrière vers la porte 4s/4p, près vers la bouée 1, largue vers la bouée 2, vent arrière vers la porte 3s/3p, largue vers l’arrivée.",
+          "finish": "Au largue depuis la porte 3, sur une ligne d’arrivée séparée entre les boucles.",
+          "why": "La ligne d’arrivée séparée tient les bateaux qui finissent loin de la ligne de départ : la flotte suivante peut prendre son départ."
+        },
+        "ilca-O": {
+          "name": "Trapèze ILCA, boucle extérieure",
+          "summary": "Près vers la bouée 1, largue vers la bouée 2, vent arrière vers la porte 3s/3p, près vers la bouée 2, à nouveau vent arrière vers la porte 3s/3p, largue vers l’arrivée.",
+          "finish": "Au largue depuis la porte 3, sur une ligne d’arrivée séparée entre les boucles."
+        }
+      }
+    }
+  },
+  "player": {
+    "heading": "Courir un parcours",
+    "intro": "Regarde un bateau faire le parcours, bord après bord. Au près, il tire des bords ; au largue et au vent arrière, il va tout droit. La flèche autour de chaque bouée s’allume quand le bateau la contourne.",
+    "course": "Parcours",
+    "play": "▶ Lancer",
+    "pause": "❚❚ Pause",
+    "resume": "▶ Reprendre",
+    "again": "▶ Recommencer",
+    "back": "◀ Bord",
+    "backAria": "Revenir d’un bord",
+    "step": "Bord ▶",
+    "stepAria": "Avancer d’un bord",
+    "reset": "Retour au départ",
+    "reduced": "Les animations sont réduites sur cet appareil : utilise les boutons de bord pour avancer dans le parcours.",
+    "speed": "Vitesse",
+    "wind": "Vent",
+    "steady": "Stable",
+    "shiftRight": "20° à droite",
+    "shiftLeft": "20° à gauche",
+    "right": "droite",
+    "left": "gauche",
+    "legOf": "Bord {i} sur {n} : {from} → {to}",
+    "rounding": "{m} : laisse-la à {side}",
+    "tacking": "louvoyage",
+    "finished": "Arrivée !",
+    "finishedSub": "Tu as coupé la ligne d’arrivée.",
+    "siNote": "Ceci est un exemple typique. Tes instructions de course montrent le vrai parcours.",
+    "shiftNote": "Le vent a tourné de {d}° vers la {dir}. Les bords de près sont maintenant déséquilibrés : un bord est long et l’autre court, et le vent arrière n’est plus tout droit sous le vent. Le comité de course peut déplacer la bouée suivante pour que le bord suivant s’adapte au nouveau vent. Il te le dit avec le pavillon C à la bouée que tu contournes."
+  },
+  "board": {
+    "heading": "Panneau de parcours",
+    "intro": "Tape ce que tu vois sur le bateau comité, ou choisis un code. On te montre ce parcours et on t’explique le code.",
+    "label": "Le panneau affiche",
+    "hint": "Les lettres = le type de parcours. Le chiffre = combien de bords de près.",
+    "empty": "Tape un code de parcours, par exemple L2 ou IOD.",
+    "lookSi": "Regarde dans tes instructions de course : elles expliquent chaque code que le comité va afficher.",
+    "beatsLine": { "one": "{n} = tu fais {n} bord de près (bord contre le vent).", "other": "{n} = tu fais {n} bords de près (bords contre le vent)." },
+    "unknown": "Nous ne connaissons pas « {code} ». Beaucoup d’épreuves ont leurs propres codes ou numéros de parcours.",
+    "noDiagram": "Nous n’avons pas encore de schéma pour ce parcours. Il n’est pas courant dans les régates d’Optimist et d’ILCA.",
+    "noNumber": "Il manque le nombre de bords de près. Il suit en général les lettres, par exemple {code}.",
+    "odd": "Ce nombre de bords de près est inhabituel. Vérifie-le dans tes instructions de course.",
+    "many": "Une longue course ! Les mêmes bouées, avec plus de tours.",
+    "openCard": "Ouvrir la fiche du parcours",
+    "otherClass": "Ce parcours appartient à la série {c}. Choisis cette série plus haut pour le courir."
+  },
+  "designations": {
+    "I": "trapèze, boucle intérieure, arrivée au largue",
+    "O": "trapèze, boucle extérieure, arrivée au largue",
+    "IW": "trapèze, boucle intérieure, arrivée au près",
+    "OW": "trapèze, boucle extérieure, arrivée au près",
+    "IA": "trapèze, boucle intérieure, avec une bouée de dégagement 1a",
+    "OA": "trapèze, boucle extérieure, avec une bouée de dégagement 1a",
+    "L": "banane (au vent – sous le vent), arrivée sous le vent",
+    "W": "banane (au vent – sous le vent), arrivée au vent",
+    "LA": "banane avec une bouée de dégagement 1a, arrivée sous le vent",
+    "WA": "banane avec une bouée de dégagement 1a, arrivée au vent",
+    "LG": "banane, arrivée au largue vers tribord après un vent arrière",
+    "LR": "banane, arrivée au largue vers bâbord après un vent arrière",
+    "WG": "banane, arrivée au largue vers tribord après un bord de près",
+    "WR": "banane, arrivée au largue vers bâbord après un bord de près",
+    "T": "triangle, départ et arrivée au milieu du bord de près",
+    "TL": "triangle, arrivée sous le vent",
+    "TW": "triangle, arrivée au vent",
+    "TR": "triangle, arrivée au largue",
+    "TLA": "triangle avec une bouée de dégagement 1a, arrivée sous le vent",
+    "TWA": "triangle avec une bouée de dégagement 1a, arrivée au vent",
+    "IS": "trapèze, boucle intérieure, avec un slalom avant l’arrivée (planche à voile)",
+    "OS": "trapèze, boucle extérieure, avec un slalom avant l’arrivée (planche à voile)",
+    "LS": "banane avec un slalom avant l’arrivée (planche à voile)",
+    "M": "match racing : banane, bouées laissées à tribord",
+    "IOD": "le parcours Optimist"
+  },
+  "quiz": {
+    "heading": "Quiz des parcours",
+    "intro": "Dix questions sur les bouées, les côtés, les bords et les arrivées. Lis le schéma : le vent vient du haut.",
+    "start": "Commencer le quiz",
+    "mode": {
+      "next": "Quelle bouée ensuite ?",
+      "side": "Bâbord ou tribord ?",
+      "leg": "Près, largue ou vent arrière ?",
+      "finish": "Où est l’arrivée ?"
+    },
+    "times": { "1": "la première fois", "2": "la deuxième fois", "3": "la troisième fois", "4": "encore une fois" },
+    "qNext": "Parcours {code}, {m} : tu viens de la contourner ({times}). Où vas-tu ensuite ?",
+    "qSide": "Parcours {code} : de quel côté laisses-tu la bouée {m} ?",
+    "side": { "port": "À bâbord (à ma gauche)", "starboard": "À tribord (à ma droite)" },
+    "explainSide": "Bouée {m} : laisse-la à {side}. Regarde la flèche autour de la bouée.",
+    "explainGate": "La bouée {m} est une bouée de porte : la lettre te le dit. « s » = laisser à tribord (starboard en anglais), « p » = laisser à bâbord (port en anglais). Donc {m} : {side}.",
+    "qLeg": "Le bord orange ({from} → {to}) : est-ce du près, du largue ou du vent arrière ?",
+    "explainLeg": {
+      "beat": "Il remonte au vent, c’est donc un bord de près : tu dois tirer des bords.",
+      "reach": "Il traverse le vent, c’est donc un bord de largue.",
+      "run": "Il descend avec le vent, c’est donc un bord de vent arrière."
+    },
+    "qFinish": "Le panneau affiche {code}. Où est l’arrivée ?",
+    "progress": "Question {i} sur {n}",
+    "score": "Score : {s}",
+    "next": "Question suivante",
+    "again": "Rejouer",
+    "right": "Bravo !",
+    "wrong": "Pas tout à fait. La réponse est : {a}.",
+    "result": "Tu as {s} sur {n}.",
+    "great": "Super ! Tu sais lire n’importe quel panneau de parcours.",
+    "good": "Bien. Fais courir dans le lecteur les parcours que tu as manqués.",
+    "keepGoing": "Continue à t’entraîner. Ouvre les parcours, regarde-les courir, puis rejoue."
+  }
 }
