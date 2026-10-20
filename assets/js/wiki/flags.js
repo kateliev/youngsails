@@ -1,3 +1,6 @@
+/*! youngsails.org · © 2026 Vassil Kateliev
+ *  PolyForm Noncommercial 1.0.0 — https://polyformproject.org/licenses/noncommercial/1.0.0
+ *  Commercial use requires permission. See README for permitted uses. */
 // Young Sails — race flags library: library grid, filters, detail card, start-sequence trainer and quiz.
 //
 // Data:  /data/flags/flags.json             race signals of the RRS (language-neutral)

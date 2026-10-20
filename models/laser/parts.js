@@ -1,3 +1,6 @@
+/*! youngsails.org · © 2026 Vassil Kateliev
+ *  PolyForm Noncommercial 1.0.0 — https://polyformproject.org/licenses/noncommercial/1.0.0
+ *  Commercial use requires permission. See README for permitted uses. */
 // ILCA 6 — part catalogue (structure only; names and texts are in /i18n/<lang>/laser.json).
 // Order = list order and tour order.
 //   group  key into i18n "groups"

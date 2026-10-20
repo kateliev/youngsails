@@ -1,3 +1,6 @@
+/*! youngsails.org · © 2026 Vassil Kateliev
+ *  PolyForm Noncommercial 1.0.0 — https://polyformproject.org/licenses/noncommercial/1.0.0
+ *  Commercial use requires permission. See README for permitted uses. */
 // Young Sails — race courses drawn from data (data/courses/*.json) as inline SVG,
 // plus the geometry the course player sails: route expansion, mark roundings,
 // tacking on beats.

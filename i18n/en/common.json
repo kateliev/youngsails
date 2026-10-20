@@ -1,4 +1,5 @@
 {
+  "_license": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/) · © 2026 Vassil Kateliev · youngsails.org",
   "_status": "complete",
   "site": {
     "name": "Young Sails",
@@ -66,6 +67,10 @@
     "sunflower": "Sunflower",
     "blue": "Blue",
     "teal": "Teal"
+  },
+  "foot": {
+    "code": "Code: {l}",
+    "content": "Content: {l}"
   },
   "errors": {
     "notFoundTitle": "Off course",

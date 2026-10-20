@@ -1,3 +1,6 @@
+/*! youngsails.org · © 2026 Vassil Kateliev
+ *  PolyForm Noncommercial 1.0.0 — https://polyformproject.org/licenses/noncommercial/1.0.0
+ *  Commercial use requires permission. See README for permitted uses. */
 // Young Sails — signal flags drawn as inline SVG from pattern descriptions (no image files).
 //
 // Designs follow the International Code of Signals (ICS), a public international

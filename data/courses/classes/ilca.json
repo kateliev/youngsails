@@ -1,4 +1,5 @@
 {
+  "_license": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/) · © 2026 Vassil Kateliev · youngsails.org",
   "_about": "ILCA class layer for the courses page (same format as optimist.json). Sources: ILCA Event Manual 2025 §7.1 (trapezoid with inner and outer loops, downwind gates, separate start and finish lines); 2025 ILCA 6 & 7 Masters Worlds SIs, Addendum C (I2 Start-1-1a-4s/4p-1-2-3s/3p-Finish, O2 Start-1-2-3s/3p-2-3s/3p-Finish, separate reaching finish); 2025 ILCA Australian Nationals SIs (O2 / I2 on a board). The handout's 'O-ILCA' / 'I-ILCA' codes were not found in any ILCA document; boards show I2 / O2. See .claude/memory/courses-sources.md.",
   "id": "ilca",
   "typical": ["ilca-I", "ilca-O", "L", "W"],

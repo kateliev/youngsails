@@ -1,3 +1,6 @@
+/*! youngsails.org · © 2026 Vassil Kateliev
+ *  PolyForm Noncommercial 1.0.0 — https://polyformproject.org/licenses/noncommercial/1.0.0
+ *  Commercial use requires permission. See README for permitted uses. */
 // Young Sails explorer — entry point. A class page calls:
 //   startExplorer({ createModel, parts, groups, paints, ns: 'optimist' })
 // createModel({ registry }) must return:
@@ -7,6 +10,7 @@
 // home.tallDrop (optional): how far the camera target drops on tall (phone) screens (default 0.75 m).
 import * as THREE from 'three';
 import { pickLang, pickGloss, loadStrings, loadRaw, t } from '../core/i18n.js';
+import { SITE } from '../core/config.js';
 import { createStage } from './stage.js';
 import { createRegistry } from './registry.js';
 import { createUI } from './ui.js';
@@ -23,7 +27,13 @@ export async function startExplorer({ createModel, parts, groups, paints, ns }) 
 
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const state = { explode: 0, explodeTarget: 0, selected: null, hover: null, ghost: true, mode: 'water', labels: false };
-  const stage = createStage(document.getElementById('scene'));
+  const canvas = document.getElementById('scene');
+  // Credit in a corner of the 3D view. It sits right after the canvas, so the part labels
+  // and every panel draw over it; it takes no clicks (explorer.css → .scene-credit).
+  const credit = Object.assign(document.createElement('div'), { className: 'scene-credit', textContent: SITE.domain });
+  credit.setAttribute('aria-hidden', 'true');
+  canvas.after(credit);
+  const stage = createStage(canvas);
   const registry = createRegistry(parts, state);
   const model = createModel({ registry });
   stage.scene.add(model.boat);

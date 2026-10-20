@@ -1,3 +1,6 @@
+/*! youngsails.org · © 2026 Vassil Kateliev
+ *  PolyForm Noncommercial 1.0.0 — https://polyformproject.org/licenses/noncommercial/1.0.0
+ *  Commercial use requires permission. See README for permitted uses. */
 // Young Sails explorer — part registry.
 // Every mesh belongs to exactly one part id. The registry gives each part its own
 // material copies so a part can glow (hover/selection) or fade on its own, keeps

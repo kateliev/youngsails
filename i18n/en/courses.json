@@ -1,4 +1,5 @@
 {
+  "_license": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/) · © 2026 Vassil Kateliev · youngsails.org",
   "_status": "complete",
   "_note": "Race courses page. Course facts: RRS 2025-2028 Appendix S, World Sailing Race Management Manual (2024), IODA and ILCA championship documents (see .claude/memory/courses-sources.md). Leg words reuse common.json pointsOfSail / trim.",
   "pageTitle": "Race Courses",

@@ -1,4 +1,5 @@
 {
+  "_license": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/) · © 2026 Vassil Kateliev · youngsails.org",
   "_about": "Race courses, language-neutral. Texts: /i18n/<lang>/courses.json -> courses.<id>. Coordinates are wind-relative: y points upwind (towards the wind), x across the wind (to starboard when facing upwind); 1 unit = one beat. Route tokens: 'start', 'finish', a mark id (left to port unless the mark says 'leave'; gate marks ending in 's' are left to starboard, 'p' to port) and 'gate<N>' (pass between the marks of gate N, then round either one). A course with 'beats.extra' repeats route.loop (beats - extra) times between route.head and route.tail; a course with 'beats.fixed' sails route.head only. Sources per course in 'source'; details in .claude/memory/courses-sources.md.",
   "edition": "RRS 2025-2028 Appendix S · World Sailing Race Management Manual (2024)",
   "classes": ["optimist", "ilca"],

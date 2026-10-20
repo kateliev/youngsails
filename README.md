@@ -54,6 +54,20 @@ python tools/serve.py
 
 Then open <http://127.0.0.1:8123/>. Add `?lang=bg` to try another language.
 
-## Licence
+## License
 
-[GNU AGPL v3](LICENSE).
+© 2026 Vassil Kateliev · youngsails.org
+
+**Code** — including the procedural 3D boat models — is licensed under
+the [PolyForm Noncommercial License 1.0.0](LICENSE).
+**Content** — text, descriptions, translations and images — is licensed
+under [CC BY-NC-SA 4.0](LICENSE-CONTENT).
+
+Free for personal, educational and classroom use.
+
+**Sailing clubs, schools, federations and coaches** may use this site
+and its content in their teaching, including paid courses and training
+camps.
+
+Reselling, rebranding, or placing this material behind a paywall is not
+permitted. Any other commercial use requires written permission.

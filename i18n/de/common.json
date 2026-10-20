@@ -1,4 +1,5 @@
 {
+  "_license": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/) · © 2026 Vassil Kateliev · youngsails.org",
   "_status": "complete — all strings in German (2026-10-09). Sailing terms NOT yet reviewed by a German coach; see .claude/memory/terms-de.md.",
   "site": {
     "name": "Young Sails",
@@ -66,6 +67,10 @@
     "sunflower": "Sonnengelb",
     "blue": "Blau",
     "teal": "Petrol"
+  },
+  "foot": {
+    "code": "Code: {l}",
+    "content": "Inhalte: {l}"
   },
   "errors": {
     "notFoundTitle": "Vom Kurs abgekommen",

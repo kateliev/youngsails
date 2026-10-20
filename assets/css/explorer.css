@@ -73,9 +73,16 @@ body.explorer { overflow: hidden; }
 .sw button[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--accent); }
 .sep { width: 1px; align-self: stretch; background: var(--line); }
 
-/* footer: one quiet line under the toolbar, on a faint backing so it reads over the water */
-#siteFoot { position: absolute; left: 50%; bottom: 3px; transform: translateX(-50%); z-index: 4; white-space: nowrap; flex-wrap: nowrap; width: max-content; max-width: calc(100% - 16px);
+/* footer: one quiet line under the toolbar, on a faint backing so it reads over the water.
+   Centred (margin: auto) between insets that keep it clear of the 3D credit in the corner. */
+#siteFoot { position: absolute; left: 116px; right: 116px; margin: 0 auto; bottom: 3px; z-index: 4; white-space: nowrap; flex-wrap: nowrap; width: max-content; max-width: calc(100% - 124px);
   padding: 0 8px; border-radius: 6px; background: color-mix(in srgb, var(--panel) 55%, transparent); }
+
+/* credit in the bottom-left corner of the 3D view (explorer.js). No z-index: labels and panels draw over it.
+   Same faint backing as the footer, so it reads over the water, the sky and the studio floor. */
+.scene-credit { position: absolute; left: 16px; bottom: 6px; pointer-events: none; user-select: none; padding: 0 8px; border-radius: 6px;
+  font-size: 11px; line-height: 1.4; font-weight: 700; letter-spacing: .04em; color: var(--ink-2);
+  background: color-mix(in srgb, var(--panel) 55%, transparent); }
 
 /* hover tooltip and 3D labels */
 #tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--panel-solid); padding: 4px 9px; border-radius: 7px; font-size: 13px; font-weight: 700; white-space: nowrap; transform: translate(14px, -130%); opacity: 0; transition: opacity .12s; z-index: 5; }
@@ -97,7 +104,7 @@ body.explorer { overflow: hidden; }
    The parts list and the info card are the same kind of sheet: hidden until
    their button (or a tap on the boat) opens one; only one is open at a time. */
 @media (max-width: 820px) {
-  #app { --head-h: 50px; --sheet-top: calc(10px + 2 * var(--head-h) + 16px); }
+  #app { --head-h: 50px; --sheet-top: calc(10px + 2 * var(--head-h) + 16px); --toolbar-bottom: calc(var(--foot-h, 31px) + 11px); }   /* room for the footer; ui.js writes its real height into --foot-h */
   .rail { display: contents; }
   #siteNav { position: absolute; left: 12px; right: 12px; top: 10px; z-index: 4; height: var(--head-h); }
   .rail-head { display: contents; }
@@ -122,7 +129,7 @@ body.explorer { overflow: hidden; }
        2. Explode / Labels / Spin / Reset, four equal buttons (a basis near a quarter forces the break after them)
        3. Water / Studio and the hull colours
      If a very narrow screen or a long translation does not fit, items wrap to another row; nothing scrolls. */
-  .toolbar { left: 12px; right: 12px; bottom: 24px; transform: none; max-width: none; overflow: visible;
+  .toolbar { left: 12px; right: 12px; bottom: var(--toolbar-bottom); transform: none; max-width: none; overflow: visible;
     flex-wrap: wrap; justify-content: space-between; gap: 8px 8px; padding: 10px 12px; }
   .toolbar > .trim { order: 1; flex: 1 1 100%; width: auto; min-width: 0; }   /* min-width: a long readout cuts with "…" instead of widening the row */
   .toolbar > .tg { order: 2; flex: 1 1 20%; padding: 8px 6px; }
@@ -131,5 +138,8 @@ body.explorer { overflow: hidden; }
   .sw { align-items: center; gap: 8px; }
   .sw button { width: 26px; height: 26px; }   /* finger-sized */
   /* sheets stop above the toolbar; ui.js writes its real height into --toolbar-h */
-  .sheet { max-height: calc(100% - var(--sheet-top) - var(--toolbar-h, 150px) - 36px); }
+  .sheet { max-height: calc(100% - var(--sheet-top) - var(--toolbar-h, 150px) - var(--toolbar-bottom) - 12px); }
+  /* footer wraps onto two lines under the toolbar; the 3D credit moves to the right, just above the toolbar */
+  #siteFoot { left: 12px; right: 12px; bottom: 4px; width: auto; max-width: none; white-space: normal; flex-wrap: wrap; }
+  .scene-credit { left: auto; right: 12px; bottom: calc(var(--toolbar-bottom) + var(--toolbar-h, 150px) + 6px); }
 }

@@ -1,3 +1,6 @@
+/*! youngsails.org · © 2026 Vassil Kateliev
+ *  PolyForm Noncommercial 1.0.0 — https://polyformproject.org/licenses/noncommercial/1.0.0
+ *  Commercial use requires permission. See README for permitted uses. */
 // Young Sails — translations.
 // Strings live in /i18n/<lang>/<namespace>.json. Every lookup falls back to
 // English, so a half-translated language still shows a complete page.

@@ -1,3 +1,6 @@
+/*! youngsails.org · © 2026 Vassil Kateliev
+ *  PolyForm Noncommercial 1.0.0 — https://polyformproject.org/licenses/noncommercial/1.0.0
+ *  Commercial use requires permission. See README for permitted uses. */
 // Young Sails — site navigation: tabs for the ready sections + language menu.
 // Every page has <nav id="siteNav" class="site-nav panel"></nav> and calls
 //   mountSiteNav({ current: '<section id>' })
@@ -10,11 +13,11 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '
 const GLOBE = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg>';
 
 export async function mountSiteNav({ current }) {
-  mountSiteFoot();
-  const el = document.getElementById('siteNav');
-  if (!el) return;
   const lang = pickLang();
   const S = await loadStrings('common', lang);
+  mountSiteFoot(S);
+  const el = document.getElementById('siteNav');
+  if (!el) return;
   const here = SECTIONS.find(s => s.id === current);
 
   // Wiki pages with a class toggle open with the boat you came from: an explorer's
@@ -56,14 +59,18 @@ export function syncNavClass(cls) {
   }
 }
 
-// Site footer: owner (GitHub profile), copyright years, source repository, e-mail.
-// Any page with <footer id="siteFoot" class="site-foot"></footer> gets it.
-export function mountSiteFoot() {
+// Site footer: copyright (owner's GitHub profile), domain, code and content licences, source repository, e-mail.
+// Any page with <footer id="siteFoot" class="site-foot"></footer> gets it. Words come from common.json → foot;
+// mountSiteNav passes its strings, a page without navigation (404) lets the footer load them.
+export async function mountSiteFoot(S) {
   const el = document.getElementById('siteFoot');
   if (!el) return;
-  const now = new Date().getFullYear(), years = now > SITE.since ? `${SITE.since}–${now}` : `${SITE.since}`;
-  el.innerHTML = `<a href="${SITE.ownerUrl}" rel="author">${esc(SITE.owner)}</a> © ${years}`
-    + `<span aria-hidden="true">·</span><a href="${SITE.repo}">GitHub</a>`
+  S ??= await loadStrings('common', pickLang());
+  const lic = (key, l) => esc(t(S, key)).replace('{l}', `<a href="${l.url}" rel="license">${esc(l.name)}</a>`);
+  const sep = '<span aria-hidden="true">·</span>';
+  el.innerHTML = `<span>© <a href="${SITE.ownerUrl}" rel="author">${esc(SITE.owner)}</a></span>${sep}<span>${SITE.domain}</span>`
+    + `${sep}<span>${lic('foot.code', SITE.licenses.code)}</span>${sep}<span>${lic('foot.content', SITE.licenses.content)}</span>`
+    + `${sep}<a href="${SITE.repo}">GitHub</a>`
     + `<span aria-hidden="true">·</span><a class="site-foot-mail" href="#"></a>`;
   // the address is joined only here, and the mailto link only when the link is used
   const mail = el.querySelector('.site-foot-mail'), addr = () => SITE.contact.join('@');

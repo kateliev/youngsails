@@ -1,3 +1,6 @@
+/*! youngsails.org · © 2026 Vassil Kateliev
+ *  PolyForm Noncommercial 1.0.0 — https://polyformproject.org/licenses/noncommercial/1.0.0
+ *  Commercial use requires permission. See README for permitted uses. */
 // Optimist — procedural 3D model of the International Optimist dinghy.
 // Dimensions follow the IODA class rules (hull 2300 mm, mast ≤ 2350, boom ≤ 2057,
 // sprit ≤ 2286, daggerboard 1067 × 285, three 45 L buoyancy bags, mainsheet floor

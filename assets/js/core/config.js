@@ -1,3 +1,6 @@
+/*! youngsails.org · © 2026 Vassil Kateliev
+ *  PolyForm Noncommercial 1.0.0 — https://polyformproject.org/licenses/noncommercial/1.0.0
+ *  Commercial use requires permission. See README for permitted uses. */
 // Young Sails — site-wide settings shared by every section.
 
 export const SITE = {
@@ -6,7 +9,12 @@ export const SITE = {
   repo: 'https://github.com/kateliev/youngsails',
   owner: 'Vassil Kateliev',
   ownerUrl: 'https://github.com/kateliev',
-  since: 2026,   // first year of the copyright line; later years show as 2026–YYYY
+  // Licences (see LICENSE, LICENSE-CONTENT and the README): code = all JavaScript, including the
+  // procedural boat models; content = texts, part descriptions, translations, data files, images.
+  licenses: {
+    code: { name: 'PolyForm Noncommercial', url: 'https://polyformproject.org/licenses/noncommercial/1.0.0' },
+    content: { name: 'CC BY-NC-SA 4.0', url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/' },
+  },
   // E-mail kept in two pieces so the address never appears whole in the HTML or the
   // repository; sitenav.js joins it in the browser and builds the mailto link only on use.
   contact: ['vassil', 'kateliev.com'],

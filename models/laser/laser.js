@@ -1,3 +1,6 @@
+/*! youngsails.org · © 2026 Vassil Kateliev
+ *  PolyForm Noncommercial 1.0.0 — https://polyformproject.org/licenses/noncommercial/1.0.0
+ *  Commercial use requires permission. See README for permitted uses. */
 // ILCA 6 — procedural 3D model of the ILCA dinghy (formerly Laser Radial) with the ILCA 6 rig.
 // Dimensions follow the ILCA Class Rules 2026 and the Measurement Diagrams (rules pp. 33–40):
 // top mast ≤ 3600 with the collar 305 from its foot, ILCA 6 lower ≤ 2262 with the gooseneck 945 above

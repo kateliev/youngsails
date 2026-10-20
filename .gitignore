@@ -20,3 +20,19 @@ documentation/private/
 
 # Agent handouts (local only)
 handouts/
+
+# Source and working materials (local only): class rules, drawings, reference scans, design files
+refs/
+source/
+raw/
+*.pdf
+*.dwg
+*.dxf
+*.ai
+*.psd
+*.fig
+*.afdesign
+*.afphoto
+*.sketch
+*.blend
+*.blend1

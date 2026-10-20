@@ -1,3 +1,6 @@
+/*! youngsails.org · © 2026 Vassil Kateliev
+ *  PolyForm Noncommercial 1.0.0 — https://polyformproject.org/licenses/noncommercial/1.0.0
+ *  Commercial use requires permission. See README for permitted uses. */
 // Young Sails explorer — panels, info card, toolbar, labels, picking, camera moves.
 // All visible text comes from the i18n dictionaries passed in:
 //   S = common.json (UI words), M = <model>.json (part names and texts), G = glossary language names.
@@ -129,9 +132,11 @@ export function createUI({ stage, registry, model, state, S, M, G, parts, groups
 
   /* ---------------- toolbar ---------------- */
   const trimEl = $('trim');
-  // On phones the toolbar folds into rows; the CSS keeps the sheets above it with this height.
-  const toolbarEl = document.querySelector('.toolbar'), appEl = $('app');
+  // On phones the toolbar folds into rows and the footer under it may wrap; the CSS keeps
+  // the toolbar above the footer and the sheets above the toolbar with these heights.
+  const toolbarEl = document.querySelector('.toolbar'), footEl = $('siteFoot'), appEl = $('app');
   new ResizeObserver(() => appEl.style.setProperty('--toolbar-h', `${toolbarEl.offsetHeight}px`)).observe(toolbarEl);
+  if (footEl) new ResizeObserver(() => appEl.style.setProperty('--foot-h', `${footEl.offsetHeight}px`)).observe(footEl);
   function setTrim(d, time) {
     model.setTrim(d, time); registry.applyLook(); registry.applyExplode();
     const a = windAngleFromBoom(d), tack = tackFromBoom(d);
